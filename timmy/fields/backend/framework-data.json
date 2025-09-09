@@ -1,0 +1,79 @@
+{
+	"frameworkData": [
+		{
+			"name": "Express.js",
+			"website": "https://expressjs.com",
+			"docs": "https://expressjs.com/en/4x/api.html"
+		},
+		{
+			"name": "Encore.ts",
+			"website": "https://encore.dev",
+			"docs": "https://encore.dev/docs"
+		},
+		{
+			"name": "Fastify",
+			"website": "https://fastify.dev",
+			"docs": "https://fastify.dev/docs"
+		},
+		{
+			"name": "NestJS",
+			"website": "https://nestjs.com",
+			"docs": "https://docs.nestjs.com"
+		},
+		{
+			"name": "Koa.js",
+			"website": "https://koajs.com",
+			"docs": "https://koajs.com"
+		},
+		{
+			"name": "Hapi.js",
+			"website": "https://hapi.dev",
+			"docs": "https://hapi.dev/api"
+		},
+		{
+			"name": "Django",
+			"website": "https://www.djangoproject.com",
+			"docs": "https://docs.djangoproject.com"
+		},
+		{
+			"name": "FastAPI",
+			"website": "https://fastapi.tiangolo.com",
+			"docs": "https://fastapi.tiangolo.com"
+		},
+		{
+			"name": "Flask",
+			"website": "https://flask.palletsprojects.com",
+			"docs": "https://flask.palletsprojects.com"
+		},
+		{
+			"name": "Spring Boot",
+			"website": "https://spring.io/projects/spring-boot",
+			"docs": "https://docs.spring.io/spring-boot/docs/current/reference/html"
+		},
+		{
+			"name": "Laravel",
+			"website": "https://laravel.com",
+			"docs": "https://laravel.com/docs"
+		},
+		{
+			"name": "Ruby on Rails",
+			"website": "https://rubyonrails.org",
+			"docs": "https://guides.rubyonrails.org"
+		},
+		{
+			"name": "ASP.NET Core",
+			"website": "https://dotnet.microsoft.com/apps/aspnet",
+			"docs": "https://docs.microsoft.com/en-us/aspnet/core"
+		},
+		{
+			"name": "Gin",
+			"website": "https://gin-gonic.com",
+			"docs": "https://gin-gonic.com/docs"
+		},
+		{
+			"name": "Echo",
+			"website": "https://echo.labstack.com",
+			"docs": "https://echo.labstack.com/guide"
+		}
+	]
+}

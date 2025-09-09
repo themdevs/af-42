@@ -1,0 +1,74 @@
+{
+	"languageData": [
+		{
+			"name": "HTML",
+			"website": "https://www.w3.org/",
+			"docs": "https://developer.mozilla.org/docs/Web/HTML"
+		},
+		{
+			"name": "CSS",
+			"website": "https://www.w3.org/Style/CSS/",
+			"docs": "https://developer.mozilla.org/docs/Web/CSS"
+		},
+		{
+			"name": "JavaScript",
+			"website": "https://www.ecma-international.org/publications-and-standards/standards/ecma-262/",
+			"docs": "https://developer.mozilla.org/docs/Web/JavaScript"
+		},
+		{
+			"name": "TypeScript",
+			"website": "https://www.typescriptlang.org/",
+			"docs": "https://www.typescriptlang.org/docs/"
+		},
+		{
+			"name": "JSX",
+			"website": "https://reactjs.org/docs/introducing-jsx.html",
+			"docs": "https://reactjs.org/docs/introducing-jsx.html"
+		},
+		{
+			"name": "Elm",
+			"website": "https://elm-lang.org/",
+			"docs": "https://elm-lang.org/docs"
+		},
+		{
+			"name": "PureScript",
+			"website": "https://www.purescript.org/",
+			"docs": "https://github.com/purescript/documentation"
+		},
+		{
+			"name": "ReScript (ReasonML)",
+			"website": "https://rescript-lang.org/",
+			"docs": "https://rescript-lang.org/docs"
+		},
+		{
+			"name": "Dart",
+			"website": "https://dart.dev/",
+			"docs": "https://dart.dev/guides"
+		},
+		{
+			"name": "Rust (via WASM frameworks)",
+			"website": "https://www.rust-lang.org/",
+			"docs": "https://www.rust-lang.org/learn"
+		},
+		{
+			"name": "Swift (via WASM or transpilation)",
+			"website": "https://swift.org/",
+			"docs": "https://developer.apple.com/documentation/swift"
+		},
+		{
+			"name": "Tcl (via web-embedding)",
+			"website": "https://www.tcl-lang.org/",
+			"docs": "https://www.tcl-lang.org/documentation.html"
+		},
+		{
+			"name": "Vaadin (Java-based UI)",
+			"website": "https://vaadin.com/",
+			"docs": "https://vaadin.com/docs"
+		},
+		{
+			"name": "htmx",
+			"website": "https://htmx.org/",
+			"docs": "https://htmx.org/docs/"
+		}
+	]
+}
