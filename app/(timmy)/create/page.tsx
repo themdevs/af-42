@@ -1,7 +1,9 @@
+import { FrontendGenerator } from './FrontendGenerator';
+
 export default async function Page() {
 	return (
 		<>
-			<h1>Create Challenge Page</h1>
+			<FrontendGenerator />
 		</>
 	);
 }

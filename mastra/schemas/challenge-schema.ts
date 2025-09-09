@@ -55,7 +55,6 @@ export const challengeSchema = z.object({
 	// Technical Challenge Brief components
 	title: z.string(),
 	overview: z.string(),
-	duration_estimate: z.string(), // e.g., "2-4 hours"
 	difficulty_level: z.enum(['junior', 'mid', 'senior']),
 
 	// Requirements (derived from technical specs)

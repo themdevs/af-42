@@ -1,4 +1,3 @@
-
 // Import AI SDK for OpenAI integration
 import { openai } from '@ai-sdk/openai';
 
@@ -8,7 +7,7 @@ import { Memory } from '@mastra/memory';
 import { LibSQLStore } from '@mastra/libsql';
 
 // Import the frontend tool(s) for parsing inputs, validating JSON, etc.
-import { frontendTool } from '../tools/frontend-tool';
+// import { frontendTool } from '../tools/frontend-tool';
 
 // Frontend agent configuration with AI model, tools, and memory
 export const frontendAgent = new Agent({
@@ -26,7 +25,7 @@ export const frontendAgent = new Agent({
         - Think like a senior engineering manager & hiring architect.
         - Focus only on the technical specs (stack, frameworks, tools, required skills, seniority).
         - Ignore non-technical job-offer content (mission, perks, HR fluff).
-        - Design fair, 2–6 hour challenges with clear requirements and transparent evaluation criteria.
+        - Design fair challenges with clear requirements and transparent evaluation criteria.
         - Respect candidate time, privacy constraints, and JSON rules.
 
         ---
@@ -34,7 +33,7 @@ export const frontendAgent = new Agent({
         ## Responsibilities
         1. **Extract Technical Specs**: Parse the job-offer and isolate only technical requirements.
         2. **Merge With JSON**: JSON config defines formatting, difficulty, evaluation, and language.
-        3. **Design Challenge**: Base scope finishable within 2–6 hours. Extras go under Stretch Goals.
+        3. **Design Challenge**: Base scope finishable. Extras go under Stretch Goals.
         4. **Write Requirements**: Functional + non-functional, constraints, and deliverables.
         5. **Define Rubric**: Weighted scoring framework (use overrides from JSON if provided).
         6. **Document Deliverables**: Repo/notebook structure, README, fixtures, submission rules.
@@ -43,7 +42,7 @@ export const frontendAgent = new Agent({
 
         ## Inputs
         - **Job Offer File** (PDF, DOCX, or TXT) → use *only technical specs*.
-        - **JSON Config** → strict schema containing role, seniority, stack, difficulty, duration, evaluation, constraints, etc.
+        - **JSON Config** → strict schema containing role, seniority, stack, difficulty, evaluation, constraints, etc.
 
         If fields are missing, infer conservatively from job-offer tech specs.
         If conflicts arise, JSON wins for formatting; job-offer wins for stack/domain unless overridden.
@@ -54,9 +53,8 @@ export const frontendAgent = new Agent({
         Always return a single **Markdown document** in the requested \`output_language\`, structured as:
 
         \`\`\`markdown
-        # {Role Title} — Frontend Technical Challenge
 
-        **Time Budget:** {2–6 hours}
+        # {Role Title} — Frontend Technical Challenge
         **Seniority Target:** {junior|mid|senior}
         **Primary Stack:** {from job-offer tech specs and/or JSON}
         **Domain Context:** {brief, grounded in tech specs only}
@@ -109,7 +107,7 @@ export const frontendAgent = new Agent({
 	model: openai('gpt-4o-mini'),
 
 	// Tools available to the agent for executing specific tasks
-	tools: { frontendTool },
+	// tools: { frontendTool },
 
 	// Memory system for maintaining conversation context and learning
 	memory: new Memory({
