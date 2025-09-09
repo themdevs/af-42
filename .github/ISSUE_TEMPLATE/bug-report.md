@@ -5,7 +5,7 @@ labels: bug
 
 ---
 
-## Problem
+# Problem
 
 <!-- How would you explain the bug to someone who has never seen it? -->
 
@@ -29,20 +29,20 @@ Lorem ipsum.
 
 <!-- Add pictures to help explain the problem. -->
 
-Picture of 
+Picture of
 
 ## Environment
 
- - Hardware: <!-- e.g. 2012 MacBook Pro 15 inch -->
- - OS: <!-- e.g. macOS 10.13.4 -->
- - Browser: <!-- e.g. Firefox 60.0.2 -->
- - Node: <!-- e.g. 8.11.13 -->
- - npm: <!-- e.g. 6.1.0 -->
+- Hardware: <!-- e.g. 2012 MacBook Pro 15 inch -->
+- OS: <!-- e.g. macOS 10.13.4 -->
+- Browser: <!-- e.g. Firefox 60.0.2 -->
+- Node: <!-- e.g. 8.11.13 -->
+- npm: <!-- e.g. 6.1.0 -->
 
 ## Resources
 
 <!-- What will people need to fix this? Provide as much help as possible to get them started. -->
 
- - 
- - 
- - 
+-
+-
+-

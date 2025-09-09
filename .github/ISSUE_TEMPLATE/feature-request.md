@@ -5,7 +5,7 @@ labels: enhancement
 
 ---
 
-## Story
+# Story
 
 <!-- How would you explain the idea to a beginner? -->
 
@@ -21,6 +21,6 @@ The plan is...
 
 <!-- What will people need to accomplish this task? Provide as much help as possible to get them started. -->
 
- - Mockups: *URL*
- - 
- - 
+- Mockups: *URL*
+-
+-
