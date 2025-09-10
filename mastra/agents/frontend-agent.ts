@@ -7,7 +7,7 @@ import { Memory } from '@mastra/memory';
 import { LibSQLStore } from '@mastra/libsql';
 
 // Import the frontend tool(s) for parsing inputs, validating JSON, etc.
-// import { frontendTool } from '../tools/frontend-tool';
+import { jsonValidatorTool } from '../tools/json-validator-tool';
 
 // Frontend agent configuration with AI model, tools, and memory
 export const frontendAgent = new Agent({
@@ -107,7 +107,7 @@ export const frontendAgent = new Agent({
 	model: openai('gpt-4o-mini'),
 
 	// Tools available to the agent for executing specific tasks
-	// tools: { frontendTool },
+	tools: { jsonValidatorTool },
 
 	// Memory system for maintaining conversation context and learning
 	memory: new Memory({

@@ -17,7 +17,14 @@ export const jsonValidatorTool = createTool({
 		parsedData: z.any(),
 		errors: z.array(z.string()).optional(),
 	}),
-	// execute: async ({ jsonContent }) => {
-	// 	// JSON validation logic
-	// },
+	execute: async ({ context }) => {
+		// JSON validation logic
+		return await validateJson(context.jsonContent);
+	},
 });
+
+const validateJson = async (jsonContent: string) => {
+	const parsedData = JSON.parse(jsonContent);
+	console.log('parsedData', parsedData);
+	return parsedData;
+};
