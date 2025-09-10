@@ -1,35 +1,37 @@
 {
-  "name": "af-42",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev --turbopack",
-    "build": "next build",
-    "start": "next start"
-  },
-  "dependencies": {
-    "@ai-sdk/anthropic": "^2.0.15",
-    "@ai-sdk/openai": "^1.3.24",
-    "@mastra/core": "^0.16.0",
-    "@mastra/deployer-vercel": "^0.11.20",
-    "@mastra/libsql": "^0.14.0",
-    "@mastra/loggers": "^0.10.11",
-    "@mastra/memory": "^0.14.4",
-    "@vercel/postgres": "^0.10.0",
-    "dotenv": "^17.2.2",
-    "drizzle-orm": "^0.44.5",
-    "next": "15.5.2",
-    "pomljs": "^0.0.8",
-    "react": "19.1.0",
-    "react-dom": "19.1.0"
-  },
-  "devDependencies": {
-    "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
-    "drizzle-kit": "^0.31.4",
-    "tailwindcss": "^4",
-    "typescript": "^5"
-  }
+	"name": "af-42",
+	"version": "0.1.0",
+	"private": true,
+	"scripts": {
+		"dev": "next dev --turbopack",
+		"build": "next build",
+		"start": "next start",
+		"mastra:dev": "mastra dev",
+		"mastra:build": "mastra build"
+	},
+	"dependencies": {
+		"@ai-sdk/anthropic": "^2.0.15",
+		"@ai-sdk/openai": "^1.3.24",
+		"@mastra/core": "^0.16.0",
+		"@mastra/deployer-vercel": "^0.11.20",
+		"@mastra/libsql": "^0.14.0",
+		"@mastra/loggers": "^0.10.11",
+		"@mastra/memory": "^0.14.4",
+		"@vercel/postgres": "^0.10.0",
+		"dotenv": "^17.2.2",
+		"drizzle-orm": "^0.44.5",
+		"next": "15.5.2",
+		"pomljs": "^0.0.8",
+		"react": "19.1.0",
+		"react-dom": "19.1.0"
+	},
+	"devDependencies": {
+		"@tailwindcss/postcss": "^4",
+		"@types/node": "^20",
+		"@types/react": "^19",
+		"@types/react-dom": "^19",
+		"drizzle-kit": "^0.31.4",
+		"tailwindcss": "^4",
+		"typescript": "^5"
+	}
 }
