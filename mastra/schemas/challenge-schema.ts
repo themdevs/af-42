@@ -1,27 +1,8 @@
 import { z } from 'zod';
 import { evaluationCriteriaSchema } from './evaluation-criteria-schema';
-
-// Technical requirements schema
-const requirementsSchema = z.object({
-	functional: z.array(z.string()),
-	non_functional: z.array(z.string()),
-	technical_stack: z.array(z.string()),
-});
-
-// Stretch goals schema
-const stretchGoalsSchema = z.object({
-	title: z.string(),
-	description: z.string(),
-	estimated_time: z.string(),
-});
-
-// Deliverables schema
-const deliverablesSchema = z.object({
-	repository_format: z.string(),
-	readme_requirements: z.array(z.string()),
-	code_structure: z.array(z.string()),
-	artifacts: z.array(z.string()).optional(),
-});
+import { stretchGoalsSchema } from './stretch-goals-schema';
+import { requirementsSchema } from './requirements-schema';
+import { deliverablesSchema } from './deliverables-schema';
 
 // Main challenge schema matching the job-offer-to-technical-challenge-generator outputs
 export const challengeSchema = z.object({
