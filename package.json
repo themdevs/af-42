@@ -6,7 +6,7 @@
 		"dev": "next dev --turbopack",
 		"build": "next build",
 		"start": "next start",
-		"mastra:dev": "mastra dev",
+		"mastra": "mastra dev",
 		"mastra:build": "mastra build"
 	},
 	"dependencies": {
