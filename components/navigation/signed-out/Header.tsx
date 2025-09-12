@@ -13,7 +13,7 @@ const navLinks = [
 	{
 		href: '/for-devs',
 		label: 'FOR 42 DEVS',
-		description: 'Home page for 42 students',
+		description: 'Home page for 42 Devs',
 	},
 	{
 		href: '/for-companies',
@@ -44,7 +44,7 @@ export default function SignedOutHeader() {
 			<header className="border-b border-gray-800 shadow-lg sticky top-0 z-50 bg-black/95 backdrop-blur-sm relative">
 				<nav className="min-h-[60px] flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
 					{/* Logo */}
-					<Link href="/" className="flex-shrink-0">
+					<Link href="/home" className="flex-shrink-0">
 						<h2 className="text-lg sm:text-xl md:text-xl font-semibold tracking-tighter hover:text-cyan-400 transition-all duration-200 flex flex-row items-baseline font-source-code-pro">
 							<span className="bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
 								AFTER
