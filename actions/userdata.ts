@@ -5,8 +5,8 @@ import { makeUnprotectedRequest } from '@/utils/make-unprotected-requests';
 
 export const getUserData = async (forceFetch = false): Promise<UserData | null> => {
 	const headersList = await headers();
-	const brand = headersList.get('x-brand') || '';
-	const token = (await cookies()).get(`jwtToken-${brand}`)?.value || null;
+	const company = headersList.get('af-42-company') || '';
+	const token = (await cookies()).get(`jwtToken-${company}`)?.value || null;
 
 	try {
 		// Use makeRequest which automatically handles token if present, or makeUnprotectedRequest if no token

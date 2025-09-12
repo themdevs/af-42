@@ -14,7 +14,7 @@ type RequestOptions = {
 /**
  * Makes an unauthenticated HTTP request to the API
  * Supports Next.js caching via `next` parameter
- * Automatically attaches 'x-company' header based on host
+ * Automatically attaches 'af-42-company' header based on host
  */
 export const makeUnprotectedRequest = async (
 	endpoint: string,
@@ -31,16 +31,16 @@ export const makeUnprotectedRequest = async (
 
 	const url = endpoint.startsWith('http') ? endpoint : `${baseUrl}${endpoint}`;
 
-	// Determine brand header
-	let brandHeader: string | undefined = undefined;
+	// Determine company header
+	let companyHeader: string | undefined = undefined;
 
 	if (typeof window !== 'undefined') {
-		brandHeader = window.location.hostname;
+		companyHeader = window.location.hostname;
 	} else {
 		try {
 			const { getHeader } = await import('@/utils/get-header');
-			const host = await getHeader('x-company');
-			brandHeader = host || undefined;
+			const host = await getHeader('af-42-company');
+			companyHeader = host || undefined;
 		} catch (err) {
 			console.error('[makeUnprotectedRequest] Failed to get host header on server:', err);
 		}
@@ -50,7 +50,7 @@ export const makeUnprotectedRequest = async (
 		// Only set Content-Type for requests with body (avoid issues with DELETE requests)
 		...(body ? { 'Content-Type': 'application/json' } : {}),
 		'x-request-origin': 'af_42',
-		...(brandHeader ? { 'safeout-brand': brandHeader } : {}),
+		...(companyHeader ? { 'af-42-company': companyHeader } : {}),
 		...headers,
 	};
 

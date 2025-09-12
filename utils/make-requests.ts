@@ -92,7 +92,7 @@ export const makeRequest = async (
 		// Server-side: use host header from request
 		try {
 			const { getHeader } = await import('@/utils/get-header');
-			const host = await getHeader('x-company');
+			const host = await getHeader('af-42-company');
 			companyHeader = host || undefined;
 		} catch (err) {
 			console.error('[makeRequest] Failed to get host header on server:', err);
