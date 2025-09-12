@@ -15,11 +15,7 @@ export default function HomePage() {
 							🚀 AI-Powered Hiring Platform
 						</Badge>
 						<h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">
-							<span className="bg-gradient-to-r from-cyan-400 via-cyan-300 to-cyan-500 bg-clip-text text-transparent">
-								After-42
-							</span>
-							<br />
-							<span className="text-white">Connects Elite Talent</span>
+							<span className="text-white">Discover and hire the best 42 developers with ease.</span>
 						</h1>
 						<p className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed">
 							The AI-powered platform that generates custom technical challenges, filters through the
@@ -57,8 +53,8 @@ export default function HomePage() {
 							</span>
 						</h2>
 						<p className="text-xl text-gray-300 max-w-3xl mx-auto">
-							Our platform leverages cutting-edge artificial intelligence to revolutionize technical
-							hiring and talent matching.
+							Our platform leverages cutting-edge artificial intelligence to revolutionize
+							<br /> technical hiring and talent matching.
 						</p>
 					</div>
 
@@ -251,39 +247,6 @@ export default function HomePage() {
 					</div>
 				</div>
 			</section>
-
-			{/* Footer */}
-			<footer className="bg-black border-t border-gray-800 py-12">
-				<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-					<div className="text-center">
-						<div className="mb-6">
-							<h3 className="text-2xl font-bold">
-								<span className="bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
-									AFTER-42
-								</span>
-							</h3>
-							<p className="text-gray-400 mt-2">AI-Powered Technical Hiring Platform</p>
-						</div>
-						<div className="flex flex-col sm:flex-row gap-6 justify-center items-center text-sm text-gray-400">
-							<Link href="/about" className="hover:text-cyan-400 transition-colors">
-								About Us
-							</Link>
-							<Link href="/faq" className="hover:text-cyan-400 transition-colors">
-								FAQ
-							</Link>
-							<Link href="/for-companies" className="hover:text-cyan-400 transition-colors">
-								For Companies
-							</Link>
-							<Link href="/for-devs" className="hover:text-cyan-400 transition-colors">
-								For Developers
-							</Link>
-						</div>
-						<div className="mt-8 pt-8 border-t border-gray-800 text-gray-500 text-sm">
-							© 2024 After-42. All rights reserved.
-						</div>
-					</div>
-				</div>
-			</footer>
 		</div>
 	);
 }
