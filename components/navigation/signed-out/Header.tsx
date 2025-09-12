@@ -45,13 +45,13 @@ export default function SignedOutHeader() {
 				<nav className="min-h-[60px] flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
 					{/* Logo */}
 					<Link href="/" className="flex-shrink-0">
-						<h1 className="text-xl sm:text-2xl md:text-3xl font-bold tracking-tighter hover:text-cyan-400 transition-all duration-200 flex flex-row items-baseline font-source-code-pro">
+						<h2 className="text-lg sm:text-xl md:text-xl font-semibold tracking-tighter hover:text-cyan-400 transition-all duration-200 flex flex-row items-baseline font-source-code-pro">
 							<span className="bg-gradient-to-r from-cyan-400 to-cyan-600 bg-clip-text text-transparent">
 								AFTER
 							</span>
 							<span className="text-white">-42</span>
 							<span className="text-xs sm:text-sm text-gray-400 pl-2">Beta</span>
-						</h1>
+						</h2>
 					</Link>
 
 					{/* Desktop Navigation - Hidden on mobile/tablet */}
