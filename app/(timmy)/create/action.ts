@@ -11,6 +11,5 @@ export async function createFrontendChallenge(formData: FormData) {
 		`Create a frontend challenge for ${jobOffer} with the following JSON config: ${jsonConfig}`,
 	);
 
-	console.log(challenge.text);
 	return challenge.text;
 }
