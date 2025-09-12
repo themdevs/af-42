@@ -11,7 +11,7 @@ export default function HomePage() {
 				<div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(6,182,212,0.1),transparent_50%)]"></div>
 				<div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 lg:py-32">
 					<div className="text-center">
-						<Badge variant="outline" className="mb-8 border-cyan-400/50 text-cyan-400 bg-cyan-400/10">
+						<Badge variant="outline" className="mb-8 border-cyan-400/50 text-cyan-400 bg-cyan-400/10 text-sm">
 							🚀 AI-Powered Hiring Platform
 						</Badge>
 						<h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold tracking-tight mb-8">
