@@ -1,7 +1,7 @@
 'use client';
 
 import MainLayout from '@/components/layouts/main-layout';
-import CompaniesPage from './CompaniesPage.component';
+import CompaniesPage from './companies-page.component';
 
 export default function Companies() {
 	return (
