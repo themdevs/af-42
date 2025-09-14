@@ -1,5 +1,5 @@
-import { FormGenerator } from './FormGenerator';
+import { TaskGeneratorForm } from './TaskGeneratorForm';
 
 export default function GenerateChallengePage() {
-	return <FormGenerator />;
+	return <TaskGeneratorForm />;
 }

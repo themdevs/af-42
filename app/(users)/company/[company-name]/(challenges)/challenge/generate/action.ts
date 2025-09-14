@@ -2,9 +2,7 @@
 
 import { mastra } from '../../../../../../../mastra';
 
-export async function createFrontendChallenge(formData: FormData) {
-	const jobOffer = formData.get('jobOffer')?.toString();
-	const jsonConfig = formData.get('jsonConfig')?.toString();
+export async function createFrontendChallenge(jobOffer: string, jsonConfig: string) {
 	const agent = mastra.getAgent('frontendAgent');
 
 	const challenge = await agent.generate(
