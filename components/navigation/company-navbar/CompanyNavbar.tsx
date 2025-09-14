@@ -19,6 +19,7 @@ import { NavProjects } from '@/components/nav-projects';
 import { NavUser } from '@/components/nav-user';
 import { TeamSwitcher } from '@/components/team-switcher';
 import { Sidebar, SidebarContent, SidebarFooter, SidebarHeader, SidebarRail } from '@/components/ui/sidebar';
+import { ModeToggle } from '@/components/mode-toggel';
 
 // This is sample data.
 const data = {
@@ -161,6 +162,7 @@ export function CompanyNavbar({ ...props }: React.ComponentProps<typeof Sidebar>
 				<NavProjects projects={data.projects} />
 			</SidebarContent>
 			<SidebarFooter>
+				<ModeToggle />
 				<NavUser user={data.user} />
 			</SidebarFooter>
 			<SidebarRail />
