@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { createFrontendChallenge } from './action';
+import { ProfileForm } from './TaskGeneratorForm';
 
 export function FormGenerator() {
 	const [result, setResult] = useState<string | null>(null);
@@ -13,7 +14,8 @@ export function FormGenerator() {
 
 	return (
 		<>
-			<div className="max-w-2xl mx-auto">
+			<div className="p-4 gap-4 items-center justify-center">
+				<ProfileForm />
 				<h2 className="text-2xl font-bold text-center py-4">Create Frontend Challenge</h2>
 				<form action={handleSubmit} className="flex flex-col gap-2">
 					<input
@@ -32,6 +34,7 @@ export function FormGenerator() {
 					</button>
 				</form>
 			</div>
+
 			{result && <pre>{result}</pre>}
 		</>
 	);
