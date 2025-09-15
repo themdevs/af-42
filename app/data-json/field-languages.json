@@ -67,15 +67,31 @@
 				"devdocs_url": "https://devdocs.io/c/",
 				"official_website": "https://en.wikipedia.org/wiki/C_(programming_language)"
 			},
-			{ "name": "C++", "devdocs_url": "https://devdocs.io/cpp/", "official_website": "https://isocpp.org/" },
-			{ "name": "D", "devdocs_url": "https://devdocs.io/d/", "official_website": "https://dlang.org/" },
-			{ "name": "Go", "devdocs_url": "https://devdocs.io/go/", "official_website": "https://go.dev/" },
+			{
+				"name": "C++",
+				"devdocs_url": "https://devdocs.io/cpp/",
+				"official_website": "https://isocpp.org/"
+			},
+			{
+				"name": "D",
+				"devdocs_url": "https://devdocs.io/d/",
+				"official_website": "https://dlang.org/"
+			},
+			{
+				"name": "Go",
+				"devdocs_url": "https://devdocs.io/go/",
+				"official_website": "https://go.dev/"
+			},
 			{
 				"name": "Rust",
 				"devdocs_url": "https://devdocs.io/rust/",
 				"official_website": "https://www.rust-lang.org/"
 			},
-			{ "name": "Lua", "devdocs_url": "https://devdocs.io/lua/", "official_website": "https://www.lua.org/" },
+			{
+				"name": "Lua",
+				"devdocs_url": "https://devdocs.io/lua/",
+				"official_website": "https://www.lua.org/"
+			},
 			{
 				"name": "Tcl/Tk",
 				"devdocs_url": "https://devdocs.io/tcl_tk/",
@@ -93,7 +109,11 @@
 				"devdocs_url": "https://devdocs.io/c/",
 				"official_website": "https://en.wikipedia.org/wiki/C_(programming_language)"
 			},
-			{ "name": "C++", "devdocs_url": "https://devdocs.io/cpp/", "official_website": "https://isocpp.org/" },
+			{
+				"name": "C++",
+				"devdocs_url": "https://devdocs.io/cpp/",
+				"official_website": "https://isocpp.org/"
+			},
 			{
 				"name": "Rust",
 				"devdocs_url": "https://devdocs.io/rust/",
@@ -106,7 +126,11 @@
 				"devdocs_url": "https://devdocs.io/rust/",
 				"official_website": "https://www.rust-lang.org/"
 			},
-			{ "name": "Go", "devdocs_url": "https://devdocs.io/go/", "official_website": "https://go.dev/" },
+			{
+				"name": "Go",
+				"devdocs_url": "https://devdocs.io/go/",
+				"official_website": "https://go.dev/"
+			},
 			{
 				"name": "Java (OpenJDK)",
 				"devdocs_url": "https://devdocs.io/openjdk~17/",
@@ -146,7 +170,11 @@
 				"devdocs_url": "https://devdocs.io/typescript/",
 				"official_website": "https://www.typescriptlang.org/"
 			},
-			{ "name": "PHP", "devdocs_url": "https://devdocs.io/php/", "official_website": "https://www.php.net/" },
+			{
+				"name": "PHP",
+				"devdocs_url": "https://devdocs.io/php/",
+				"official_website": "https://www.php.net/"
+			},
 			{
 				"name": "Ruby",
 				"devdocs_url": "https://devdocs.io/ruby/",
@@ -166,7 +194,11 @@
 			}
 		],
 		"Blockchain": [
-			{ "name": "Go", "devdocs_url": "https://devdocs.io/go/", "official_website": "https://go.dev/" },
+			{
+				"name": "Go",
+				"devdocs_url": "https://devdocs.io/go/",
+				"official_website": "https://go.dev/"
+			},
 			{
 				"name": "Rust",
 				"devdocs_url": "https://devdocs.io/rust/",
