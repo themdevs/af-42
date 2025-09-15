@@ -202,13 +202,13 @@ export const DataSelectionComponent = () => {
 											<Button
 												key={dataset.key}
 												variant={selectedDataset === dataset.key ? 'default' : 'ghost'}
-												className="w-full justify-start text-left h-auto p-3"
+												className="w-full justify-start text-left h-auto p-3 cursor-pointer"
 												onClick={() => setSelectedDataset(dataset.key)}
 											>
 												<div>
 													<div className="font-medium">{dataset.name}</div>
 													<div className="text-xs text-muted-foreground">
-														{Object.keys(dataset.data).length} categories
+														{Object.keys(dataset.data).length} items
 													</div>
 												</div>
 											</Button>
@@ -231,35 +231,24 @@ export const DataSelectionComponent = () => {
 							Search and select categories from {datasets.find((d) => d.key === selectedDataset)?.name}
 						</CardDescription>
 					</CardHeader>
-					<CardContent className="space-y-4">
-						{/* Search Input */}
-						<div className="relative">
-							<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-							<Input
-								placeholder="Search categories or items..."
-								value={searchTerm}
-								onChange={(e) => setSearchTerm(e.target.value)}
-								className="pl-10"
-							/>
-						</div>
-
+					<CardContent className="">
 						{/* Categories and Items List */}
 						<ScrollArea className="h-96">
-							<div className="space-y-3">
+							<div className="space-y-2">
 								{/* Render each filtered category */}
 								{filteredCategories.map((category) => {
 									const categoryData = currentDataset[category];
 									const isArray = Array.isArray(categoryData);
 
 									return (
-										<div key={category} className="space-y-2">
+										<div key={category} className="space-y-2 mt-2">
 											{/* Render individual items if category contains array data */}
 											{isArray && (categoryData as DatasetItem[]).length > 0 && (
 												<div className="ml-4 space-y-1 border-l-2 border-muted pl-4">
 													{/* Category header */}
 													<div className="mb-2">
 														<div className="text-xs font-medium text-muted-foreground">
-															{category}:
+															{category == 'default' ? '' : category}
 														</div>
 													</div>
 													{/* Render each item in the category */}
@@ -270,7 +259,7 @@ export const DataSelectionComponent = () => {
 														return (
 															<div
 																key={index}
-																className="flex items-center space-x-2 p-1 rounded border bg-background"
+																className="flex space-x-2 p-1 rounded border border-muted cursor-pointer"
 															>
 																{/* Selection checkbox */}
 																<Checkbox
@@ -283,17 +272,11 @@ export const DataSelectionComponent = () => {
 																{/* Item details */}
 																<Label
 																	htmlFor={itemKey}
-																	className="flex-1 cursor-pointer"
+																	className="flex-1 cursor-pointer text-sm"
 																>
 																	<div className="text-sm font-medium">
 																		{item.name}
 																	</div>
-																	{/* Show documentation URL if available */}
-																	{item.official_docs && (
-																		<div className="text-xs text-muted-foreground truncate">
-																			{item.official_docs}
-																		</div>
-																	)}
 																</Label>
 																{/* Selection indicator */}
 																{isItemSelected && (
