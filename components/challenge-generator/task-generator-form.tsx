@@ -10,9 +10,12 @@ import { createFrontendChallenge } from '@/app/(users)/company/[company-name]/(c
 import { useState } from 'react';
 import { DataSelectionComponent } from '@/components/challenge-generator/data-selection-component';
 import { FileUploaderComponent } from '@/components/file-uploader.component';
+import { FileTextExtractor } from '@/components/file-text-extractor';
+import { TextExtractionResult } from '@/mastra/utils/extract-text-from-file';
 
 const formSchema = z.object({
 	jobOfferFile: z.instanceof(File).optional(),
+	extractedText: z.string().optional(),
 	jsonConfig: z.string().optional(),
 });
 
@@ -20,12 +23,14 @@ export function TaskGeneratorForm() {
 	const [result, setResult] = useState<string | null>(null);
 	const [jsonConfig, setJsonConfig] = useState<string>('');
 	const [uploadedFile, setUploadedFile] = useState<File | null>(null);
+	const [extractedText, setExtractedText] = useState<string>('');
 
 	// 1. Define your form.
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
 			jobOfferFile: undefined,
+			extractedText: '',
 			jsonConfig: '',
 		},
 	});
@@ -42,13 +47,27 @@ export function TaskGeneratorForm() {
 		form.setValue('jobOfferFile', file || undefined);
 	};
 
+	// Handle text extraction result
+	const handleTextExtracted = (result: TextExtractionResult) => {
+		if (result.success) {
+			setExtractedText(result.extractedText);
+			form.setValue('extractedText', result.extractedText);
+		} else {
+			setExtractedText('');
+			form.setValue('extractedText', '');
+		}
+	};
+
 	// todo: define a way to select the right agent for the task
 	// 2. Define a submit handler.
 	async function handleSubmit(formData: z.infer<typeof formSchema>) {
 		let jobOfferContent = '';
 
-		if (formData.jobOfferFile) {
-			// Read file content
+		// Use extracted text if available, otherwise fall back to reading file content
+		if (formData.extractedText) {
+			jobOfferContent = formData.extractedText;
+		} else if (formData.jobOfferFile) {
+			// Read file content as fallback
 			jobOfferContent = await formData.jobOfferFile.text();
 		}
 
@@ -71,6 +90,22 @@ export function TaskGeneratorForm() {
 								</FormControl>
 								<FormDescription>
 									Upload your job offer document (PDF, Word, text files, etc.)
+								</FormDescription>
+								<FormMessage />
+							</FormItem>
+						)}
+					/>
+					<FormField
+						control={form.control}
+						name="extractedText"
+						render={({ field }) => (
+							<FormItem>
+								<FormLabel>Text Extraction</FormLabel>
+								<FormControl>
+									<FileTextExtractor onTextExtracted={handleTextExtracted} />
+								</FormControl>
+								<FormDescription>
+									Extract and process text from your uploaded document for better analysis
 								</FormDescription>
 								<FormMessage />
 							</FormItem>

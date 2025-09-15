@@ -14,9 +14,19 @@ import { pdfSummarizationAgent } from './agents/pdf-summarization-agent';
 // Workflows
 // import { pdfToQuestionsWorkflow } from './workflows/generate-questions-from-pdf-workflow';
 
+// Utils - Note: extractTextFromFile functions are server-side only, use API route instead
+export type { TextExtractionResult, FileProcessingOptions } from './utils/extract-text-from-file';
+
 export const mastra = new Mastra({
 	// workflows: { pdfToQuestionsWorkflow },
-	agents: { textQuestionAgent, pdfQuestionAgent, pdfSummarizationAgent, frontendAgent, backendAgent, techStackExtractorAgent },
+	agents: {
+		textQuestionAgent,
+		pdfQuestionAgent,
+		pdfSummarizationAgent,
+		frontendAgent,
+		backendAgent,
+		techStackExtractorAgent,
+	},
 	storage: new LibSQLStore({
 		// stores telemetry, evals, ... into memory storage, if it needs to persist, change to file:../mastra.db
 		url: ':memory:',
