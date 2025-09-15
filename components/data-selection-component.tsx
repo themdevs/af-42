@@ -282,26 +282,6 @@ export const DataSelectionComponent = () => {
 
 									return (
 										<div key={category} className="space-y-2">
-											{/* Category Header */}
-											{/* <div className="flex items-center space-x-2 p-2 rounded-lg border bg-muted/30">
-												<Checkbox
-													id={categoryKey}
-													checked={isCategorySelected}
-													onCheckedChange={() => handleCategoryToggle(category)}
-												/>
-												<Label htmlFor={categoryKey} className="flex-1 cursor-pointer">
-													<div className="font-medium">{category}</div>
-													<div className="text-xs text-muted-foreground">
-														{isArray
-															? `${(categoryData as DatasetItem[]).length} items`
-															: 'Object data'}
-													</div>
-												</Label>
-												{isCategorySelected && (
-													<CheckCircle2 className="h-4 w-4 text-green-500" />
-												)}
-											</div> */}
-
 											{/* Individual Items */}
 											{isArray && (categoryData as DatasetItem[]).length > 0 && (
 												<div className="ml-4 space-y-1 border-l-2 border-muted pl-4">
@@ -345,13 +325,6 @@ export const DataSelectionComponent = () => {
 															</div>
 														);
 													})}
-													{!expandedCategories.has(category) &&
-														(categoryData as DatasetItem[]).length > 5 && (
-															<div className="text-xs text-muted-foreground italic">
-																... and {(categoryData as DatasetItem[]).length - 5}{' '}
-																more items
-															</div>
-														)}
 												</div>
 											)}
 										</div>
