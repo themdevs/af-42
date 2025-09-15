@@ -26,7 +26,6 @@ import * as dataScienceDataset from '../app/data-json/data-science-dataset.json'
 import * as dbDataset from '../app/data-json/db-dataset.json';
 import * as deepLearningDataset from '../app/data-json/deep-learning-dataset.json';
 import * as devOpsDataset from '../app/data-json/devops-dataset.json';
-import * as fieldsDataset from '../app/data-json/fields.json';
 import * as gamingDataset from '../app/data-json/game-developement-dataset.json';
 import * as generativeAiDataset from '../app/data-json/generative-ai-dataset.json';
 import * as graphicsDataset from '../app/data-json/graphics-dataset.json';
@@ -49,7 +48,6 @@ const datasets = [
 	{ key: 'database', name: 'Database', data: dbDataset },
 	{ key: 'deepLearning', name: 'Deep Learning', data: deepLearningDataset },
 	{ key: 'devOps', name: 'DevOps', data: devOpsDataset },
-	{ key: 'fields', name: 'Fields', data: fieldsDataset },
 	{ key: 'gaming', name: 'Game Development', data: gamingDataset },
 	{ key: 'generativeAi', name: 'Generative AI', data: generativeAiDataset },
 	{ key: 'graphics', name: 'Graphics', data: graphicsDataset },
