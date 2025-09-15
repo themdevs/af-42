@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Nmap",
+    "official_docs": "https://nmap.org/docs.html",
+    "official_website": "https://nmap.org/"
+  },
+  {
+    "name": "Wireshark",
+    "official_docs": "https://www.wireshark.org/docs/",
+    "official_website": "https://www.wireshark.org/"
+  },
+  {
+    "name": "Metasploit Framework",
+    "official_docs": "https://rapid7.github.io/metasploit-framework/",
+    "official_website": "https://www.metasploit.com/"
+  },
+  {
+    "name": "Snort",
+    "official_docs": "https://www.snort.org/documents",
+    "official_website": "https://www.snort.org/"
+  },
+  {
+    "name": "Aircrack-ng",
+    "official_docs": "https://www.aircrack-ng.org/documentation.html",
+    "official_website": "https://www.aircrack-ng.org/"
+  },
+  {
+    "name": "Hashcat",
+    "official_docs": "https://hashcat.net/wiki/start",
+    "official_website": "https://hashcat.net/hashcat/"
+  },
+  {
+    "name": "Burp Suite",
+    "official_docs": "https://portswigger.net/burp/documentation",
+    "official_website": "https://portswigger.net/burp"
+  },
+  {
+    "name": "Kali Linux",
+    "official_docs": "https://www.kali.org/docs/",
+    "official_website": "https://www.kali.org/"
+  },
+  {
+    "name": "John the Ripper",
+    "official_docs": "https://www.openwall.com/john/doc/",
+    "official_website": "https://www.openwall.com/john/"
+  },
+  {
+    "name": "Nikto",
+    "official_docs": "https://github.com/sullo/nikto/blob/master/README.md",
+    "official_website": "https://cirt.net/Nikto2"
+  },
+  {
+    "name": "OWASP ZAP",
+    "official_docs": "https://www.zaproxy.org/docs/",
+    "official_website": "https://www.zaproxy.org/"
+  },
+  {
+    "name": "Nessus",
+    "official_docs": "https://docs.tenable.com/nessus/",
+    "official_website": "https://www.tenable.com/products/nessus"
+  },
+  {
+    "name": "Sniffing & Packet Capture Tools (e.g. tcpdump)",
+    "official_docs": "https://www.tcpdump.org/manpages/tcpdump.1.html",
+    "official_website": "https://www.tcpdump.org/"
+  },
+  {
+    "name": "Suricata",
+    "official_docs": "https://suricata.io/docs/",
+    "official_website": "https://suricata.io/"
+  },
+  {
+    "name": "OpenVAS (Greenbone)",
+    "official_docs": "https://docs.greenbone.net/GSM-Manual/gsm/22/en/index.html",
+    "official_website": "https://www.greenbone.net/en/"
+  },
+  {
+    "name": "Malwarebytes",
+    "official_docs": "https://support.malwarebytes.com/",
+    "official_website": "https://www.malwarebytes.com/"
+  },
+  {
+    "name": "ANY.RUN",
+    "official_docs": "https://any.run/help/",
+    "official_website": "https://any.run/"
+  },
+  {
+    "name": "Cain & Abel",
+    "official_docs": "http://www.oxid.it/cain.html",
+    "official_website": "http://www.oxid.it/cain.html"
+  },
+  {
+    "name": "WiFi-Pineapple",
+    "official_docs": "https://docs.wifipineapple.com/",
+    "official_website": "https://wifipineapple.com/"
+  },
+  {
+    "name": "Splunk (for Security / SIEM)",
+    "official_docs": "https://docs.splunk.com/Documentation/Splunk",
+    "official_website": "https://www.splunk.com/"
+  },
+  {
+    "name": "Elastic Stack (Elasticsearch / Kibana) for SIEM",
+    "official_docs": "https://www.elastic.co/guide/index.html",
+    "official_website": "https://www.elastic.co/"
+  },
+  {
+    "name": "OSSEC",
+    "official_docs": "https://www.ossec.net/docs/",
+    "official_website": "https://www.ossec.net/"
+  },
+  {
+    "name": "Bro/Zeek",
+    "official_docs": "https://docs.zeek.org/en/latest/",
+    "official_website": "https://zeek.org/"
+  },
+  {
+    "name": "ClamAV",
+    "official_docs": "https://docs.clamav.net/",
+    "official_website": "https://www.clamav.net/"
+  }
+]

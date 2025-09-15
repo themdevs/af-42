@@ -203,7 +203,12 @@
 				"name": "Rust",
 				"devdocs_url": "https://devdocs.io/rust/",
 				"official_website": "https://www.rust-lang.org/"
-			}
+			},
+      {
+        "name": "Solidity",
+        "devdocs_url": "https://devdocs.io/solidity/",
+        "official_website": "https://soliditylang.org/"
+      }
 		]
 	}
 }

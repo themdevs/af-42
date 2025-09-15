@@ -1,0 +1,166 @@
+{
+  "RelationalDatabases(SQL)": [
+    {
+      "name": "PostgreSQL",
+      "official_docs": "https://www.postgresql.org/docs/",
+      "official_website": "https://www.postgresql.org/"
+    },
+    {
+      "name": "MySQL",
+      "official_docs": "https://dev.mysql.com/doc/",
+      "official_website": "https://www.mysql.com/"
+    },
+    {
+      "name": "MariaDB",
+      "official_docs": "https://mariadb.com/kb/en/documentation/",
+      "official_website": "https://mariadb.org/"
+    },
+    {
+      "name": "SQLite",
+      "official_docs": "https://sqlite.org/docs.html",
+      "official_website": "https://sqlite.org/"
+    },
+    {
+      "name": "Oracle Database",
+      "official_docs": "https://docs.oracle.com/en/database/",
+      "official_website": "https://www.oracle.com/database/"
+    },
+    {
+      "name": "Microsoft SQL Server",
+      "official_docs": "https://learn.microsoft.com/en-us/sql/",
+      "official_website": "https://www.microsoft.com/sql-server"
+    }
+  ],
+  "NoSQLDatabases": [
+    {
+      "name": "MongoDB",
+      "official_docs": "https://www.mongodb.com/docs/",
+      "official_website": "https://www.mongodb.com/"
+    },
+    {
+      "name": "Cassandra (Apache)",
+      "official_docs": "https://cassandra.apache.org/doc/latest/",
+      "official_website": "https://cassandra.apache.org/"
+    },
+    {
+      "name": "CouchDB",
+      "official_docs": "https://docs.couchdb.org/en/stable/",
+      "official_website": "https://couchdb.apache.org/"
+    },
+    {
+      "name": "RavenDB",
+      "official_docs": "https://ravendb.net/docs",
+      "official_website": "https://ravendb.net/"
+    },
+    {
+      "name": "Couchbase",
+      "official_docs": "https://docs.couchbase.com/",
+      "official_website": "https://www.couchbase.com/"
+    },
+    {
+      "name": "Amazon DynamoDB",
+      "official_docs": "https://docs.aws.amazon.com/dynamodb/",
+      "official_website": "https://aws.amazon.com/dynamodb/"
+    }
+  ],
+  "NewSQLAndDistributed": [
+    {
+      "name": "CockroachDB",
+      "official_docs": "https://www.cockroachlabs.com/docs/",
+      "official_website": "https://www.cockroachlabs.com/"
+    },
+    {
+      "name": "TiDB",
+      "official_docs": "https://docs.pingcap.com/tidb/stable",
+      "official_website": "https://pingcap.com/"
+    },
+    {
+      "name": "YugabyteDB",
+      "official_docs": "https://docs.yugabyte.com/",
+      "official_website": "https://www.yugabyte.com/"
+    },
+    {
+      "name": "Google Cloud Spanner",
+      "official_docs": "https://cloud.google.com/spanner/docs",
+      "official_website": "https://cloud.google.com/spanner"
+    }
+  ],
+  "InMemoryDatabases": [
+    {
+      "name": "Redis",
+      "official_docs": "https://redis.io/docs/",
+      "official_website": "https://redis.io/"
+    },
+    {
+      "name": "Memcached",
+      "official_docs": "https://github.com/memcached/memcached/wiki",
+      "official_website": "https://memcached.org/"
+    },
+    {
+      "name": "Hazelcast",
+      "official_docs": "https://docs.hazelcast.com/",
+      "official_website": "https://hazelcast.com/"
+    }
+  ],
+  "GraphDatabases": [
+    {
+      "name": "Neo4j",
+      "official_docs": "https://neo4j.com/docs/",
+      "official_website": "https://neo4j.com/"
+    },
+    {
+      "name": "Amazon Neptune",
+      "official_docs": "https://docs.aws.amazon.com/neptune/",
+      "official_website": "https://aws.amazon.com/neptune/"
+    },
+    {
+      "name": "ArangoDB",
+      "official_docs": "https://www.arangodb.com/docs/",
+      "official_website": "https://www.arangodb.com/"
+    },
+    {
+      "name": "OrientDB",
+      "official_docs": "https://orientdb.org/docs/",
+      "official_website": "https://orientdb.org/"
+    }
+  ],
+  "TimeSeriesDatabases": [
+    {
+      "name": "InfluxDB",
+      "official_docs": "https://docs.influxdata.com/",
+      "official_website": "https://www.influxdata.com/"
+    },
+    {
+      "name": "TimescaleDB",
+      "official_docs": "https://docs.timescale.com/",
+      "official_website": "https://www.timescale.com/"
+    },
+    {
+      "name": "QuestDB",
+      "official_docs": "https://questdb.io/docs/",
+      "official_website": "https://questdb.io/"
+    }
+  ],
+  "SearchAndAnalytics": [
+    {
+      "name": "Elasticsearch",
+      "official_docs": "https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html",
+      "official_website": "https://www.elastic.co/elasticsearch/"
+    },
+    {
+      "name": "Apache Solr",
+      "official_docs": "https://solr.apache.org/guide/",
+      "official_website": "https://solr.apache.org/"
+    },
+    {
+      "name": "ClickHouse",
+      "official_docs": "https://clickhouse.com/docs/",
+      "official_website": "https://clickhouse.com/"
+    },
+    {
+      "name": "Druid (Apache)",
+      "official_docs": "https://druid.apache.org/docs/latest/",
+      "official_website": "https://druid.apache.org/"
+    }
+  ]
+}

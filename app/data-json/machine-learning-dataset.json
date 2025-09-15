@@ -1,0 +1,102 @@
+[
+  {
+    "name": "scikit-learn",
+    "official_docs": "https://scikit-learn.org/stable/documentation.html",
+    "official_website": "https://scikit-learn.org/"
+  },
+  {
+    "name": "TensorFlow",
+    "official_docs": "https://www.tensorflow.org/api_docs",
+    "official_website": "https://www.tensorflow.org/"
+  },
+  {
+    "name": "PyTorch",
+    "official_docs": "https://pytorch.org/docs/",
+    "official_website": "https://pytorch.org/"
+  },
+  {
+    "name": "Keras",
+    "official_docs": "https://keras.io/api/",
+    "official_website": "https://keras.io/"
+  },
+  {
+    "name": "XGBoost",
+    "official_docs": "https://xgboost.readthedocs.io/en/stable/",
+    "official_website": "https://xgboost.ai/"
+  },
+  {
+    "name": "LightGBM",
+    "official_docs": "https://lightgbm.readthedocs.io/en/stable/",
+    "official_website": "https://lightgbm.readthedocs.io/"
+  },
+  {
+    "name": "CatBoost",
+    "official_docs": "https://catboost.ai/docs/",
+    "official_website": "https://catboost.ai/"
+  },
+  {
+    "name": "H2O.ai",
+    "official_docs": "https://docs.h2o.ai/",
+    "official_website": "https://www.h2o.ai/"
+  },
+  {
+    "name": "MLlib (Apache Spark)",
+    "official_docs": "https://spark.apache.org/docs/latest/ml-guide.html",
+    "official_website": "https://spark.apache.org/mllib/"
+  },
+  {
+    "name": "Shogun",
+    "official_docs": "https://www.shogun-toolbox.org/",
+    "official_website": "https://www.shogun-toolbox.org/"
+  },
+  {
+    "name": "Dlib",
+    "official_docs": "http://dlib.net/ml.html",
+    "official_website": "http://dlib.net/"
+  },
+  {
+    "name": "Orange3",
+    "official_docs": "https://orangedatamining.com/widget-catalog/",
+    "official_website": "https://orangedatamining.com/"
+  },
+  {
+    "name": "RapidMiner",
+    "official_docs": "https://docs.rapidminer.com/latest/",
+    "official_website": "https://rapidminer.com/"
+  },
+  {
+    "name": "Weka",
+    "official_docs": "https://waikato.github.io/weka-wiki/",
+    "official_website": "https://www.cs.waikato.ac.nz/ml/weka/"
+  },
+  {
+    "name": "Theano (archived)",
+    "official_docs": "http://deeplearning.net/software/theano/",
+    "official_website": "http://deeplearning.net/software/theano/"
+  },
+  {
+    "name": "CNTK (Microsoft Cognitive Toolkit)",
+    "official_docs": "https://learn.microsoft.com/en-us/cognitive-toolkit/",
+    "official_website": "https://www.microsoft.com/en-us/cognitive-toolkit/"
+  },
+  {
+    "name": "DeepLearning4J",
+    "official_docs": "https://deeplearning4j.konduit.ai/",
+    "official_website": "https://deeplearning4j.org/"
+  },
+  {
+    "name": "PaddlePaddle",
+    "official_docs": "https://www.paddlepaddle.org.cn/documentation/docs/en/guides/index_en.html",
+    "official_website": "https://www.paddlepaddle.org.cn/"
+  },
+  {
+    "name": "MXNet (Apache)",
+    "official_docs": "https://mxnet.apache.org/api/python/docs/",
+    "official_website": "https://mxnet.apache.org/"
+  },
+  {
+    "name": "JAX",
+    "official_docs": "https://jax.readthedocs.io/en/latest/",
+    "official_website": "https://github.com/google/jax"
+  }
+]

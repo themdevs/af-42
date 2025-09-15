@@ -1,0 +1,122 @@
+{
+  "NativeMobilePlatforms": [
+    {
+      "name": "Android",
+      "official_docs": "https://developer.android.com/docs",
+      "official_website": "https://developer.android.com/"
+    },
+    {
+      "name": "iOS",
+      "official_docs": "https://developer.apple.com/documentation/",
+      "official_website": "https://developer.apple.com/ios/"
+    },
+    {
+      "name": "Windows UWP (Universal Windows Platform)",
+      "official_docs": "https://learn.microsoft.com/en-us/windows/uwp/",
+      "official_website": "https://developer.microsoft.com/en-us/windows/"
+    }
+  ],
+  "CrossPlatformFrameworks": [
+    {
+      "name": "React Native",
+      "official_docs": "https://reactnative.dev/docs/getting-started",
+      "official_website": "https://reactnative.dev/"
+    },
+    {
+      "name": "Flutter",
+      "official_docs": "https://docs.flutter.dev/",
+      "official_website": "https://flutter.dev/"
+    },
+    {
+      "name": "Xamarin / .NET MAUI",
+      "official_docs": "https://learn.microsoft.com/en-us/dotnet/maui/",
+      "official_website": "https://dotnet.microsoft.com/en-us/apps/maui"
+    },
+    {
+      "name": "Ionic",
+      "official_docs": "https://ionicframework.com/docs",
+      "official_website": "https://ionicframework.com/"
+    },
+    {
+      "name": "Cordova (Apache)",
+      "official_docs": "https://cordova.apache.org/docs/en/latest/",
+      "official_website": "https://cordova.apache.org/"
+    },
+    {
+      "name": "NativeScript",
+      "official_docs": "https://docs.nativescript.org/",
+      "official_website": "https://nativescript.org/"
+    },
+    {
+      "name": "Kotlin Multiplatform Mobile (KMM)",
+      "official_docs": "https://kotlinlang.org/docs/multiplatform-mobile-getting-started.html",
+      "official_website": "https://kotlinlang.org/lp/mobile/"
+    }
+  ],
+  "MobileBackendServices": [
+    {
+      "name": "Firebase",
+      "official_docs": "https://firebase.google.com/docs",
+      "official_website": "https://firebase.google.com/"
+    },
+    {
+      "name": "AWS Amplify",
+      "official_docs": "https://docs.amplify.aws/",
+      "official_website": "https://aws.amazon.com/amplify/"
+    },
+    {
+      "name": "Supabase",
+      "official_docs": "https://supabase.com/docs",
+      "official_website": "https://supabase.com/"
+    },
+    {
+      "name": "Parse Platform",
+      "official_docs": "https://docs.parseplatform.org/",
+      "official_website": "https://parseplatform.org/"
+    }
+  ],
+  "UIFrameworksAndSDKs": [
+    {
+      "name": "SwiftUI",
+      "official_docs": "https://developer.apple.com/documentation/swiftui/",
+      "official_website": "https://developer.apple.com/xcode/swiftui/"
+    },
+    {
+      "name": "UIKit",
+      "official_docs": "https://developer.apple.com/documentation/uikit/",
+      "official_website": "https://developer.apple.com/"
+    },
+    {
+      "name": "Jetpack Compose",
+      "official_docs": "https://developer.android.com/jetpack/compose/documentation",
+      "official_website": "https://developer.android.com/jetpack/compose"
+    },
+    {
+      "name": "Material Design",
+      "official_docs": "https://m3.material.io/",
+      "official_website": "https://material.io/"
+    }
+  ],
+  "MobileDevTools": [
+    {
+      "name": "Android Studio",
+      "official_docs": "https://developer.android.com/studio/intro",
+      "official_website": "https://developer.android.com/studio"
+    },
+    {
+      "name": "Xcode",
+      "official_docs": "https://developer.apple.com/xcode/resources/",
+      "official_website": "https://developer.apple.com/xcode/"
+    },
+    {
+      "name": "Fastlane",
+      "official_docs": "https://docs.fastlane.tools/",
+      "official_website": "https://fastlane.tools/"
+    },
+    {
+      "name": "Gradle",
+      "official_docs": "https://docs.gradle.org/current/userguide/userguide.html",
+      "official_website": "https://gradle.org/"
+    }
+  ]
+}

@@ -1,0 +1,191 @@
+{
+	"CryptographyLibrariesAndFrameworks": [
+		{
+			"name": "OpenSSL",
+			"official_docs": "https://www.openssl.org/docs/",
+			"official_website": "https://www.openssl.org/"
+		},
+		{
+			"name": "libsodium",
+			"official_docs": "https://doc.libsodium.org/",
+			"official_website": "https://libsodium.gitbook.io/doc/"
+		},
+		{
+			"name": "Bouncy Castle",
+			"official_docs": "https://www.bouncycastle.org/specifications.html",
+			"official_website": "https://www.bouncycastle.org/"
+		},
+		{
+			"name": "NaCl (Networking and Cryptography library)",
+			"official_docs": "https://nacl.cr.yp.to/",
+			"official_website": "https://nacl.cr.yp.to/"
+		},
+		{
+			"name": "WolfSSL",
+			"official_docs": "https://www.wolfssl.com/docs/",
+			"official_website": "https://www.wolfssl.com/"
+		},
+		{
+			"name": "Crypto++",
+			"official_docs": "https://www.cryptopp.com/docs/ref/",
+			"official_website": "https://www.cryptopp.com/"
+		}
+	],
+	"EncryptionStandardsAndProtocols": [
+		{
+			"name": "AES (Advanced Encryption Standard)",
+			"official_docs": "https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.197.pdf",
+			"official_website": "https://csrc.nist.gov/projects/block-cipher-techniques"
+		},
+		{
+			"name": "RSA",
+			"official_docs": "https://datatracker.ietf.org/doc/html/rfc8017",
+			"official_website": "https://www.rsa.com/"
+		},
+		{
+			"name": "Elliptic Curve Cryptography (ECC)",
+			"official_docs": "https://neuromancer.sk/std/secg/secp256r1",
+			"official_website": "https://www.secg.org/"
+		},
+		{
+			"name": "ChaCha20",
+			"official_docs": "https://datatracker.ietf.org/doc/html/rfc8439",
+			"official_website": "https://www.rfc-editor.org/rfc/rfc8439"
+		},
+		{
+			"name": "Twofish",
+			"official_docs": "https://www.schneier.com/academic/twofish/",
+			"official_website": "https://www.schneier.com/academic/twofish/"
+		},
+		{
+			"name": "Blowfish",
+			"official_docs": "https://www.schneier.com/academic/blowfish/",
+			"official_website": "https://www.schneier.com/academic/blowfish/"
+		}
+	],
+	"HashingAlgorithms": [
+		{
+			"name": "SHA-2 (Secure Hash Algorithm 2)",
+			"official_docs": "https://csrc.nist.gov/publications/detail/fips/180/4/final",
+			"official_website": "https://csrc.nist.gov/projects/hash-functions"
+		},
+		{
+			"name": "SHA-3",
+			"official_docs": "https://csrc.nist.gov/publications/detail/fips/202/final",
+			"official_website": "https://keccak.team/"
+		},
+		{
+			"name": "MD5",
+			"official_docs": "https://www.rfc-editor.org/rfc/rfc1321",
+			"official_website": "https://www.rfc-editor.org/rfc/rfc1321"
+		},
+		{
+			"name": "BLAKE2",
+			"official_docs": "https://www.blake2.net/",
+			"official_website": "https://www.blake2.net/"
+		},
+		{
+			"name": "Argon2 (Password Hashing)",
+			"official_docs": "https://datatracker.ietf.org/doc/html/draft-irtf-cfrg-argon2-03",
+			"official_website": "https://www.password-hashing.net/"
+		},
+		{
+			"name": "scrypt",
+			"official_docs": "https://datatracker.ietf.org/doc/html/rfc7914",
+			"official_website": "https://www.rfc-editor.org/rfc/rfc7914"
+		}
+	],
+	"PKIAndCertificates": [
+		{
+			"name": "X.509 Certificates",
+			"official_docs": "https://www.itu.int/rec/T-REC-X.509/en",
+			"official_website": "https://www.itu.int/"
+		},
+		{
+			"name": "OpenPGP (Pretty Good Privacy)",
+			"official_docs": "https://www.rfc-editor.org/rfc/rfc4880",
+			"official_website": "https://www.openpgp.org/"
+		},
+		{
+			"name": "Let's Encrypt",
+			"official_docs": "https://letsencrypt.org/docs/",
+			"official_website": "https://letsencrypt.org/"
+		}
+	],
+	"SecureCommunicationProtocols": [
+		{
+			"name": "TLS (Transport Layer Security)",
+			"official_docs": "https://www.rfc-editor.org/rfc/rfc8446",
+			"official_website": "https://www.ietf.org/"
+		},
+		{
+			"name": "SSL (Secure Sockets Layer)",
+			"official_docs": "https://www.rfc-editor.org/rfc/rfc6101",
+			"official_website": "https://www.ietf.org/"
+		},
+		{
+			"name": "IPsec",
+			"official_docs": "https://www.rfc-editor.org/rfc/rfc6071",
+			"official_website": "https://www.rfc-editor.org/"
+		},
+		{
+			"name": "SSH (Secure Shell)",
+			"official_docs": "https://www.rfc-editor.org/rfc/rfc4251",
+			"official_website": "https://www.openssh.com/"
+		},
+		{
+			"name": "WireGuard",
+			"official_docs": "https://www.wireguard.com/protocol/",
+			"official_website": "https://www.wireguard.com/"
+		}
+	],
+	"HardwareSecurity": [
+		{
+			"name": "Trusted Platform Module (TPM)",
+			"official_docs": "https://trustedcomputinggroup.org/resource/tpm-library-specification/",
+			"official_website": "https://trustedcomputinggroup.org/"
+		},
+		{
+			"name": "Hardware Security Modules (HSMs)",
+			"official_docs": "https://csrc.nist.gov/glossary/term/hardware_security_module",
+			"official_website": "https://csrc.nist.gov/"
+		},
+		{
+			"name": "YubiKey",
+			"official_docs": "https://developers.yubico.com/",
+			"official_website": "https://www.yubico.com/"
+		}
+	],
+	"PostQuantumCryptography": [
+		{
+			"name": "CRYSTALS-Kyber (Key Encapsulation)",
+			"official_docs": "https://pq-crystals.org/kyber/",
+			"official_website": "https://pq-crystals.org/kyber/"
+		},
+		{
+			"name": "CRYSTALS-Dilithium (Digital Signatures)",
+			"official_docs": "https://pq-crystals.org/dilithium/",
+			"official_website": "https://pq-crystals.org/dilithium/"
+		},
+		{
+			"name": "Falcon (Digital Signatures)",
+			"official_docs": "https://falcon-sign.info/",
+			"official_website": "https://falcon-sign.info/"
+		},
+		{
+			"name": "SPHINCS+ (Stateless Hash-Based Signatures)",
+			"official_docs": "https://sphincs.org/",
+			"official_website": "https://sphincs.org/"
+		},
+		{
+			"name": "BIKE (Code-Based KEM)",
+			"official_docs": "https://bikesuite.org/",
+			"official_website": "https://bikesuite.org/"
+		},
+		{
+			"name": "Rainbow (Multivariate Signatures - retired)",
+			"official_docs": "https://pq-crystals.org/rainbow/",
+			"official_website": "https://pq-crystals.org/rainbow/"
+		}
+	]
+}

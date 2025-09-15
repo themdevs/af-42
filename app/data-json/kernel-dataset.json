@@ -1,0 +1,105 @@
+{
+	"MonolithicKernels": [
+		{
+			"name": "Linux Kernel",
+			"official_docs": "https://www.kernel.org/doc/html/latest/",
+			"official_website": "https://www.kernel.org/"
+		},
+		{
+			"name": "Windows NT Kernel",
+			"official_docs": "https://learn.microsoft.com/en-us/windows-hardware/drivers/",
+			"official_website": "https://learn.microsoft.com/en-us/windows-hardware/"
+		},
+		{
+			"name": "FreeBSD Kernel",
+			"official_docs": "https://docs.freebsd.org/en/books/arch-handbook/",
+			"official_website": "https://www.freebsd.org/"
+		},
+		{
+			"name": "OpenBSD Kernel",
+			"official_docs": "https://man.openbsd.org/",
+			"official_website": "https://www.openbsd.org/"
+		},
+		{
+			"name": "NetBSD Kernel",
+			"official_docs": "https://www.netbsd.org/docs/",
+			"official_website": "https://www.netbsd.org/"
+		},
+		{
+			"name": "Solaris Kernel (Illumos / OpenIndiana)",
+			"official_docs": "https://illumos.org/docs/",
+			"official_website": "https://illumos.org/"
+		}
+	],
+	"MicroKernels": [
+		{
+			"name": "MINIX Kernel",
+			"official_docs": "http://wiki.minix3.org/doku.php?id=www:documentation",
+			"official_website": "https://www.minix3.org/"
+		},
+		{
+			"name": "seL4 Microkernel",
+			"official_docs": "https://docs.sel4.systems/",
+			"official_website": "https://sel4.systems/"
+		},
+		{
+			"name": "QNX Neutrino Kernel",
+			"official_docs": "https://www.qnx.com/developers/docs/",
+			"official_website": "https://www.qnx.com/"
+		},
+		{
+			"name": "L4 Microkernel Family",
+			"official_docs": "https://os.inf.tu-dresden.de/L4Re/doc/index.html",
+			"official_website": "https://os.inf.tu-dresden.de/L4/"
+		}
+	],
+	"HybridKernels": [
+		{
+			"name": "Darwin / XNU Kernel (macOS, iOS)",
+			"official_docs": "https://developer.apple.com/library/archive/documentation/Darwin/Conceptual/KernelProgramming/",
+			"official_website": "https://opensource.apple.com/source/xnu/"
+		},
+		{
+			"name": "Haiku OS Kernel",
+			"official_docs": "https://www.haiku-os.org/docs/develop/",
+			"official_website": "https://www.haiku-os.org/"
+		}
+	],
+	"KernelRelatedTechnologies": [
+		{
+			"name": "eBPF (Extended Berkeley Packet Filter)",
+			"official_docs": "https://ebpf.io/what-is-ebpf/",
+			"official_website": "https://ebpf.io/"
+		},
+		{
+			"name": "KVM (Kernel-based Virtual Machine)",
+			"official_docs": "https://www.linux-kvm.org/page/Documentation",
+			"official_website": "https://www.linux-kvm.org/"
+		},
+		{
+			"name": "DTrace",
+			"official_docs": "https://illumos.org/books/dtrace/",
+			"official_website": "https://dtrace.org/blogs/"
+		},
+		{
+			"name": "SystemTap",
+			"official_docs": "https://sourceware.org/systemtap/documentation.html",
+			"official_website": "https://sourceware.org/systemtap/"
+		},
+		{
+			"name": "Perf (Linux Performance Counters)",
+			"official_docs": "https://perf.wiki.kernel.org/index.php/Main_Page",
+			"official_website": "https://perf.wiki.kernel.org/"
+		},
+		{
+			"name": "SELinux (Security-Enhanced Linux)",
+			"official_docs": "https://selinuxproject.org/page/Main_Page",
+			"official_website": "https://selinuxproject.org/"
+		},
+		{
+			"name": "AppArmor",
+			"official_docs": "https://gitlab.com/apparmor/apparmor/-/wikis/home",
+			"official_website": "https://apparmor.net/"
+		}
+	]
+}

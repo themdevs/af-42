@@ -1,0 +1,217 @@
+[
+  {
+    "name": "Bitcoin",
+    "official_docs": "https://developer.bitcoin.org/",
+    "official_website": "https://bitcoin.org/"
+  },
+  {
+    "name": "Ethereum",
+    "official_docs": "https://ethereum.org/developers/docs/",
+    "official_website": "https://ethereum.org/"
+  },
+  {
+    "name": "Solana",
+    "official_docs": "https://docs.solana.com/",
+    "official_website": "https://solana.com/"
+  },
+  {
+    "name": "Polkadot",
+    "official_docs": "https://docs.polkadot.network/",
+    "official_website": "https://polkadot.network/"
+  },
+  {
+    "name": "Cardano",
+    "official_docs": "https://docs.cardano.org/",
+    "official_website": "https://cardano.org/"
+  },
+  {
+    "name": "Avalanche",
+    "official_docs": "https://docs.avax.network/",
+    "official_website": "https://avax.network/"
+  },
+  {
+    "name": "Tezos",
+    "official_docs": "https://tezos.gitlab.io/mainnet-docs/",
+    "official_website": "https://tezos.com/"
+  },
+  {
+    "name": "Binance Smart Chain",
+    "official_docs": "https://docs.bnbchain.org/",
+    "official_website": "https://www.bnbchain.org/"
+  },
+  {
+    "name": "NEO",
+    "official_docs": "https://docs.neo.org/docs/en-us/index.html",
+    "official_website": "https://neo.org/"
+  },
+  {
+    "name": "XRPL (XRP Ledger)",
+    "official_docs": "https://xrpl.org/docs.html",
+    "official_website": "https://xrpl.org/"
+  },
+  {
+    "name": "Stellar",
+    "official_docs": "https://developers.stellar.org/docs/",
+    "official_website": "https://www.stellar.org/"
+  },
+  {
+    "name": "Tron",
+    "official_docs": "https://developer.tron.network/docs/",
+    "official_website": "https://tron.network/"
+  },
+  {
+    "name": "EOS",
+    "official_docs": "https://developers.eos.io/welcome/latest/index",
+    "official_website": "https://eos.io/"
+  },
+  {
+    "name": "Hyperledger Fabric",
+    "official_docs": "https://hyperledger-fabric.readthedocs.io/en/latest/",
+    "official_website": "https://www.hyperledger.org/projects/fabric"
+  },
+  {
+    "name": "Hyperledger Sawtooth",
+    "official_docs": "https://sawtooth.hyperledger.org/docs/core/releases/latest/",
+    "official_website": "https://www.hyperledger.org/projects/sawtooth"
+  },
+  {
+    "name": "Corda",
+    "official_docs": "https://docs.r3.com/en/platform/corda/4.10/key_concepts/index.html",
+    "official_website": "https://www.r3.com/corda-platform/"
+  },
+  {
+    "name": "Quorum",
+    "official_docs": "https://docs.goquorum.consensys.net/en/stable/",
+    "official_website": "https://www.goquorum.com/"
+  },
+  {
+    "name": "Algorand",
+    "official_docs": "https://developer.algorand.org/docs/",
+    "official_website": "https://www.algorand.com/"
+  },
+  {
+    "name": "Cosmos",
+    "official_docs": "https://docs.cosmos.network/",
+    "official_website": "https://cosmos.network/"
+  },
+  {
+    "name": "Near Protocol",
+    "official_docs": "https://docs.near.org/",
+    "official_website": "https://near.org/"
+  },
+  {
+    "name": "Flow",
+    "official_docs": "https://docs.onflow.org/",
+    "official_website": "https://flow.com/"
+  },
+  {
+    "name": "Polygon",
+    "official_docs": "https://docs.polygon.technology/",
+    "official_website": "https://polygon.technology/"
+  },
+  {
+    "name": "Arbitrum",
+    "official_docs": "https://developer.arbitrum.io/docs/",
+    "official_website": "https://arbitrum.io/"
+  },
+  {
+    "name": "zkSync",
+    "official_docs": "https://zksync.io/dev/",
+    "official_website": "https://zksync.io/"
+  },
+  {
+    "name": "Optimism",
+    "official_docs": "https://community.optimism.io/docs/",
+    "official_website": "https://optimism.io/"
+  },
+  {
+    "name": "Hedera Hashgraph",
+    "official_docs": "https://docs.hedera.com/",
+    "official_website": "https://hedera.com/"
+  },
+  {
+    "name": "IOTA",
+    "official_docs": "https://wiki.iota.org/",
+    "official_website": "https://www.iota.org/"
+  },
+  {
+    "name": "Harmony",
+    "official_docs": "https://docs.harmony.one/home/",
+    "official_website": "https://www.harmony.one/"
+  },
+  {
+    "name": "Moonbeam",
+    "official_docs": "https://docs.moonbeam.network/",
+    "official_website": "https://moonbeam.network/"
+  },
+  {
+    "name": "Fantom",
+    "official_docs": "https://docs.fantom.foundation/",
+    "official_website": "https://fantom.foundation/"
+  },
+  {
+    "name": "Avalanche",
+    "official_docs": "https://docs.avax.network/",
+    "official_website": "https://avax.network/"
+  },
+  {
+    "name": "Celo",
+    "official_docs": "https://docs.celo.org/",
+    "official_website": "https://celo.org/"
+  },
+  {
+    "name": "Flow",
+    "official_docs": "https://docs.onflow.org/",
+    "official_website": "https://flow.com/"
+  },
+  {
+    "name": "Filecoin",
+    "official_docs": "https://docs.filecoin.io/",
+    "official_website": "https://filecoin.io/"
+  },
+  {
+    "name": "Arweave",
+    "official_docs": "https://docs.arweave.org/",
+    "official_website": "https://www.arweave.org/"
+  },
+  {
+    "name": "Dash",
+    "official_docs": "https://docs.dash.org/",
+    "official_website": "https://www.dash.org/"
+  },
+  {
+    "name": "Monero",
+    "official_docs": "https://www.getmonero.org/resources/research-lab/",
+    "official_website": "https://www.getmonero.org/"
+  },
+  {
+    "name": "EOSIO",
+    "official_docs": "https://developers.eos.io/",
+    "official_website": "https://eos.io/"
+  },
+  {
+    "name": "Ripple (XRP Ledger)",
+    "official_docs": "https://xrpl.org/docs.html",
+    "official_website": "https://xrpl.org/"
+  },
+  {
+    "name": "Tron",
+    "official_docs": "https://developer.tron.network/docs/",
+    "official_website": "https://tron.network/"
+  },
+  {
+    "name": "Solana",
+    "official_docs": "https://docs.solana.com/",
+    "official_website": "https://solana.com/"
+  },
+  {
+    "name": "Bitcoin Cash",
+    "official_docs": "https://developer.bitcoin.com/",
+    "official_website": "https://www.bitcoincash.org/"
+  },
+  {
+    "name": "Litecoin",
+    "official_docs": "https://litecoin.com/",
+    "official_website": "https://litecoin.com/"
+  }
+]

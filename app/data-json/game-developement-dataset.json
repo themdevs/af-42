@@ -1,0 +1,201 @@
+{
+	"GameEngines": [
+		{
+			"name": "Unity",
+			"official_docs": "https://docs.unity3d.com/Manual/index.html",
+			"official_website": "https://unity.com/"
+		},
+		{
+			"name": "Unreal Engine",
+			"official_docs": "https://docs.unrealengine.com/",
+			"official_website": "https://www.unrealengine.com/"
+		},
+		{
+			"name": "Godot",
+			"official_docs": "https://docs.godotengine.org/en/stable/",
+			"official_website": "https://godotengine.org/"
+		},
+		{
+			"name": "CryEngine",
+			"official_docs": "https://docs.cryengine.com/",
+			"official_website": "https://www.cryengine.com/"
+		},
+		{
+			"name": "Amazon Lumberyard / Open 3D Engine",
+			"official_docs": "https://www.o3de.org/docs/",
+			"official_website": "https://o3de.org/"
+		},
+		{
+			"name": "Cocos2d-x",
+			"official_docs": "https://docs.cocos.com/cocos2d-x/manual/en/",
+			"official_website": "https://www.cocos.com/en/"
+		},
+		{
+			"name": "Construct",
+			"official_docs": "https://www.construct.net/en/make-games/manuals",
+			"official_website": "https://www.construct.net/"
+		},
+		{
+			"name": "RPG Maker",
+			"official_docs": "https://www.rpgmakerweb.com/support/products/documentation",
+			"official_website": "https://www.rpgmakerweb.com/"
+		}
+	],
+	"GameFrameworksAndLibraries": [
+		{
+			"name": "MonoGame",
+			"official_docs": "https://docs.monogame.net/",
+			"official_website": "https://www.monogame.net/"
+		},
+		{
+			"name": "libGDX",
+			"official_docs": "https://libgdx.com/dev/",
+			"official_website": "https://libgdx.com/"
+		},
+		{
+			"name": "Phaser",
+			"official_docs": "https://newdocs.phaser.io/docs/3.55.2",
+			"official_website": "https://phaser.io/"
+		},
+		{
+			"name": "Pygame",
+			"official_docs": "https://www.pygame.org/docs/",
+			"official_website": "https://www.pygame.org/"
+		},
+		{
+			"name": "LOVE2D",
+			"official_docs": "https://love2d.org/wiki/love",
+			"official_website": "https://love2d.org/"
+		},
+		{
+			"name": "SDL (Simple DirectMedia Layer)",
+			"official_docs": "https://wiki.libsdl.org/",
+			"official_website": "https://www.libsdl.org/"
+		},
+		{
+			"name": "SFML (Simple and Fast Multimedia Library)",
+			"official_docs": "https://www.sfml-dev.org/documentation/",
+			"official_website": "https://www.sfml-dev.org/"
+		}
+	],
+	"PhysicsEngines": [
+		{
+			"name": "Box2D",
+			"official_docs": "https://box2d.org/documentation/",
+			"official_website": "https://box2d.org/"
+		},
+		{
+			"name": "Bullet Physics",
+			"official_docs": "https://pybullet.org/Bullet/BulletFull/",
+			"official_website": "https://pybullet.org/"
+		},
+		{
+			"name": "PhysX (NVIDIA)",
+			"official_docs": "https://gameworksdocs.nvidia.com/PhysX/4.1/documentation/physxguide/Index.html",
+			"official_website": "https://developer.nvidia.com/physx-sdk"
+		},
+		{
+			"name": "Havok",
+			"official_docs": "https://www.havok.com/docs/",
+			"official_website": "https://www.havok.com/"
+		},
+		{
+			"name": "Chipmunk2D",
+			"official_docs": "https://chipmunk-physics.net/release/ChipmunkLatest-Docs/",
+			"official_website": "https://chipmunk-physics.net/"
+		}
+	],
+	"ScriptingLanguagesForGames": [
+		{
+			"name": "Lua",
+			"official_docs": "https://www.lua.org/docs.html",
+			"official_website": "https://www.lua.org/"
+		},
+		{
+			"name": "GDScript (Godot)",
+			"official_docs": "https://docs.godotengine.org/en/stable/tutorials/scripting/gdscript/index.html",
+			"official_website": "https://godotengine.org/"
+		},
+		{
+			"name": "Unreal Blueprints",
+			"official_docs": "https://docs.unrealengine.com/en-US/ProgrammingAndScripting/Blueprints/index.html",
+			"official_website": "https://www.unrealengine.com/"
+		},
+		{
+			"name": "C# for Unity",
+			"official_docs": "https://learn.unity.com/",
+			"official_website": "https://unity.com/"
+		}
+	],
+	"AudioEngines": [
+		{
+			"name": "FMOD",
+			"official_docs": "https://www.fmod.com/resources/documentation",
+			"official_website": "https://www.fmod.com/"
+		},
+		{
+			"name": "Wwise (Audiokinetic)",
+			"official_docs": "https://www.audiokinetic.com/library/",
+			"official_website": "https://www.audiokinetic.com/"
+		},
+		{
+			"name": "OpenAL",
+			"official_docs": "https://openal-soft.org/documentation/",
+			"official_website": "https://openal-soft.org/"
+		},
+		{
+			"name": "Miles Sound System",
+			"official_docs": "https://docs.radgametools.com/miles/",
+			"official_website": "https://www.radgametools.com/miles.htm"
+		}
+	],
+	"MultiplayerAndNetworking": [
+		{
+			"name": "Photon Engine",
+			"official_docs": "https://doc.photonengine.com/",
+			"official_website": "https://www.photonengine.com/"
+		},
+		{
+			"name": "Mirror (for Unity)",
+			"official_docs": "https://mirror-networking.gitbook.io/docs/",
+			"official_website": "https://mirror-networking.com/"
+		},
+		{
+			"name": "Colyseus",
+			"official_docs": "https://docs.colyseus.io/",
+			"official_website": "https://www.colyseus.io/"
+		},
+		{
+			"name": "RakNet",
+			"official_docs": "https://github.com/facebookarchive/RakNet",
+			"official_website": "https://github.com/facebookarchive/RakNet"
+		}
+	],
+	"AssetCreationAndManagement": [
+		{
+			"name": "Blender",
+			"official_docs": "https://docs.blender.org/manual/en/latest/",
+			"official_website": "https://www.blender.org/"
+		},
+		{
+			"name": "Maya",
+			"official_docs": "https://help.autodesk.com/view/MAYAUL/2024/ENU/",
+			"official_website": "https://www.autodesk.com/products/maya/"
+		},
+		{
+			"name": "3ds Max",
+			"official_docs": "https://help.autodesk.com/view/3DSMAX/2024/ENU/",
+			"official_website": "https://www.autodesk.com/products/3ds-max/"
+		},
+		{
+			"name": "Substance Painter",
+			"official_docs": "https://substance3d.adobe.com/documentation/spdoc/",
+			"official_website": "https://substance3d.adobe.com/"
+		},
+		{
+			"name": "ZBrush",
+			"official_docs": "https://pixologic.com/zbrush/learning/",
+			"official_website": "https://pixologic.com/zbrush/"
+		}
+	]
+}

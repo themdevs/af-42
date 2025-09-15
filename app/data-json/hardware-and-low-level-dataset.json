@@ -1,0 +1,169 @@
+{
+  "ProcessorsAndInstructionSets": [
+    {
+      "name": "x86 (Intel/AMD)",
+      "official_docs": "https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html",
+      "official_website": "https://www.intel.com/"
+    },
+    {
+      "name": "ARM Architecture",
+      "official_docs": "https://developer.arm.com/documentation/",
+      "official_website": "https://www.arm.com/"
+    },
+    {
+      "name": "RISC-V",
+      "official_docs": "https://riscv.org/technical/specifications/",
+      "official_website": "https://riscv.org/"
+    },
+    {
+      "name": "MIPS Architecture",
+      "official_docs": "https://www.mips.com/develop/tools/docs/",
+      "official_website": "https://www.mips.com/"
+    },
+    {
+      "name": "PowerPC",
+      "official_docs": "https://www.power.org/documentation/",
+      "official_website": "https://www.power.org/"
+    }
+  ],
+  "VirtualizationAndHypervisors": [
+    {
+      "name": "KVM (Kernel-based Virtual Machine)",
+      "official_docs": "https://www.linux-kvm.org/page/Documentation",
+      "official_website": "https://www.linux-kvm.org/"
+    },
+    {
+      "name": "Xen Hypervisor",
+      "official_docs": "https://xenproject.org/developers/teams/documentation/",
+      "official_website": "https://xenproject.org/"
+    },
+    {
+      "name": "VMware ESXi",
+      "official_docs": "https://docs.vmware.com/en/VMware-vSphere/index.html",
+      "official_website": "https://www.vmware.com/products/esxi-and-esx.html"
+    },
+    {
+      "name": "Microsoft Hyper-V",
+      "official_docs": "https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/",
+      "official_website": "https://www.microsoft.com/en-us/evalcenter/evaluate-hyper-v-server-2019"
+    },
+    {
+      "name": "QEMU",
+      "official_docs": "https://www.qemu.org/docs/master/",
+      "official_website": "https://www.qemu.org/"
+    },
+    {
+      "name": "VirtualBox",
+      "official_docs": "https://www.virtualbox.org/wiki/Documentation",
+      "official_website": "https://www.virtualbox.org/"
+    }
+  ],
+  "FirmwareAndBootloaders": [
+    {
+      "name": "BIOS",
+      "official_docs": "https://uefi.org/oldbios",
+      "official_website": "https://uefi.org/"
+    },
+    {
+      "name": "UEFI",
+      "official_docs": "https://uefi.org/specifications",
+      "official_website": "https://uefi.org/"
+    },
+    {
+      "name": "Coreboot",
+      "official_docs": "https://doc.coreboot.org/",
+      "official_website": "https://www.coreboot.org/"
+    },
+    {
+      "name": "SeaBIOS",
+      "official_docs": "https://www.seabios.org/Documentation",
+      "official_website": "https://www.seabios.org/"
+    },
+    {
+      "name": "GRUB Bootloader",
+      "official_docs": "https://www.gnu.org/software/grub/manual/",
+      "official_website": "https://www.gnu.org/software/grub/"
+    },
+    {
+      "name": "PXE (Preboot Execution Environment)",
+      "official_docs": "https://uefi.org/specifications",
+      "official_website": "https://uefi.org/"
+    }
+  ],
+  "EmbeddedSystems": [
+    {
+      "name": "Arduino",
+      "official_docs": "https://docs.arduino.cc/",
+      "official_website": "https://www.arduino.cc/"
+    },
+    {
+      "name": "Raspberry Pi",
+      "official_docs": "https://www.raspberrypi.com/documentation/",
+      "official_website": "https://www.raspberrypi.com/"
+    },
+    {
+      "name": "ESP32 (Espressif)",
+      "official_docs": "https://docs.espressif.com/projects/esp-idf/en/latest/",
+      "official_website": "https://www.espressif.com/en/products/socs/esp32"
+    },
+    {
+      "name": "STM32 (STMicroelectronics)",
+      "official_docs": "https://www.st.com/en/microcontrollers-microprocessors/stm32-32-bit-arm-cortex-mcus.html",
+      "official_website": "https://www.st.com/stm32"
+    },
+    {
+      "name": "BeagleBone",
+      "official_docs": "https://beagleboard.org/Documentation",
+      "official_website": "https://beagleboard.org/"
+    }
+  ],
+  "DriverAndLowLevelInterfaces": [
+    {
+      "name": "PCI Express (PCIe)",
+      "official_docs": "https://pcisig.com/specifications",
+      "official_website": "https://pcisig.com/"
+    },
+    {
+      "name": "USB Specification",
+      "official_docs": "https://www.usb.org/documents",
+      "official_website": "https://www.usb.org/"
+    },
+    {
+      "name": "I2C (Inter-Integrated Circuit)",
+      "official_docs": "https://www.nxp.com/docs/en/user-guide/UM10204.pdf",
+      "official_website": "https://www.nxp.com/"
+    },
+    {
+      "name": "SPI (Serial Peripheral Interface)",
+      "official_docs": "https://www.nxp.com/pages/serial-peripheral-interface-spi:SPI",
+      "official_website": "https://www.nxp.com/"
+    },
+    {
+      "name": "CAN Bus",
+      "official_docs": "https://www.iso.org/standard/63648.html",
+      "official_website": "https://www.can-cia.org/"
+    }
+  ],
+  "HardwareSecurityExtensions": [
+    {
+      "name": "Intel SGX (Software Guard Extensions)",
+      "official_docs": "https://www.intel.com/content/www/us/en/developer/tools/software-guard-extensions/overview.html",
+      "official_website": "https://www.intel.com/sgx"
+    },
+    {
+      "name": "AMD SEV (Secure Encrypted Virtualization)",
+      "official_docs": "https://developer.amd.com/sev/",
+      "official_website": "https://www.amd.com/en/technologies/secure-encrypted-virtualization"
+    },
+    {
+      "name": "Trusted Platform Module (TPM)",
+      "official_docs": "https://trustedcomputinggroup.org/resource/tpm-library-specification/",
+      "official_website": "https://trustedcomputinggroup.org/"
+    },
+    {
+      "name": "ARM TrustZone",
+      "official_docs": "https://developer.arm.com/architectures/security-architectures/trustzone",
+      "official_website": "https://developer.arm.com/"
+    }
+  ]
+}

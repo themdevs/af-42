@@ -1,0 +1,225 @@
+{
+  "BlockchainsAndNetworks": [
+    {
+      "name": "Ethereum",
+      "official_docs": "https://ethereum.org/en/developers/docs/",
+      "official_website": "https://ethereum.org/"
+    },
+    {
+      "name": "Polkadot",
+      "official_docs": "https://wiki.polkadot.network/",
+      "official_website": "https://polkadot.network/"
+    },
+    {
+      "name": "Solana",
+      "official_docs": "https://docs.solana.com/",
+      "official_website": "https://solana.com/"
+    },
+    {
+      "name": "Avalanche",
+      "official_docs": "https://docs.avax.network/",
+      "official_website": "https://avax.network/"
+    },
+    {
+      "name": "Cosmos",
+      "official_docs": "https://docs.cosmos.network/",
+      "official_website": "https://cosmos.network/"
+    },
+    {
+      "name": "Algorand",
+      "official_docs": "https://developer.algorand.org/docs/",
+      "official_website": "https://algorand.com/"
+    },
+    {
+      "name": "Cardano",
+      "official_docs": "https://docs.cardano.org/",
+      "official_website": "https://cardano.org/"
+    }
+  ],
+  "SmartContractsAndLanguages": [
+    {
+      "name": "Solidity",
+      "official_docs": "https://docs.soliditylang.org/",
+      "official_website": "https://soliditylang.org/"
+    },
+    {
+      "name": "Vyper",
+      "official_docs": "https://docs.vyperlang.org/",
+      "official_website": "https://vyperlang.org/"
+    },
+    {
+      "name": "Move (Aptos / Sui)",
+      "official_docs": "https://aptos.dev/",
+      "official_website": "https://aptoslabs.com/"
+    },
+    {
+      "name": "Rust (Solana, NEAR)",
+      "official_docs": "https://doc.rust-lang.org/",
+      "official_website": "https://www.rust-lang.org/"
+    }
+  ],
+  "Web3LibrariesAndSDKs": [
+    {
+      "name": "web3.js",
+      "official_docs": "https://web3js.readthedocs.io/",
+      "official_website": "https://web3js.readthedocs.io/"
+    },
+    {
+      "name": "ethers.js",
+      "official_docs": "https://docs.ethers.org/",
+      "official_website": "https://docs.ethers.org/"
+    },
+    {
+      "name": "Web3.py",
+      "official_docs": "https://web3py.readthedocs.io/",
+      "official_website": "https://github.com/ethereum/web3.py"
+    },
+    {
+      "name": "Hardhat",
+      "official_docs": "https://hardhat.org/getting-started/",
+      "official_website": "https://hardhat.org/"
+    },
+    {
+      "name": "Truffle Suite",
+      "official_docs": "https://trufflesuite.com/docs/",
+      "official_website": "https://trufflesuite.com/"
+    },
+    {
+      "name": "Brownie",
+      "official_docs": "https://eth-brownie.readthedocs.io/",
+      "official_website": "https://eth-brownie.readthedocs.io/"
+    },
+    {
+      "name": "Anchor (Solana)",
+      "official_docs": "https://book.anchor-lang.com/",
+      "official_website": "https://project-serum.github.io/anchor/"
+    }
+  ],
+  "WalletsAndKeyManagement": [
+    {
+      "name": "MetaMask",
+      "official_docs": "https://docs.metamask.io/",
+      "official_website": "https://metamask.io/"
+    },
+    {
+      "name": "WalletConnect",
+      "official_docs": "https://docs.walletconnect.com/",
+      "official_website": "https://walletconnect.com/"
+    },
+    {
+      "name": "Ledger",
+      "official_docs": "https://support.ledger.com/hc/en-us",
+      "official_website": "https://www.ledger.com/"
+    },
+    {
+      "name": "Trezor",
+      "official_docs": "https://trezor.io/learn/",
+      "official_website": "https://trezor.io/"
+    }
+  ],
+  "OraclesAndDataFeeds": [
+    {
+      "name": "Chainlink",
+      "official_docs": "https://docs.chain.link/",
+      "official_website": "https://chain.link/"
+    },
+    {
+      "name": "Band Protocol",
+      "official_docs": "https://docs.bandchain.org/",
+      "official_website": "https://bandprotocol.com/"
+    },
+    {
+      "name": "API3",
+      "official_docs": "https://docs.api3.org/",
+      "official_website": "https://api3.org/"
+    }
+  ],
+  "StorageAndFileSystems": [
+    {
+      "name": "IPFS (InterPlanetary File System)",
+      "official_docs": "https://docs.ipfs.tech/",
+      "official_website": "https://ipfs.tech/"
+    },
+    {
+      "name": "Filecoin",
+      "official_docs": "https://docs.filecoin.io/",
+      "official_website": "https://filecoin.io/"
+    },
+    {
+      "name": "Arweave",
+      "official_docs": "https://docs.arweave.org/",
+      "official_website": "https://www.arweave.org/"
+    },
+    {
+      "name": "Storj",
+      "official_docs": "https://docs.storj.io/",
+      "official_website": "https://www.storj.io/"
+    }
+  ],
+  "IdentityAndAuthentication": [
+    {
+      "name": "ENS (Ethereum Name Service)",
+      "official_docs": "https://docs.ens.domains/",
+      "official_website": "https://ens.domains/"
+    },
+    {
+      "name": "DID (Decentralized Identifiers)",
+      "official_docs": "https://www.w3.org/TR/did-core/",
+      "official_website": "https://www.w3.org/TR/did-core/"
+    },
+    {
+      "name": "Ceramic Network",
+      "official_docs": "https://developers.ceramic.network/",
+      "official_website": "https://ceramic.network/"
+    }
+  ],
+  "DeFiInfrastructure": [
+    {
+      "name": "Uniswap",
+      "official_docs": "https://docs.uniswap.org/",
+      "official_website": "https://uniswap.org/"
+    },
+    {
+      "name": "Aave",
+      "official_docs": "https://docs.aave.com/",
+      "official_website": "https://aave.com/"
+    },
+    {
+      "name": "Compound",
+      "official_docs": "https://docs.compound.finance/",
+      "official_website": "https://compound.finance/"
+    },
+    {
+      "name": "MakerDAO",
+      "official_docs": "https://docs.makerdao.com/",
+      "official_website": "https://makerdao.com/"
+    },
+    {
+      "name": "SushiSwap",
+      "official_docs": "https://dev.sushi.com/",
+      "official_website": "https://sushi.com/"
+    }
+  ],
+  "ZeroKnowledgeAndPrivacyTech": [
+    {
+      "name": "zk-SNARKs",
+      "official_docs": "https://z.cash/technology/zksnarks/",
+      "official_website": "https://z.cash/technology/"
+    },
+    {
+      "name": "zk-STARKs",
+      "official_docs": "https://starkware.co/stark/",
+      "official_website": "https://starkware.co/"
+    },
+    {
+      "name": "Aztec Protocol",
+      "official_docs": "https://docs.aztec.network/",
+      "official_website": "https://aztec.network/"
+    },
+    {
+      "name": "Mina Protocol",
+      "official_docs": "https://docs.minaprotocol.com/",
+      "official_website": "https://minaprotocol.com/"
+    }
+  ]
+}

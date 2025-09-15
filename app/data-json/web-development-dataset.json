@@ -1,0 +1,312 @@
+{
+	"CoreWebStandards": [
+		{
+			"name": "HTML",
+			"official_docs": "https://html.spec.whatwg.org/",
+			"official_website": "https://html.spec.whatwg.org/"
+		},
+		{
+			"name": "CSS",
+			"official_docs": "https://www.w3.org/TR/CSS/",
+			"official_website": "https://www.w3.org/Style/CSS/"
+		},
+		{
+			"name": "JavaScript (ECMAScript)",
+			"official_docs": "https://tc39.es/ecma262/",
+			"official_website": "https://tc39.es/"
+		},
+		{
+			"name": "TypeScript",
+			"official_docs": "https://www.typescriptlang.org/docs/",
+			"official_website": "https://www.typescriptlang.org/"
+		},
+		{
+			"name": "DOM",
+			"official_docs": "https://dom.spec.whatwg.org/",
+			"official_website": "https://dom.spec.whatwg.org/"
+		},
+		{
+			"name": "HTTP",
+			"official_docs": "https://www.rfc-editor.org/rfc/rfc9110.html",
+			"official_website": "https://www.ietf.org/"
+		}
+	],
+	"FrontendFrameworksAndLibraries": [
+		{
+			"name": "React",
+			"official_docs": "https://react.dev/",
+			"official_website": "https://react.dev/"
+		},
+		{
+			"name": "Vue.js",
+			"official_docs": "https://vuejs.org/guide/introduction.html",
+			"official_website": "https://vuejs.org/"
+		},
+		{
+			"name": "Angular",
+			"official_docs": "https://angular.io/docs",
+			"official_website": "https://angular.io/"
+		},
+		{
+			"name": "Svelte",
+			"official_docs": "https://svelte.dev/docs",
+			"official_website": "https://svelte.dev/"
+		},
+		{
+			"name": "jQuery",
+			"official_docs": "https://api.jquery.com/",
+			"official_website": "https://jquery.com/"
+		},
+		{
+			"name": "Bootstrap",
+			"official_docs": "https://getbootstrap.com/docs/",
+			"official_website": "https://getbootstrap.com/"
+		},
+		{
+			"name": "Tailwind CSS",
+			"official_docs": "https://tailwindcss.com/docs",
+			"official_website": "https://tailwindcss.com/"
+		},
+		{
+			"name": "Next.js",
+			"official_docs": "https://nextjs.org/docs",
+			"official_website": "https://nextjs.org/"
+		},
+		{
+			"name": "Nuxt.js",
+			"official_docs": "https://nuxt.com/docs",
+			"official_website": "https://nuxt.com/"
+		},
+		{
+			"name": "Gatsby",
+			"official_docs": "https://www.gatsbyjs.com/docs/",
+			"official_website": "https://www.gatsbyjs.com/"
+		}
+	],
+	"BackendFrameworksAndRuntimes": [
+		{
+			"name": "Node.js",
+			"official_docs": "https://nodejs.org/en/docs/",
+			"official_website": "https://nodejs.org/"
+		},
+		{
+			"name": "Express.js",
+			"official_docs": "https://expressjs.com/en/5x/api.html",
+			"official_website": "https://expressjs.com/"
+		},
+		{
+			"name": "Django",
+			"official_docs": "https://docs.djangoproject.com/en/stable/",
+			"official_website": "https://www.djangoproject.com/"
+		},
+		{
+			"name": "Ruby on Rails",
+			"official_docs": "https://guides.rubyonrails.org/",
+			"official_website": "https://rubyonrails.org/"
+		},
+		{
+			"name": "Spring Boot",
+			"official_docs": "https://docs.spring.io/spring-boot/docs/current/reference/html/",
+			"official_website": "https://spring.io/projects/spring-boot"
+		},
+		{
+			"name": "Laravel",
+			"official_docs": "https://laravel.com/docs/",
+			"official_website": "https://laravel.com/"
+		},
+		{
+			"name": "Symfony",
+			"official_docs": "https://symfony.com/doc/current/index.html",
+			"official_website": "https://symfony.com/"
+		},
+		{
+			"name": "Flask",
+			"official_docs": "https://flask.palletsprojects.com/en/latest/",
+			"official_website": "https://flask.palletsprojects.com/"
+		},
+		{
+			"name": "FastAPI",
+			"official_docs": "https://fastapi.tiangolo.com/",
+			"official_website": "https://fastapi.tiangolo.com/"
+		}
+	],
+	"CSSAndStyling": [
+		{
+			"name": "Sass",
+			"official_docs": "https://sass-lang.com/documentation/",
+			"official_website": "https://sass-lang.com/"
+		},
+		{
+			"name": "Less",
+			"official_docs": "https://lesscss.org/",
+			"official_website": "https://lesscss.org/"
+		},
+		{
+			"name": "Stylus",
+			"official_docs": "https://stylus-lang.com/docs/",
+			"official_website": "https://stylus-lang.com/"
+		},
+		{
+			"name": "PostCSS",
+			"official_docs": "https://postcss.org/docs/",
+			"official_website": "https://postcss.org/"
+		}
+	],
+	"BuildToolsAndPackageManagers": [
+		{
+			"name": "npm",
+			"official_docs": "https://docs.npmjs.com/",
+			"official_website": "https://www.npmjs.com/"
+		},
+		{
+			"name": "Yarn",
+			"official_docs": "https://yarnpkg.com/getting-started",
+			"official_website": "https://yarnpkg.com/"
+		},
+		{
+			"name": "pnpm",
+			"official_docs": "https://pnpm.io/motivation",
+			"official_website": "https://pnpm.io/"
+		},
+		{
+			"name": "Webpack",
+			"official_docs": "https://webpack.js.org/concepts/",
+			"official_website": "https://webpack.js.org/"
+		},
+		{
+			"name": "Vite",
+			"official_docs": "https://vitejs.dev/guide/",
+			"official_website": "https://vitejs.dev/"
+		},
+		{
+			"name": "Parcel",
+			"official_docs": "https://parceljs.org/docs/",
+			"official_website": "https://parceljs.org/"
+		},
+		{
+			"name": "Babel",
+			"official_docs": "https://babeljs.io/docs/en/",
+			"official_website": "https://babeljs.io/"
+		}
+	],
+	"TestingAndQA": [
+		{
+			"name": "Jest",
+			"official_docs": "https://jestjs.io/docs/getting-started",
+			"official_website": "https://jestjs.io/"
+		},
+		{
+			"name": "Mocha",
+			"official_docs": "https://mochajs.org/",
+			"official_website": "https://mochajs.org/"
+		},
+		{
+			"name": "Chai",
+			"official_docs": "https://www.chaijs.com/guide/",
+			"official_website": "https://www.chaijs.com/"
+		},
+		{
+			"name": "Cypress",
+			"official_docs": "https://docs.cypress.io/",
+			"official_website": "https://www.cypress.io/"
+		},
+		{
+			"name": "Playwright",
+			"official_docs": "https://playwright.dev/docs/intro",
+			"official_website": "https://playwright.dev/"
+		},
+		{
+			"name": "Selenium",
+			"official_docs": "https://www.selenium.dev/documentation/",
+			"official_website": "https://www.selenium.dev/"
+		}
+	],
+	"WebServersAndProxies": [
+		{
+			"name": "Apache HTTP Server",
+			"official_docs": "https://httpd.apache.org/docs/",
+			"official_website": "https://httpd.apache.org/"
+		},
+		{
+			"name": "Nginx",
+			"official_docs": "https://nginx.org/en/docs/",
+			"official_website": "https://nginx.org/"
+		},
+		{
+			"name": "Caddy",
+			"official_docs": "https://caddyserver.com/docs/",
+			"official_website": "https://caddyserver.com/"
+		},
+		{
+			"name": "Lighttpd",
+			"official_docs": "https://redmine.lighttpd.net/projects/lighttpd/wiki",
+			"official_website": "https://www.lighttpd.net/"
+		}
+	],
+	"CMS": [
+		{
+			"name": "WordPress",
+			"official_docs": "https://developer.wordpress.org/",
+			"official_website": "https://wordpress.org/"
+		},
+		{
+			"name": "Drupal",
+			"official_docs": "https://www.drupal.org/docs",
+			"official_website": "https://www.drupal.org/"
+		},
+		{
+			"name": "Joomla",
+			"official_docs": "https://docs.joomla.org/",
+			"official_website": "https://www.joomla.org/"
+		},
+		{
+			"name": "Ghost",
+			"official_docs": "https://ghost.org/docs/",
+			"official_website": "https://ghost.org/"
+		}
+	],
+	"APIsAndProtocols": [
+		{
+			"name": "GraphQL",
+			"official_docs": "https://graphql.org/learn/",
+			"official_website": "https://graphql.org/"
+		},
+		{
+			"name": "gRPC",
+			"official_docs": "https://grpc.io/docs/",
+			"official_website": "https://grpc.io/"
+		},
+		{
+			"name": "REST (Representational State Transfer)",
+			"official_docs": "https://restfulapi.net/",
+			"official_website": "https://restfulapi.net/"
+		},
+		{
+			"name": "WebSockets",
+			"official_docs": "https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API",
+			"official_website": "https://developer.mozilla.org/"
+		}
+	],
+	"FullstackPlatforms": [
+		{
+			"name": "Meteor",
+			"official_docs": "https://docs.meteor.com/",
+			"official_website": "https://www.meteor.com/"
+		},
+		{
+			"name": "Remix",
+			"official_docs": "https://remix.run/docs",
+			"official_website": "https://remix.run/"
+		},
+		{
+			"name": "Blitz.js",
+			"official_docs": "https://blitzjs.com/docs",
+			"official_website": "https://blitzjs.com/"
+		},
+		{
+			"name": "RedwoodJS",
+			"official_docs": "https://redwoodjs.com/docs",
+			"official_website": "https://redwoodjs.com/"
+		}
+	]
+}

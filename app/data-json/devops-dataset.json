@@ -1,0 +1,233 @@
+{
+	"CICDTools": [
+		{
+			"name": "Jenkins",
+			"official_docs": "https://www.jenkins.io/doc/",
+			"official_website": "https://www.jenkins.io/"
+		},
+		{
+			"name": "GitHub Actions",
+			"official_docs": "https://docs.github.com/en/actions",
+			"official_website": "https://github.com/features/actions"
+		},
+		{
+			"name": "GitLab CI/CD",
+			"official_docs": "https://docs.gitlab.com/ee/ci/",
+			"official_website": "https://about.gitlab.com/"
+		},
+		{
+			"name": "CircleCI",
+			"official_docs": "https://circleci.com/docs/",
+			"official_website": "https://circleci.com/"
+		},
+		{
+			"name": "Travis CI",
+			"official_docs": "https://docs.travis-ci.com/",
+			"official_website": "https://travis-ci.com/"
+		},
+		{
+			"name": "Azure DevOps",
+			"official_docs": "https://learn.microsoft.com/en-us/azure/devops/",
+			"official_website": "https://azure.microsoft.com/en-us/services/devops/"
+		},
+		{
+			"name": "AWS CodePipeline",
+			"official_docs": "https://docs.aws.amazon.com/codepipeline/",
+			"official_website": "https://aws.amazon.com/codepipeline/"
+		}
+	],
+	"ContainerizationAndOrchestration": [
+		{
+			"name": "Docker",
+			"official_docs": "https://docs.docker.com/",
+			"official_website": "https://www.docker.com/"
+		},
+		{
+			"name": "Kubernetes",
+			"official_docs": "https://kubernetes.io/docs/",
+			"official_website": "https://kubernetes.io/"
+		},
+		{
+			"name": "OpenShift",
+			"official_docs": "https://docs.openshift.com/",
+			"official_website": "https://www.openshift.com/"
+		},
+		{
+			"name": "Podman",
+			"official_docs": "https://docs.podman.io/",
+			"official_website": "https://podman.io/"
+		},
+		{
+			"name": "Rancher",
+			"official_docs": "https://rancher.com/docs/",
+			"official_website": "https://rancher.com/"
+		},
+		{
+			"name": "Nomad (HashiCorp)",
+			"official_docs": "https://developer.hashicorp.com/nomad/docs",
+			"official_website": "https://www.nomadproject.io/"
+		}
+	],
+	"InfrastructureAsCode": [
+		{
+			"name": "Terraform",
+			"official_docs": "https://developer.hashicorp.com/terraform/docs",
+			"official_website": "https://www.terraform.io/"
+		},
+		{
+			"name": "Pulumi",
+			"official_docs": "https://www.pulumi.com/docs/",
+			"official_website": "https://www.pulumi.com/"
+		},
+		{
+			"name": "AWS CloudFormation",
+			"official_docs": "https://docs.aws.amazon.com/cloudformation/",
+			"official_website": "https://aws.amazon.com/cloudformation/"
+		},
+		{
+			"name": "Google Cloud Deployment Manager",
+			"official_docs": "https://cloud.google.com/deployment-manager/docs",
+			"official_website": "https://cloud.google.com/deployment-manager"
+		},
+		{
+			"name": "Crossplane",
+			"official_docs": "https://docs.crossplane.io/",
+			"official_website": "https://crossplane.io/"
+		}
+	],
+	"MonitoringAndObservability": [
+		{
+			"name": "Prometheus",
+			"official_docs": "https://prometheus.io/docs/introduction/overview/",
+			"official_website": "https://prometheus.io/"
+		},
+		{
+			"name": "Grafana",
+			"official_docs": "https://grafana.com/docs/",
+			"official_website": "https://grafana.com/"
+		},
+		{
+			"name": "ELK Stack (Elasticsearch, Logstash, Kibana)",
+			"official_docs": "https://www.elastic.co/guide/",
+			"official_website": "https://www.elastic.co/what-is/elk-stack"
+		},
+		{
+			"name": "Datadog",
+			"official_docs": "https://docs.datadoghq.com/",
+			"official_website": "https://www.datadoghq.com/"
+		},
+		{
+			"name": "New Relic",
+			"official_docs": "https://docs.newrelic.com/",
+			"official_website": "https://newrelic.com/"
+		},
+		{
+			"name": "Splunk",
+			"official_docs": "https://docs.splunk.com/",
+			"official_website": "https://www.splunk.com/"
+		},
+		{
+			"name": "Nagios",
+			"official_docs": "https://assets.nagios.com/downloads/nagioscore/docs/",
+			"official_website": "https://www.nagios.org/"
+		},
+		{
+			"name": "Zabbix",
+			"official_docs": "https://www.zabbix.com/documentation/current/en/manual",
+			"official_website": "https://www.zabbix.com/"
+		}
+	],
+	"ConfigurationManagement": [
+		{
+			"name": "Ansible",
+			"official_docs": "https://docs.ansible.com/",
+			"official_website": "https://www.ansible.com/"
+		},
+		{
+			"name": "Puppet",
+			"official_docs": "https://puppet.com/docs/",
+			"official_website": "https://puppet.com/"
+		},
+		{
+			"name": "Chef",
+			"official_docs": "https://docs.chef.io/",
+			"official_website": "https://www.chef.io/"
+		},
+		{
+			"name": "SaltStack",
+			"official_docs": "https://docs.saltproject.io/",
+			"official_website": "https://saltproject.io/"
+		}
+	],
+	"VersionControlAndCollaboration": [
+		{
+			"name": "Git",
+			"official_docs": "https://git-scm.com/doc",
+			"official_website": "https://git-scm.com/"
+		},
+		{
+			"name": "GitHub",
+			"official_docs": "https://docs.github.com/en",
+			"official_website": "https://github.com/"
+		},
+		{
+			"name": "GitLab",
+			"official_docs": "https://docs.gitlab.com/",
+			"official_website": "https://about.gitlab.com/"
+		},
+		{
+			"name": "Bitbucket",
+			"official_docs": "https://support.atlassian.com/bitbucket-cloud/",
+			"official_website": "https://bitbucket.org/"
+		}
+	],
+	"ArtifactAndPackageManagement": [
+		{
+			"name": "JFrog Artifactory",
+			"official_docs": "https://jfrog.com/help/r/jfrog-artifactory-documentation",
+			"official_website": "https://jfrog.com/artifactory/"
+		},
+		{
+			"name": "Nexus Repository",
+			"official_docs": "https://help.sonatype.com/repomanager3",
+			"official_website": "https://www.sonatype.com/products/repository-oss"
+		},
+		{
+			"name": "Harbor",
+			"official_docs": "https://goharbor.io/docs/",
+			"official_website": "https://goharbor.io/"
+		}
+	],
+	"CloudPlatforms": [
+		{
+			"name": "Amazon Web Services (AWS)",
+			"official_docs": "https://docs.aws.amazon.com/",
+			"official_website": "https://aws.amazon.com/"
+		},
+		{
+			"name": "Microsoft Azure",
+			"official_docs": "https://learn.microsoft.com/en-us/azure/",
+			"official_website": "https://azure.microsoft.com/"
+		},
+		{
+			"name": "Google Cloud Platform (GCP)",
+			"official_docs": "https://cloud.google.com/docs",
+			"official_website": "https://cloud.google.com/"
+		},
+		{
+			"name": "IBM Cloud",
+			"official_docs": "https://cloud.ibm.com/docs",
+			"official_website": "https://www.ibm.com/cloud"
+		},
+		{
+			"name": "Oracle Cloud",
+			"official_docs": "https://docs.oracle.com/en/cloud/",
+			"official_website": "https://www.oracle.com/cloud/"
+		},
+		{
+			"name": "DigitalOcean",
+			"official_docs": "https://docs.digitalocean.com/",
+			"official_website": "https://www.digitalocean.com/"
+		}
+	]
+}

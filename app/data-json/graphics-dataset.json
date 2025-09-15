@@ -1,0 +1,213 @@
+{
+	"GraphicsAPIs": [
+		{
+			"name": "OpenGL",
+			"official_docs": "https://registry.khronos.org/OpenGL/index_gl.php",
+			"official_website": "https://www.khronos.org/opengl/"
+		},
+		{
+			"name": "Vulkan",
+			"official_docs": "https://registry.khronos.org/vulkan/",
+			"official_website": "https://www.khronos.org/vulkan/"
+		},
+		{
+			"name": "DirectX",
+			"official_docs": "https://learn.microsoft.com/en-us/windows/win32/directx",
+			"official_website": "https://learn.microsoft.com/en-us/windows/win32/directx"
+		},
+		{
+			"name": "Metal",
+			"official_docs": "https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf",
+			"official_website": "https://developer.apple.com/metal/"
+		},
+		{
+			"name": "WebGPU",
+			"official_docs": "https://gpuweb.github.io/gpuweb/",
+			"official_website": "https://www.w3.org/TR/webgpu/"
+		},
+		{
+			"name": "WebGL",
+			"official_docs": "https://registry.khronos.org/webgl/specs/latest/1.0/",
+			"official_website": "https://www.khronos.org/webgl/"
+		}
+	],
+	"GraphicsLibrariesAndFrameworks": [
+		{
+			"name": "SDL (Simple DirectMedia Layer)",
+			"official_docs": "https://wiki.libsdl.org/",
+			"official_website": "https://www.libsdl.org/"
+		},
+		{
+			"name": "SFML (Simple and Fast Multimedia Library)",
+			"official_docs": "https://www.sfml-dev.org/documentation/",
+			"official_website": "https://www.sfml-dev.org/"
+		},
+		{
+			"name": "Allegro",
+			"official_docs": "https://liballeg.org/a5docs/",
+			"official_website": "https://liballeg.org/"
+		},
+		{
+			"name": "Cairo",
+			"official_docs": "https://www.cairographics.org/documentation/",
+			"official_website": "https://www.cairographics.org/"
+		},
+		{
+			"name": "Skia",
+			"official_docs": "https://skia.org/docs/",
+			"official_website": "https://skia.org/"
+		}
+	],
+	"GameEngines": [
+		{
+			"name": "Unity",
+			"official_docs": "https://docs.unity3d.com/Manual/index.html",
+			"official_website": "https://unity.com/"
+		},
+		{
+			"name": "Unreal Engine",
+			"official_docs": "https://docs.unrealengine.com/",
+			"official_website": "https://www.unrealengine.com/"
+		},
+		{
+			"name": "Godot",
+			"official_docs": "https://docs.godotengine.org/en/stable/",
+			"official_website": "https://godotengine.org/"
+		},
+		{
+			"name": "CryEngine",
+			"official_docs": "https://docs.cryengine.com/",
+			"official_website": "https://www.cryengine.com/"
+		},
+		{
+			"name": "Panda3D",
+			"official_docs": "https://docs.panda3d.org/",
+			"official_website": "https://www.panda3d.org/"
+		}
+	],
+	"ModelingAndRenderingEngines": [
+		{
+			"name": "Blender (Rendering Engine: Cycles/Eevee)",
+			"official_docs": "https://docs.blender.org/manual/en/latest/",
+			"official_website": "https://www.blender.org/"
+		},
+		{
+			"name": "Autodesk Maya",
+			"official_docs": "https://help.autodesk.com/view/MAYAUL/2024/ENU/",
+			"official_website": "https://www.autodesk.com/products/maya/"
+		},
+		{
+			"name": "Autodesk 3ds Max",
+			"official_docs": "https://help.autodesk.com/view/3DSMAX/2024/ENU/",
+			"official_website": "https://www.autodesk.com/products/3ds-max/"
+		},
+		{
+			"name": "Cinema 4D",
+			"official_docs": "https://help.maxon.net/c4d/",
+			"official_website": "https://www.maxon.net/en/cinema-4d"
+		},
+		{
+			"name": "Houdini",
+			"official_docs": "https://www.sidefx.com/docs/houdini/",
+			"official_website": "https://www.sidefx.com/"
+		}
+	],
+	"GUIToolkits": [
+		{
+			"name": "Qt",
+			"official_docs": "https://doc.qt.io/",
+			"official_website": "https://www.qt.io/"
+		},
+		{
+			"name": "GTK",
+			"official_docs": "https://docs.gtk.org/",
+			"official_website": "https://www.gtk.org/"
+		},
+		{
+			"name": "wxWidgets",
+			"official_docs": "https://docs.wxwidgets.org/",
+			"official_website": "https://www.wxwidgets.org/"
+		},
+		{
+			"name": "Dear ImGui",
+			"official_docs": "https://github.com/ocornut/imgui/wiki",
+			"official_website": "https://github.com/ocornut/imgui"
+		}
+	],
+	"ImageProcessingLibraries": [
+		{
+			"name": "OpenCV",
+			"official_docs": "https://docs.opencv.org/",
+			"official_website": "https://opencv.org/"
+		},
+		{
+			"name": "ImageMagick",
+			"official_docs": "https://imagemagick.org/script/documentation.php",
+			"official_website": "https://imagemagick.org/"
+		},
+		{
+			"name": "Pillow (PIL Fork)",
+			"official_docs": "https://pillow.readthedocs.io/en/stable/",
+			"official_website": "https://python-pillow.org/"
+		},
+		{
+			"name": "GD Graphics Library",
+			"official_docs": "https://libgd.github.io/manuals/2.3.3/",
+			"official_website": "https://libgd.github.io/"
+		},
+		{
+			"name": "GraphicsMagick",
+			"official_docs": "http://www.graphicsmagick.org/documentation.html",
+			"official_website": "http://www.graphicsmagick.org/"
+		}
+	],
+	"ShaderLanguages": [
+		{
+			"name": "GLSL (OpenGL Shading Language)",
+			"official_docs": "https://registry.khronos.org/OpenGL/specs/gl/GLSLangSpec.4.60.pdf",
+			"official_website": "https://www.khronos.org/opengl/wiki/OpenGL_Shading_Language"
+		},
+		{
+			"name": "HLSL (High-Level Shading Language)",
+			"official_docs": "https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl-pguide",
+			"official_website": "https://learn.microsoft.com/en-us/windows/win32/direct3dhlsl/dx-graphics-hlsl"
+		},
+		{
+			"name": "MSL (Metal Shading Language)",
+			"official_docs": "https://developer.apple.com/metal/Metal-Shading-Language-Specification.pdf",
+			"official_website": "https://developer.apple.com/metal/"
+		},
+		{
+			"name": "WGSL (WebGPU Shading Language)",
+			"official_docs": "https://www.w3.org/TR/WGSL/",
+			"official_website": "https://gpuweb.github.io/gpuweb/wgsl.html"
+		}
+	],
+	"RayTracingAPIsAndLibraries": [
+		{
+			"name": "NVIDIA OptiX",
+			"official_docs": "https://raytracing-docs.nvidia.com/optix7/guide/index.html",
+			"official_website": "https://developer.nvidia.com/optix"
+		},
+		{
+			"name": "DirectX Raytracing (DXR)",
+			"official_docs": "https://microsoft.github.io/DirectX-Specs/d3d/Raytracing.html",
+			"official_website": "https://devblogs.microsoft.com/directx/dxr-intro-to-raytracing/"
+		},
+		{
+			"name": "Vulkan Ray Tracing",
+			"official_docs": "https://www.khronos.org/registry/vulkan/specs/1.2-extensions/html/chapRayTracing.html",
+			"official_website": "https://www.khronos.org/vulkan/"
+		},
+		{
+			"name": "Intel Embree",
+			"official_docs": "https://www.embree.org/api.html",
+			"official_website": "https://www.embree.org/"
+		},
+		{
+			"name": "AMD Radeon Rays",
+			"official_docs": "https://gpuopen.com/radeon-rays/",
+			"official_website": "https://gpuopen.com/radeon-rays/"
+		}
+	]
+}

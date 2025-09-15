@@ -1,0 +1,157 @@
+[
+  {
+    "name": "TensorFlow",
+    "official_docs": "https://www.tensorflow.org/api_docs",
+    "official_website": "https://www.tensorflow.org/"
+  },
+  {
+    "name": "PyTorch",
+    "official_docs": "https://pytorch.org/docs/",
+    "official_website": "https://pytorch.org/"
+  },
+  {
+    "name": "Keras",
+    "official_docs": "https://keras.io/api/",
+    "official_website": "https://keras.io/"
+  },
+  {
+    "name": "scikit-learn",
+    "official_docs": "https://scikit-learn.org/stable/documentation.html",
+    "official_website": "https://scikit-learn.org/"
+  },
+  {
+    "name": "XGBoost",
+    "official_docs": "https://xgboost.readthedocs.io/en/stable/",
+    "official_website": "https://xgboost.ai/"
+  },
+  {
+    "name": "LightGBM",
+    "official_docs": "https://lightgbm.readthedocs.io/en/stable/",
+    "official_website": "https://lightgbm.readthedocs.io/"
+  },
+  {
+    "name": "CatBoost",
+    "official_docs": "https://catboost.ai/docs/",
+    "official_website": "https://catboost.ai/"
+  },
+  {
+    "name": "spaCy",
+    "official_docs": "https://spacy.io/api",
+    "official_website": "https://spacy.io/"
+  },
+  {
+    "name": "NLTK",
+    "official_docs": "https://www.nltk.org/",
+    "official_website": "https://www.nltk.org/"
+  },
+  {
+    "name": "Hugging Face Transformers",
+    "official_docs": "https://huggingface.co/docs/transformers/index",
+    "official_website": "https://huggingface.co/transformers"
+  },
+  {
+    "name": "OpenAI API",
+    "official_docs": "https://platform.openai.com/docs/",
+    "official_website": "https://openai.com/"
+  },
+  {
+    "name": "LangChain",
+    "official_docs": "https://python.langchain.com/docs/",
+    "official_website": "https://www.langchain.com/"
+  },
+  {
+    "name": "Haystack",
+    "official_docs": "https://docs.haystack.deepset.ai/",
+    "official_website": "https://haystack.deepset.ai/"
+  },
+  {
+    "name": "FastAI",
+    "official_docs": "https://docs.fast.ai/",
+    "official_website": "https://www.fast.ai/"
+  },
+  {
+    "name": "MindSpore",
+    "official_docs": "https://www.mindspore.cn/en/docs",
+    "official_website": "https://www.mindspore.cn/en"
+  },
+  {
+    "name": "MXNet (Apache)",
+    "official_docs": "https://mxnet.apache.org/api/python/docs/",
+    "official_website": "https://mxnet.apache.org/"
+  },
+  {
+    "name": "CNTK (Microsoft Cognitive Toolkit)",
+    "official_docs": "https://learn.microsoft.com/en-us/cognitive-toolkit/",
+    "official_website": "https://www.microsoft.com/en-us/cognitive-toolkit/"
+  },
+  {
+    "name": "DeepLearning4J",
+    "official_docs": "https://deeplearning4j.konduit.ai/",
+    "official_website": "https://deeplearning4j.org/"
+  },
+  {
+    "name": "ONNX",
+    "official_docs": "https://onnx.ai/onnx/intro/",
+    "official_website": "https://onnx.ai/"
+  },
+  {
+    "name": "PaddlePaddle",
+    "official_docs": "https://www.paddlepaddle.org.cn/documentation/docs/en/guides/index_en.html",
+    "official_website": "https://www.paddlepaddle.org.cn/"
+  },
+  {
+    "name": "JAX",
+    "official_docs": "https://jax.readthedocs.io/en/latest/",
+    "official_website": "https://github.com/google/jax"
+  },
+  {
+    "name": "OpenCV",
+    "official_docs": "https://docs.opencv.org/",
+    "official_website": "https://opencv.org/"
+  },
+  {
+    "name": "Detectron2",
+    "official_docs": "https://detectron2.readthedocs.io/",
+    "official_website": "https://github.com/facebookresearch/detectron2"
+  },
+  {
+    "name": "MMDetection",
+    "official_docs": "https://mmdetection.readthedocs.io/en/stable/",
+    "official_website": "https://mmdetection.org/"
+  },
+  {
+    "name": "Ultralytics YOLOv5",
+    "official_docs": "https://docs.ultralytics.com/",
+    "official_website": "https://ultralytics.com/"
+  },
+  {
+    "name": "Stable Diffusion",
+    "official_docs": "https://stability.ai/docs",
+    "official_website": "https://stability.ai/"
+  },
+  {
+    "name": "DeepMind AlphaFold",
+    "official_docs": "https://alphafold.ebi.ac.uk/",
+    "official_website": "https://deepmind.google/discover/alphafold/"
+  },
+  {
+    "name": "IBM Watson",
+    "official_docs": "https://cloud.ibm.com/docs?tab=api-docs",
+    "official_website": "https://www.ibm.com/watson"
+  },
+  {
+    "name": "Google Cloud AI",
+    "official_docs": "https://cloud.google.com/products/ai",
+    "official_website": "https://cloud.google.com/ai"
+  },
+  {
+    "name": "Azure AI",
+    "official_docs": "https://learn.microsoft.com/en-us/azure/ai-services/",
+    "official_website": "https://azure.microsoft.com/en-us/solutions/ai/"
+  },
+  {
+    "name": "AWS AI/ML",
+    "official_docs": "https://docs.aws.amazon.com/machine-learning/",
+    "official_website": "https://aws.amazon.com/machine-learning/"
+  }
+]
