@@ -6,25 +6,26 @@ import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { Input } from '@/components/ui/input';
 import { createFrontendChallenge } from '@/app/(users)/company/[company-name]/(challenges)/challenge/generate/action';
 import { useState } from 'react';
 import { DataSelectionComponent } from '@/components/challenge-generator/data-selection-component';
+import { FileUploaderComponent } from '@/components/file-uploader.component';
 
 const formSchema = z.object({
-	jobOffer: z.string().optional(),
+	jobOfferFile: z.instanceof(File).optional(),
 	jsonConfig: z.string().optional(),
 });
 
 export function TaskGeneratorForm() {
 	const [result, setResult] = useState<string | null>(null);
 	const [jsonConfig, setJsonConfig] = useState<string>('');
+	const [uploadedFile, setUploadedFile] = useState<File | null>(null);
 
 	// 1. Define your form.
 	const form = useForm<z.infer<typeof formSchema>>({
 		resolver: zodResolver(formSchema),
 		defaultValues: {
-			jobOffer: '',
+			jobOfferFile: undefined,
 			jsonConfig: '',
 		},
 	});
@@ -35,10 +36,23 @@ export function TaskGeneratorForm() {
 		form.setValue('jsonConfig', json);
 	};
 
+	// Handle file selection
+	const handleFileSelect = (file: File | null) => {
+		setUploadedFile(file);
+		form.setValue('jobOfferFile', file || undefined);
+	};
+
 	// todo: define a way to select the right agent for the task
 	// 2. Define a submit handler.
 	async function handleSubmit(formData: z.infer<typeof formSchema>) {
-		const res = await createFrontendChallenge(formData.jobOffer || '', jsonConfig || '');
+		let jobOfferContent = '';
+
+		if (formData.jobOfferFile) {
+			// Read file content
+			jobOfferContent = await formData.jobOfferFile.text();
+		}
+
+		const res = await createFrontendChallenge(jobOfferContent, jsonConfig || '');
 		setResult(res);
 	}
 
@@ -48,14 +62,16 @@ export function TaskGeneratorForm() {
 				<form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
 					<FormField
 						control={form.control}
-						name="jobOffer"
+						name="jobOfferFile"
 						render={({ field }) => (
 							<FormItem>
-								<FormLabel>Job Offer</FormLabel>
+								<FormLabel>Job Offer Document</FormLabel>
 								<FormControl>
-									<Input placeholder="Job offer" {...field} />
+									<FileUploaderComponent onFileSelect={handleFileSelect} maxFileSize={10} />
 								</FormControl>
-								<FormDescription>This is your job offer.</FormDescription>
+								<FormDescription>
+									Upload your job offer document (PDF, Word, text files, etc.)
+								</FormDescription>
 								<FormMessage />
 							</FormItem>
 						)}
@@ -64,7 +80,7 @@ export function TaskGeneratorForm() {
 						<DataSelectionComponent onJsonChange={handleJsonChange} />
 						<FormLabel>JSON Config</FormLabel>
 						<FormDescription>
-                            <span className="font-bold">Important: </span>
+							<span className="font-bold">Important: </span>
 							This JSON config is automatically generated from your selections above and will be used to
 							generate the challenge.
 						</FormDescription>
