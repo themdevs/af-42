@@ -18,25 +18,25 @@ import { Copy, Download, Search, Filter, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 
 // Import all technology datasets from JSON files
-import * as aiDataset from '../app/data-json/ai-dataset.json';
-import * as blockchainDataset from '../app/data-json/blockchain-dataset.json';
-import * as cryptographyDataset from '../app/data-json/cryptography-dataset.json';
-import * as cybersecurityDataset from '../app/data-json/cyber-dataset.json';
-import * as dataScienceDataset from '../app/data-json/data-science-dataset.json';
-import * as dbDataset from '../app/data-json/db-dataset.json';
-import * as deepLearningDataset from '../app/data-json/deep-learning-dataset.json';
-import * as devOpsDataset from '../app/data-json/devops-dataset.json';
-import * as gamingDataset from '../app/data-json/game-developement-dataset.json';
-import * as generativeAiDataset from '../app/data-json/generative-ai-dataset.json';
-import * as graphicsDataset from '../app/data-json/graphics-dataset.json';
-import * as hardwareDataset from '../app/data-json/hardware-and-low-level-dataset.json';
-import * as kernelDataset from '../app/data-json/kernel-dataset.json';
-import * as languagesDataset from '../app/data-json/languages-dataset.json';
-import * as machineLearningDataset from '../app/data-json/machine-learning-dataset.json';
-import * as mobileDataset from '../app/data-json/mobile-development-dataset.json';
-import * as programingLanguagesDataset from '../app/data-json/programing-languages.json';
-import * as webDevelopmentDataset from '../app/data-json/web-development-dataset.json';
-import * as web3Dataset from '../app/data-json/web3-dataset.json';
+import * as aiDataset from '../../app/data-json/ai-dataset.json';
+import * as blockchainDataset from '../../app/data-json/blockchain-dataset.json';
+import * as cryptographyDataset from '../../app/data-json/cryptography-dataset.json';
+import * as cybersecurityDataset from '../../app/data-json/cyber-dataset.json';
+import * as dataScienceDataset from '../../app/data-json/data-science-dataset.json';
+import * as dbDataset from '../../app/data-json/db-dataset.json';
+import * as deepLearningDataset from '../../app/data-json/deep-learning-dataset.json';
+import * as devOpsDataset from '../../app/data-json/devops-dataset.json';
+import * as gamingDataset from '../../app/data-json/game-developement-dataset.json';
+import * as generativeAiDataset from '../../app/data-json/generative-ai-dataset.json';
+import * as graphicsDataset from '../../app/data-json/graphics-dataset.json';
+import * as hardwareDataset from '../../app/data-json/hardware-and-low-level-dataset.json';
+import * as kernelDataset from '../../app/data-json/kernel-dataset.json';
+import * as languagesDataset from '../../app/data-json/languages-dataset.json';
+import * as machineLearningDataset from '../../app/data-json/machine-learning-dataset.json';
+import * as mobileDataset from '../../app/data-json/mobile-development-dataset.json';
+import * as programingLanguagesDataset from '../../app/data-json/programing-languages.json';
+import * as webDevelopmentDataset from '../../app/data-json/web-development-dataset.json';
+import * as web3Dataset from '../../app/data-json/web3-dataset.json';
 
 // Dataset configuration - maps dataset keys to their data and display names
 const datasets = [
@@ -72,8 +72,13 @@ interface CategoryData {
 	[key: string]: DatasetItem[] | DatasetItem | any; // Flexible category structure
 }
 
+// Props interface for the component
+interface DataSelectionComponentProps {
+	onJsonChange?: (json: string) => void;
+}
+
 // Main component for selecting technology stacks
-export const DataSelectionComponent = () => {
+export const DataSelectionComponent = ({ onJsonChange }: DataSelectionComponentProps = {}) => {
 	// Component state management
 	const [searchTerm, setSearchTerm] = useState(''); // Search filter for categories/items
 	const [selectedDataset, setSelectedDataset] = useState('ai'); // Currently selected dataset
@@ -148,6 +153,11 @@ export const DataSelectionComponent = () => {
 		});
 
 		setOutputJson(output);
+
+		// Call the callback with the JSON string if provided
+		if (onJsonChange) {
+			onJsonChange(JSON.stringify(output, null, 2));
+		}
 	};
 
 	// ##########################################################
@@ -175,9 +185,9 @@ export const DataSelectionComponent = () => {
 	};
 
 	return (
-		<div className="max-w-7xl mx-auto p-6 space-y-6">
+		<div className="w-full mx-auto p-6 space-y-6 items-center">
 			{/* Page Header */}
-			<div className="text-center space-y-2">
+			<div className="text-start space-y-2">
 				<h1 className="text-3xl font-bold tracking-tight">Stack Selection Tool</h1>
 				<p className="text-muted-foreground">
 					Select categories and items from various technology fields to generate custom JSON output
@@ -185,9 +195,9 @@ export const DataSelectionComponent = () => {
 			</div>
 
 			{/* Main Content Grid - 3 columns on large screens */}
-			<div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+			<div className="flex flex-row gap-6 w-full">
 				{/* Left Column: Field/Dataset Selection */}
-				<Card className="lg:col-span-1">
+				<Card className="max-w-1/5">
 					<CardHeader>
 						<CardTitle className="flex items-center gap-2">
 							<Filter className="h-5 w-5" />
@@ -226,7 +236,7 @@ export const DataSelectionComponent = () => {
 				</Card>
 
 				{/* Middle Column: Category and Item Selection */}
-				<Card className="lg:col-span-1">
+				<Card className="w-1/2">
 					<CardHeader>
 						<CardTitle className="flex items-center gap-2">
 							<Search className="h-5 w-5" />
@@ -318,49 +328,6 @@ export const DataSelectionComponent = () => {
 						)}
 					</CardContent>
 				</Card>
-
-				{/* Right Column: JSON Output Preview and Export */}
-				<Card className="lg:col-span-1">
-					<CardHeader>
-						<CardTitle className="flex items-center gap-2">
-							<Download className="h-5 w-5" />
-							JSON Output
-						</CardTitle>
-						<CardDescription>Preview and export your selected data</CardDescription>
-					</CardHeader>
-					<CardContent className="space-y-4">
-						{/* Show JSON output if items are selected */}
-						{Object.keys(outputJson).length > 0 ? (
-							<>
-								{/* JSON preview */}
-								<ScrollArea className="h-96 border rounded-lg p-4 bg-muted/50">
-									<pre className="text-xs font-mono whitespace-pre-wrap">
-										{JSON.stringify(outputJson, null, 2)}
-									</pre>
-								</ScrollArea>
-
-								{/* Export buttons */}
-								<div className="flex gap-2">
-									<Button onClick={copyToClipboard} className="flex-1">
-										<Copy className="h-4 w-4 mr-2" />
-										Copy JSON
-									</Button>
-									<Button onClick={downloadJson} variant="outline" className="flex-1">
-										<Download className="h-4 w-4 mr-2" />
-										Download
-									</Button>
-								</div>
-							</>
-						) : (
-							<div className="h-96 flex items-center justify-center border rounded-lg bg-muted/50">
-								<div className="text-center text-muted-foreground">
-									<Filter className="h-8 w-8 mx-auto mb-2 opacity-50" />
-									<p>Select categories to generate JSON output</p>
-								</div>
-							</div>
-						)}
-					</CardContent>
-				</Card>
 			</div>
 
 			{/* Bottom Section: Selected Items Summary */}
@@ -401,20 +368,6 @@ export const DataSelectionComponent = () => {
 										);
 									}
 								})}
-							</div>
-
-							{/* Selection Statistics */}
-							<div className="pt-2 border-t">
-								<div className="grid grid-cols-2 gap-4 text-sm">
-									<div>
-										<span className="font-medium">Categories:</span>{' '}
-										{selectedKeys.filter((key) => key.split('.').length === 2).length}
-									</div>
-									<div>
-										<span className="font-medium">Individual Items:</span>{' '}
-										{selectedKeys.filter((key) => key.split('.').length === 3).length}
-									</div>
-								</div>
 							</div>
 						</div>
 					</CardContent>
