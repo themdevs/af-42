@@ -1,14 +1,177 @@
 {
-	"Fields": {
-		"Algo": ["Haskell", "Scala", "Clojure", "Erlang", "Elixir", "Groovy"],
-		"AI": ["Python", "Julia"],
-		"Data": ["Python", "Julia", "R", "Scala"],
-		"System": ["C", "C++", "D", "Go", "Rust", "Lua", "Tcl/Tk", "Perl"],
-		"Kernel": ["C", "C++", "Rust"],
-		"Cryptography": ["Rust", "Go", "Java"],
-		"Math": ["Julia", "Python", "Haskell", "Scala"],
-		"Web": ["JavaScript", "TypeScript", "PHP", "Ruby"],
-		"Mobile": ["Java", "Kotlin", "Swift"],
-		"Blockchain": ["Go", "Rust", "Solidity"]
+	"Languages": {
+		"Algo": [
+			{
+				"name": "Haskell",
+				"devdocs_url": "https://devdocs.io/haskell/",
+				"official_website": "https://www.haskell.org/"
+			},
+			{
+				"name": "Scala",
+				"devdocs_url": "https://devdocs.io/scala/",
+				"official_website": "https://www.scala-lang.org/"
+			},
+			{
+				"name": "Clojure",
+				"devdocs_url": "https://devdocs.io/clojure/",
+				"official_website": "https://clojure.org/"
+			},
+			{
+				"name": "Erlang",
+				"devdocs_url": "https://devdocs.io/erlang/",
+				"official_website": "https://www.erlang.org/"
+			},
+			{
+				"name": "Elixir",
+				"devdocs_url": "https://devdocs.io/elixir/",
+				"official_website": "https://elixir-lang.org/"
+			},
+			{
+				"name": "Groovy",
+				"devdocs_url": "https://devdocs.io/groovy/",
+				"official_website": "https://groovy-lang.org/"
+			}
+		],
+		"AI": [
+			{
+				"name": "Python",
+				"devdocs_url": "https://devdocs.io/python~3.10/",
+				"official_website": "https://www.python.org/"
+			},
+			{
+				"name": "Julia",
+				"devdocs_url": "https://devdocs.io/julia/",
+				"official_website": "https://julialang.org/"
+			}
+		],
+		"Data": [
+			{
+				"name": "Python",
+				"devdocs_url": "https://devdocs.io/python~3.10/",
+				"official_website": "https://www.python.org/"
+			},
+			{
+				"name": "Julia",
+				"devdocs_url": "https://devdocs.io/julia/",
+				"official_website": "https://julialang.org/"
+			},
+			{
+				"name": "Scala",
+				"devdocs_url": "https://devdocs.io/scala/",
+				"official_website": "https://www.scala-lang.org/"
+			}
+		],
+		"System": [
+			{
+				"name": "C",
+				"devdocs_url": "https://devdocs.io/c/",
+				"official_website": "https://en.wikipedia.org/wiki/C_(programming_language)"
+			},
+			{ "name": "C++", "devdocs_url": "https://devdocs.io/cpp/", "official_website": "https://isocpp.org/" },
+			{ "name": "D", "devdocs_url": "https://devdocs.io/d/", "official_website": "https://dlang.org/" },
+			{ "name": "Go", "devdocs_url": "https://devdocs.io/go/", "official_website": "https://go.dev/" },
+			{
+				"name": "Rust",
+				"devdocs_url": "https://devdocs.io/rust/",
+				"official_website": "https://www.rust-lang.org/"
+			},
+			{ "name": "Lua", "devdocs_url": "https://devdocs.io/lua/", "official_website": "https://www.lua.org/" },
+			{
+				"name": "Tcl/Tk",
+				"devdocs_url": "https://devdocs.io/tcl_tk/",
+				"official_website": "https://www.tcl.tk/"
+			},
+			{
+				"name": "Perl",
+				"devdocs_url": "https://devdocs.io/perl~5.38/",
+				"official_website": "https://www.perl.org/"
+			}
+		],
+		"Kernel": [
+			{
+				"name": "C",
+				"devdocs_url": "https://devdocs.io/c/",
+				"official_website": "https://en.wikipedia.org/wiki/C_(programming_language)"
+			},
+			{ "name": "C++", "devdocs_url": "https://devdocs.io/cpp/", "official_website": "https://isocpp.org/" },
+			{
+				"name": "Rust",
+				"devdocs_url": "https://devdocs.io/rust/",
+				"official_website": "https://www.rust-lang.org/"
+			}
+		],
+		"Cryptography": [
+			{
+				"name": "Rust",
+				"devdocs_url": "https://devdocs.io/rust/",
+				"official_website": "https://www.rust-lang.org/"
+			},
+			{ "name": "Go", "devdocs_url": "https://devdocs.io/go/", "official_website": "https://go.dev/" },
+			{
+				"name": "Java (OpenJDK)",
+				"devdocs_url": "https://devdocs.io/openjdk~17/",
+				"official_website": "https://openjdk.org/"
+			}
+		],
+		"Math": [
+			{
+				"name": "Julia",
+				"devdocs_url": "https://devdocs.io/julia/",
+				"official_website": "https://julialang.org/"
+			},
+			{
+				"name": "Python",
+				"devdocs_url": "https://devdocs.io/python~3.10/",
+				"official_website": "https://www.python.org/"
+			},
+			{
+				"name": "Haskell",
+				"devdocs_url": "https://devdocs.io/haskell/",
+				"official_website": "https://www.haskell.org/"
+			},
+			{
+				"name": "Scala",
+				"devdocs_url": "https://devdocs.io/scala/",
+				"official_website": "https://www.scala-lang.org/"
+			}
+		],
+		"Web": [
+			{
+				"name": "JavaScript",
+				"devdocs_url": "https://devdocs.io/javascript/",
+				"official_website": "https://tc39.es/ecma262/"
+			},
+			{
+				"name": "TypeScript",
+				"devdocs_url": "https://devdocs.io/typescript/",
+				"official_website": "https://www.typescriptlang.org/"
+			},
+			{ "name": "PHP", "devdocs_url": "https://devdocs.io/php/", "official_website": "https://www.php.net/" },
+			{
+				"name": "Ruby",
+				"devdocs_url": "https://devdocs.io/ruby/",
+				"official_website": "https://www.ruby-lang.org/"
+			}
+		],
+		"Mobile": [
+			{
+				"name": "Java (OpenJDK)",
+				"devdocs_url": "https://devdocs.io/openjdk~17/",
+				"official_website": "https://openjdk.org/"
+			},
+			{
+				"name": "Kotlin",
+				"devdocs_url": "https://devdocs.io/kotlin/",
+				"official_website": "https://kotlinlang.org/"
+			}
+		],
+		"Blockchain": [
+			{ "name": "Go", "devdocs_url": "https://devdocs.io/go/", "official_website": "https://go.dev/" },
+			{
+				"name": "Rust",
+				"devdocs_url": "https://devdocs.io/rust/",
+				"official_website": "https://www.rust-lang.org/"
+			}
+		]
 	}
 }

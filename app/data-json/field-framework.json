@@ -1,49 +1,259 @@
 {
-	"Web": [
-		"React",
-		"Angular",
-		"Angular.js",
-		"Vue.js",
-		"Vuex",
-		"Backbone.js",
-		"Ember.js",
-		"Knockout.js",
-		"Marionette.js",
-		"Redux",
-		"D3.js",
-		"Modernizr",
-		"Moment.js",
-		"Underscore.js",
-		"Ramda",
-		"JSDoc",
-		"Bootstrap",
-		"PostCSS",
-		"Sass",
-		"Stylus",
-		"Less"
-	],
-	"Mobile": ["React Native"],
-	"Development": [
-		"Ruby on Rails",
-		"Django",
-		"CakePHP",
-		"Symfony",
-		"Phalcon",
-		"Yii",
-		"Zend Framework",
-		"Spring Boot",
-		"Doctrine",
-		"PHPUnit",
-		"Requests (Python)",
-		"Chai",
-		"Sinon",
-		"Jest",
-		"CodeceptJS",
-		"Cucumber"
-	],
-	"Data": ["NumPy", "Pandas", "Mongoose"],
-	"DevOps": ["Docker", "Ansible", "Chef", "Nix", "CMake", "Git", "Bash", "Fish shell", "Nginx", "webpack"],
-	"Gaming": ["Unity"],
-	"Cybersecurity": ["Ansible", "Nginx", "Docker", "Git"],
-	"Web3": ["Node.js", "npm"]
+	"FrameworksAndTools": {
+		"Web": [
+			{ "name": "React", "devdocs_url": "https://devdocs.io/react/", "official_website": "https://react.dev/" },
+			{
+				"name": "Angular",
+				"devdocs_url": "https://devdocs.io/angular/",
+				"official_website": "https://angular.io/"
+			},
+			{
+				"name": "Angular.js",
+				"devdocs_url": "https://devdocs.io/angularjs/",
+				"official_website": "https://angularjs.org/"
+			},
+			{ "name": "Vue.js", "devdocs_url": "https://devdocs.io/vue/", "official_website": "https://vuejs.org/" },
+			{
+				"name": "Vuex",
+				"devdocs_url": "https://devdocs.io/vuex/",
+				"official_website": "https://vuex.vuejs.org/"
+			},
+			{
+				"name": "Backbone.js",
+				"devdocs_url": "https://devdocs.io/backbone/",
+				"official_website": "https://backbonejs.org/"
+			},
+			{
+				"name": "Ember.js",
+				"devdocs_url": "https://devdocs.io/ember/",
+				"official_website": "https://emberjs.com/"
+			},
+			{
+				"name": "Knockout.js",
+				"devdocs_url": "https://devdocs.io/knockout/",
+				"official_website": "https://knockoutjs.com/"
+			},
+			{
+				"name": "Marionette.js",
+				"devdocs_url": "https://devdocs.io/marionette/",
+				"official_website": "https://marionettejs.com/"
+			},
+			{
+				"name": "Redux",
+				"devdocs_url": "https://devdocs.io/redux/",
+				"official_website": "https://redux.js.org/"
+			},
+			{ "name": "D3.js", "devdocs_url": "https://devdocs.io/d3/", "official_website": "https://d3js.org/" },
+			{
+				"name": "Modernizr",
+				"devdocs_url": "https://devdocs.io/modernizr/",
+				"official_website": "https://modernizr.com/"
+			},
+			{
+				"name": "Moment.js",
+				"devdocs_url": "https://devdocs.io/moment/",
+				"official_website": "https://momentjs.com/"
+			},
+			{
+				"name": "Underscore.js",
+				"devdocs_url": "https://devdocs.io/underscore/",
+				"official_website": "https://underscorejs.org/"
+			},
+			{ "name": "Ramda", "devdocs_url": "https://devdocs.io/ramda/", "official_website": "https://ramdajs.com/" },
+			{ "name": "JSDoc", "devdocs_url": "https://devdocs.io/jsdoc/", "official_website": "https://jsdoc.app/" },
+			{
+				"name": "Bootstrap",
+				"devdocs_url": "https://devdocs.io/bootstrap~5/",
+				"official_website": "https://getbootstrap.com/"
+			},
+			{
+				"name": "PostCSS",
+				"devdocs_url": "https://devdocs.io/postcss/",
+				"official_website": "https://postcss.org/"
+			},
+			{ "name": "Sass", "devdocs_url": "https://devdocs.io/sass/", "official_website": "https://sass-lang.com/" },
+			{
+				"name": "Stylus",
+				"devdocs_url": "https://devdocs.io/stylus/",
+				"official_website": "https://stylus-lang.com/"
+			},
+			{ "name": "Less", "devdocs_url": "https://devdocs.io/less/", "official_website": "https://lesscss.org/" }
+		],
+		"Mobile": [
+			{
+				"name": "React Native",
+				"devdocs_url": "https://devdocs.io/react_native/",
+				"official_website": "https://reactnative.dev/"
+			}
+		],
+		"Development": [
+			{
+				"name": "Ruby on Rails",
+				"devdocs_url": "https://devdocs.io/rails/",
+				"official_website": "https://rubyonrails.org/"
+			},
+			{
+				"name": "Django",
+				"devdocs_url": "https://devdocs.io/django/",
+				"official_website": "https://www.djangoproject.com/"
+			},
+			{
+				"name": "CakePHP",
+				"devdocs_url": "https://devdocs.io/cakephp/",
+				"official_website": "https://cakephp.org/"
+			},
+			{
+				"name": "Symfony",
+				"devdocs_url": "https://devdocs.io/symfony/",
+				"official_website": "https://symfony.com/"
+			},
+			{
+				"name": "Phalcon",
+				"devdocs_url": "https://devdocs.io/phalcon/",
+				"official_website": "https://phalcon.io/"
+			},
+			{
+				"name": "Yii",
+				"devdocs_url": "https://devdocs.io/yii/",
+				"official_website": "https://www.yiiframework.com/"
+			},
+			{
+				"name": "Zend Framework",
+				"devdocs_url": "https://devdocs.io/zend/",
+				"official_website": "https://framework.zend.com/"
+			},
+			{
+				"name": "Spring Boot",
+				"devdocs_url": "https://devdocs.io/spring_boot/",
+				"official_website": "https://spring.io/projects/spring-boot"
+			},
+			{
+				"name": "Doctrine",
+				"devdocs_url": "https://devdocs.io/doctrine/",
+				"official_website": "https://www.doctrine-project.org/"
+			}
+		],
+		"TestingAndQA": [
+			{
+				"name": "PHPUnit",
+				"devdocs_url": "https://devdocs.io/phpunit/",
+				"official_website": "https://phpunit.de/"
+			},
+			{
+				"name": "Chai",
+				"devdocs_url": "https://devdocs.io/chai/",
+				"official_website": "https://www.chaijs.com/"
+			},
+			{ "name": "Sinon", "devdocs_url": "https://devdocs.io/sinon/", "official_website": "https://sinonjs.org/" },
+			{ "name": "Jest", "devdocs_url": "https://devdocs.io/jest/", "official_website": "https://jestjs.io/" },
+			{
+				"name": "CodeceptJS",
+				"devdocs_url": "https://devdocs.io/codeceptjs/",
+				"official_website": "https://codecept.io/"
+			},
+			{
+				"name": "Cucumber",
+				"devdocs_url": "https://devdocs.io/cucumber/",
+				"official_website": "https://cucumber.io/"
+			}
+		],
+		"Data": [
+			{ "name": "NumPy", "devdocs_url": "https://devdocs.io/numpy/", "official_website": "https://numpy.org/" },
+			{
+				"name": "Pandas",
+				"devdocs_url": "https://devdocs.io/pandas/",
+				"official_website": "https://pandas.pydata.org/"
+			},
+			{
+				"name": "Mongoose",
+				"devdocs_url": "https://devdocs.io/mongoose/",
+				"official_website": "https://mongoosejs.com/"
+			}
+		],
+		"DevOps": [
+			{
+				"name": "Docker",
+				"devdocs_url": "https://devdocs.io/docker/",
+				"official_website": "https://www.docker.com/"
+			},
+			{
+				"name": "Ansible",
+				"devdocs_url": "https://devdocs.io/ansible/",
+				"official_website": "https://www.ansible.com/"
+			},
+			{ "name": "Chef", "devdocs_url": "https://devdocs.io/chef/", "official_website": "https://www.chef.io/" },
+			{ "name": "Nix", "devdocs_url": "https://devdocs.io/nix/", "official_website": "https://nixos.org/" },
+			{ "name": "CMake", "devdocs_url": "https://devdocs.io/cmake/", "official_website": "https://cmake.org/" },
+			{ "name": "Git", "devdocs_url": "https://devdocs.io/git/", "official_website": "https://git-scm.com/" },
+			{
+				"name": "Bash",
+				"devdocs_url": "https://devdocs.io/bash/",
+				"official_website": "https://www.gnu.org/software/bash/"
+			},
+			{
+				"name": "Fish shell",
+				"devdocs_url": "https://devdocs.io/fish/",
+				"official_website": "https://fishshell.com/"
+			},
+			{ "name": "Nginx", "devdocs_url": "https://devdocs.io/nginx/", "official_website": "https://nginx.org/" },
+			{
+				"name": "webpack",
+				"devdocs_url": "https://devdocs.io/webpack/",
+				"official_website": "https://webpack.js.org/"
+			}
+		],
+		"Gaming": [
+			{ "name": "Unity", "devdocs_url": "https://devdocs.io/unity/", "official_website": "https://unity.com/" }
+		],
+		"Cybersecurity": [
+			{
+				"name": "Ansible",
+				"devdocs_url": "https://devdocs.io/ansible/",
+				"official_website": "https://www.ansible.com/"
+			},
+			{ "name": "Nginx", "devdocs_url": "https://devdocs.io/nginx/", "official_website": "https://nginx.org/" },
+			{
+				"name": "Docker",
+				"devdocs_url": "https://devdocs.io/docker/",
+				"official_website": "https://www.docker.com/"
+			},
+			{ "name": "Git", "devdocs_url": "https://devdocs.io/git/", "official_website": "https://git-scm.com/" }
+		],
+		"Web3": [
+			{ "name": "Node.js", "devdocs_url": "https://devdocs.io/node/", "official_website": "https://nodejs.org/" },
+			{ "name": "npm", "devdocs_url": "https://devdocs.io/npm/", "official_website": "https://www.npmjs.com/" }
+		],
+		"APIsAndStandards": [
+			{
+				"name": "HTTP",
+				"devdocs_url": "https://devdocs.io/http/",
+				"official_website": "https://www.rfc-editor.org/rfc/rfc2616"
+			},
+			{
+				"name": "DOM",
+				"devdocs_url": "https://devdocs.io/dom/",
+				"official_website": "https://dom.spec.whatwg.org/"
+			},
+			{
+				"name": "GraphQL",
+				"devdocs_url": "https://devdocs.io/graphql/",
+				"official_website": "https://graphql.org/"
+			}
+		],
+		"CMS": [
+			{
+				"name": "WordPress",
+				"devdocs_url": "https://devdocs.io/wordpress/",
+				"official_website": "https://wordpress.org/"
+			}
+		],
+		"DocumentationAndMarkup": [
+			{
+				"name": "Markdown",
+				"devdocs_url": "https://devdocs.io/markdown/",
+				"official_website": "https://daringfireball.net/projects/markdown/"
+			},
+			{ "name": "JSDoc", "devdocs_url": "https://devdocs.io/jsdoc/", "official_website": "https://jsdoc.app/" }
+		]
+	}
 }
