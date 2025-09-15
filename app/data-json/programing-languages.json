@@ -1,0 +1,122 @@
+{
+  "ProgrammingLanguages": {
+    "GeneralPurpose": [
+      "C",
+      "C++",
+      "D",
+      "Go",
+      "Haskell",
+      "Java (OpenJDK, Java EE)",
+      "Julia",
+      "Kotlin",
+      "Lua",
+      "Perl",
+      "PHP",
+      "Python",
+      "Ruby",
+      "Rust",
+      "Scala",
+      "Tcl/Tk"
+    ],
+    "FunctionalAndScripting": [
+      "Clojure",
+      "CoffeeScript",
+      "Crystal",
+      "Dart",
+      "Elixir",
+      "Erlang",
+      "Groovy",
+      "TypeScript"
+    ],
+    "DataScience": [
+      "NumPy",
+      "Pandas"
+    ]
+  },
+  "WebStandardsAndMarkup": [
+    "HTML",
+    "CSS",
+    "DOM",
+    "HTTP",
+    "Markdown"
+  ],
+  "StylesheetPreprocessors": [
+    "Less",
+    "PostCSS",
+    "Sass",
+    "Stylus"
+  ],
+  "FrameworksAndLibraries": {
+    "Frontend": [
+      "Angular",
+      "Angular.js",
+      "Backbone.js",
+      "D3.js",
+      "Ember.js",
+      "Jasmine",
+      "jQuery",
+      "JSDoc",
+      "Knockout.js",
+      "Marionette.js",
+      "Modernizr",
+      "Moment.js",
+      "Q",
+      "Ramda",
+      "React",
+      "React Native",
+      "Redux",
+      "Sinon",
+      "Underscore.js",
+      "Vue.js",
+      "Vuex"
+    ],
+    "BackendAndFullstack": [
+      "CakePHP",
+      "Django",
+      "Doctrine",
+      "Laravel (via Symfony)",
+      "Mongoose",
+      "Node.js",
+      "npm",
+      "Phalcon",
+      "PHPUnit",
+      "Ruby on Rails",
+      "Spring Boot",
+      "Symfony",
+      "WordPress",
+      "Yii",
+      "Zend Framework"
+    ]
+  },
+  "DatabasesAndQuery": [
+    "MongoDB",
+    "PostgreSQL",
+    "Redis",
+    "SQL (SQLite)"
+  ],
+  "ShellsBuildAndTooling": [
+    "Bash",
+    "Chef",
+    "CMake",
+    "Docker",
+    "Fish shell",
+    "Git",
+    "Nginx",
+    "Nix",
+    "webpack"
+  ],
+  "TestingAndAutomation": [
+    "Ansible",
+    "Chai",
+    "CodeceptJS",
+    "Cucumber",
+    "Jest"
+  ],
+  "GameEnginesAndPlatforms": [
+    "Unity"
+  ],
+  "MiscUtilities": [
+    "Flow",
+    "Requests (Python)"
+  ]
+}

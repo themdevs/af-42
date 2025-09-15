@@ -1,0 +1,14 @@
+{
+	"Fields": {
+		"Algo": ["Haskell", "Scala", "Clojure", "Erlang", "Elixir", "Groovy"],
+		"AI": ["Python", "Julia"],
+		"Data": ["Python", "Julia", "R", "Scala"],
+		"System": ["C", "C++", "D", "Go", "Rust", "Lua", "Tcl/Tk", "Perl"],
+		"Kernel": ["C", "C++", "Rust"],
+		"Cryptography": ["Rust", "Go", "Java"],
+		"Math": ["Julia", "Python", "Haskell", "Scala"],
+		"Web": ["JavaScript", "TypeScript", "PHP", "Ruby"],
+		"Mobile": ["Java", "Kotlin", "Swift"],
+		"Blockchain": ["Go", "Rust", "Solidity"]
+	}
+}
