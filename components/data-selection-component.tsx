@@ -1,22 +1,23 @@
 'use client';
 
+// React hooks
 import { useState, useMemo } from 'react';
-import { useForm } from 'react-hook-form';
-import { zodResolver } from '@hookform/resolvers/zod';
-import * as z from 'zod';
+
+// UI Components from shadcn/ui
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Checkbox } from '@/components/ui/checkbox';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Separator } from '@/components/ui/separator';
 import { Badge } from '@/components/ui/badge';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Tabs, TabsContent } from '@/components/ui/tabs';
+
+// Icons and notifications
 import { Copy, Download, Search, Filter, CheckCircle2 } from 'lucide-react';
 import { toast } from 'sonner';
 
-// Import all datasets
+// Import all technology datasets from JSON files
 import * as aiDataset from '../app/data-json/ai-dataset.json';
 import * as blockchainDataset from '../app/data-json/blockchain-dataset.json';
 import * as cryptographyDataset from '../app/data-json/cryptography-dataset.json';
@@ -38,14 +39,7 @@ import * as programingLanguagesDataset from '../app/data-json/programing-languag
 import * as webDevelopmentDataset from '../app/data-json/web-development-dataset.json';
 import * as web3Dataset from '../app/data-json/web3-dataset.json';
 
-// Define the form schema
-const formSchema = z.object({
-	selectedKeys: z.array(z.string()),
-});
-
-type FormData = z.infer<typeof formSchema>;
-
-// Dataset configuration
+// Dataset configuration - maps dataset keys to their data and display names
 const datasets = [
 	{ key: 'ai', name: 'AI & Machine Learning', data: aiDataset },
 	{ key: 'blockchain', name: 'Blockchain', data: blockchainDataset },
@@ -69,34 +63,29 @@ const datasets = [
 	{ key: 'web3', name: 'Web3', data: web3Dataset },
 ];
 
+// TypeScript interfaces for data structure
 interface DatasetItem {
-	name: string;
-	official_docs?: string;
-	official_website?: string;
+	name: string; // Technology/tool name
+	official_docs?: string; // Optional documentation URL
+	official_website?: string; // Optional official website URL
 }
 
 interface CategoryData {
-	[key: string]: DatasetItem[] | DatasetItem | any;
+	[key: string]: DatasetItem[] | DatasetItem | any; // Flexible category structure
 }
 
+// Main component for selecting technology stacks
 export const DataSelectionComponent = () => {
-	const [searchTerm, setSearchTerm] = useState('');
-	const [selectedDataset, setSelectedDataset] = useState('ai');
-	const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
-	const [outputJson, setOutputJson] = useState<Record<string, any>>({});
-	const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
+	// Component state management
+	const [searchTerm, setSearchTerm] = useState(''); // Search filter for categories/items
+	const [selectedDataset, setSelectedDataset] = useState('ai'); // Currently selected dataset
+	const [selectedKeys, setSelectedKeys] = useState<string[]>([]); // Array of selected item keys
+	const [outputJson, setOutputJson] = useState<Record<string, any>>({}); // Generated JSON output
 
-	const { control, handleSubmit, watch } = useForm<FormData>({
-		resolver: zodResolver(formSchema),
-		defaultValues: {
-			selectedKeys: [],
-		},
-	});
-
-	// Get current dataset
+	// Get the currently selected dataset
 	const currentDataset = datasets.find((d) => d.key === selectedDataset)?.data as CategoryData;
 
-	// Filter categories based on search term
+	// Filter categories based on search term (searches both category names and item names)
 	const filteredCategories = useMemo(() => {
 		if (!searchTerm) return Object.keys(currentDataset || {});
 
@@ -110,16 +99,7 @@ export const DataSelectionComponent = () => {
 		);
 	}, [currentDataset, searchTerm]);
 
-	// Handle category selection
-	const handleCategoryToggle = (categoryKey: string) => {
-		const key = `${selectedDataset}.${categoryKey}`;
-		const newSelectedKeys = selectedKeys.includes(key)
-			? selectedKeys.filter((k) => k !== key)
-			: [...selectedKeys, key];
-
-		setSelectedKeys(newSelectedKeys);
-		generateOutput(newSelectedKeys);
-	};
+	// Event handlers for user interactions
 
 	// Handle individual item selection within a category
 	const handleItemToggle = (categoryKey: string, itemIndex: number) => {
@@ -132,26 +112,16 @@ export const DataSelectionComponent = () => {
 		generateOutput(newSelectedKeys);
 	};
 
-	// Toggle category expansion
-	const toggleCategoryExpansion = (categoryKey: string) => {
-		const newExpanded = new Set(expandedCategories);
-		if (newExpanded.has(categoryKey)) {
-			newExpanded.delete(categoryKey);
-		} else {
-			newExpanded.add(categoryKey);
-		}
-		setExpandedCategories(newExpanded);
-	};
-
-	// Generate output JSON
+	// Generate JSON output from selected keys
+	// Keys format: "dataset.category.itemIndex" or "dataset.category"
 	const generateOutput = (keys: string[]) => {
 		const output: Record<string, any> = {};
 
 		keys.forEach((key) => {
 			const parts = key.split('.');
-			const datasetKey = parts[0];
-			const categoryKey = parts[1];
-			const itemIndex = parts[2];
+			const datasetKey = parts[0]; // e.g., "ai"
+			const categoryKey = parts[1]; // e.g., "machine_learning"
+			const itemIndex = parts[2]; // e.g., "0" (for individual items)
 
 			const dataset = datasets.find((d) => d.key === datasetKey);
 
@@ -163,7 +133,7 @@ export const DataSelectionComponent = () => {
 				const categoryData = (dataset.data as any)[categoryKey];
 
 				if (itemIndex !== undefined) {
-					// Individual item selection
+					// Individual item selection - add specific item to array
 					if (Array.isArray(categoryData) && categoryData[parseInt(itemIndex)]) {
 						if (!output[datasetKey][categoryKey]) {
 							output[datasetKey][categoryKey] = [];
@@ -171,7 +141,7 @@ export const DataSelectionComponent = () => {
 						output[datasetKey][categoryKey].push(categoryData[parseInt(itemIndex)]);
 					}
 				} else {
-					// Entire category selection
+					// Entire category selection - add all category data
 					output[datasetKey][categoryKey] = categoryData;
 				}
 			}
@@ -180,13 +150,14 @@ export const DataSelectionComponent = () => {
 		setOutputJson(output);
 	};
 
-	// Copy to clipboard
+	// Utility functions for exporting data
+	// Copy JSON to clipboard
 	const copyToClipboard = () => {
 		navigator.clipboard.writeText(JSON.stringify(outputJson, null, 2));
 		toast.success('JSON copied to clipboard!');
 	};
 
-	// Download JSON
+	// Download JSON as file
 	const downloadJson = () => {
 		const blob = new Blob([JSON.stringify(outputJson, null, 2)], { type: 'application/json' });
 		const url = URL.createObjectURL(blob);
@@ -202,7 +173,7 @@ export const DataSelectionComponent = () => {
 
 	return (
 		<div className="max-w-7xl mx-auto p-6 space-y-6">
-			{/* Header */}
+			{/* Page Header */}
 			<div className="text-center space-y-2">
 				<h1 className="text-3xl font-bold tracking-tight">Stack Selection Tool</h1>
 				<p className="text-muted-foreground">
@@ -210,8 +181,9 @@ export const DataSelectionComponent = () => {
 				</p>
 			</div>
 
+			{/* Main Content Grid - 3 columns on large screens */}
 			<div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-				{/* Dataset Selection */}
+				{/* Left Column: Field/Dataset Selection */}
 				<Card className="lg:col-span-1">
 					<CardHeader>
 						<CardTitle className="flex items-center gap-2">
@@ -250,7 +222,7 @@ export const DataSelectionComponent = () => {
 					</CardContent>
 				</Card>
 
-				{/* Category Selection */}
+				{/* Middle Column: Category and Item Selection */}
 				<Card className="lg:col-span-1">
 					<CardHeader>
 						<CardTitle className="flex items-center gap-2">
@@ -262,6 +234,7 @@ export const DataSelectionComponent = () => {
 						</CardDescription>
 					</CardHeader>
 					<CardContent className="space-y-4">
+						{/* Search Input */}
 						<div className="relative">
 							<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
 							<Input
@@ -272,24 +245,26 @@ export const DataSelectionComponent = () => {
 							/>
 						</div>
 
+						{/* Categories and Items List */}
 						<ScrollArea className="h-96">
 							<div className="space-y-3">
+								{/* Render each filtered category */}
 								{filteredCategories.map((category) => {
-									const categoryKey = `${selectedDataset}.${category}`;
-									const isCategorySelected = selectedKeys.includes(categoryKey);
 									const categoryData = currentDataset[category];
 									const isArray = Array.isArray(categoryData);
 
 									return (
 										<div key={category} className="space-y-2">
-											{/* Individual Items */}
+											{/* Render individual items if category contains array data */}
 											{isArray && (categoryData as DatasetItem[]).length > 0 && (
 												<div className="ml-4 space-y-1 border-l-2 border-muted pl-4">
+													{/* Category header */}
 													<div className="mb-2">
 														<div className="text-xs font-medium text-muted-foreground">
 															{category}:
 														</div>
 													</div>
+													{/* Render each item in the category */}
 													{(categoryData as DatasetItem[]).map((item, index) => {
 														const itemKey = `${selectedDataset}.${category}.${index}`;
 														const isItemSelected = selectedKeys.includes(itemKey);
@@ -299,6 +274,7 @@ export const DataSelectionComponent = () => {
 																key={index}
 																className="flex items-center space-x-2 p-1 rounded border bg-background"
 															>
+																{/* Selection checkbox */}
 																<Checkbox
 																	id={itemKey}
 																	checked={isItemSelected}
@@ -306,6 +282,7 @@ export const DataSelectionComponent = () => {
 																		handleItemToggle(category, index)
 																	}
 																/>
+																{/* Item details */}
 																<Label
 																	htmlFor={itemKey}
 																	className="flex-1 cursor-pointer"
@@ -313,12 +290,14 @@ export const DataSelectionComponent = () => {
 																	<div className="text-sm font-medium">
 																		{item.name}
 																	</div>
+																	{/* Show documentation URL if available */}
 																	{item.official_docs && (
 																		<div className="text-xs text-muted-foreground truncate">
 																			{item.official_docs}
 																		</div>
 																	)}
 																</Label>
+																{/* Selection indicator */}
 																{isItemSelected && (
 																	<CheckCircle2 className="h-3 w-3 text-green-500" />
 																)}
@@ -333,6 +312,7 @@ export const DataSelectionComponent = () => {
 							</div>
 						</ScrollArea>
 
+						{/* Selection controls - show when items are selected */}
 						{selectedKeys.length > 0 && (
 							<div className="pt-4 border-t">
 								<div className="flex items-center justify-between">
@@ -353,7 +333,7 @@ export const DataSelectionComponent = () => {
 					</CardContent>
 				</Card>
 
-				{/* Output Preview */}
+				{/* Right Column: JSON Output Preview and Export */}
 				<Card className="lg:col-span-1">
 					<CardHeader>
 						<CardTitle className="flex items-center gap-2">
@@ -363,14 +343,17 @@ export const DataSelectionComponent = () => {
 						<CardDescription>Preview and export your selected data</CardDescription>
 					</CardHeader>
 					<CardContent className="space-y-4">
+						{/* Show JSON output if items are selected */}
 						{Object.keys(outputJson).length > 0 ? (
 							<>
+								{/* JSON preview */}
 								<ScrollArea className="h-96 border rounded-lg p-4 bg-muted/50">
 									<pre className="text-xs font-mono whitespace-pre-wrap">
 										{JSON.stringify(outputJson, null, 2)}
 									</pre>
 								</ScrollArea>
 
+								{/* Export buttons */}
 								<div className="flex gap-2">
 									<Button onClick={copyToClipboard} className="flex-1">
 										<Copy className="h-4 w-4 mr-2" />
@@ -394,7 +377,7 @@ export const DataSelectionComponent = () => {
 				</Card>
 			</div>
 
-			{/* Selected Items Summary */}
+			{/* Bottom Section: Selected Items Summary */}
 			{selectedKeys.length > 0 && (
 				<Card>
 					<CardHeader>
@@ -403,6 +386,7 @@ export const DataSelectionComponent = () => {
 					</CardHeader>
 					<CardContent>
 						<div className="space-y-3">
+							{/* Selected items badges */}
 							<div className="flex flex-wrap gap-2">
 								{selectedKeys.map((key) => {
 									const parts = key.split('.');
@@ -412,7 +396,7 @@ export const DataSelectionComponent = () => {
 									const dataset = datasets.find((d) => d.key === datasetKey);
 
 									if (itemIndex !== undefined) {
-										// Individual item selection
+										// Individual item selection - show specific item
 										const categoryData = (dataset?.data as any)?.[categoryKey];
 										const item = Array.isArray(categoryData)
 											? categoryData[parseInt(itemIndex)]
@@ -423,7 +407,7 @@ export const DataSelectionComponent = () => {
 											</Badge>
 										);
 									} else {
-										// Category selection
+										// Category selection - show entire category
 										return (
 											<Badge key={key} variant="secondary" className="text-xs">
 												{dataset?.name} → {categoryKey} (All)
