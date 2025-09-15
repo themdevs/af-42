@@ -1,0 +1,351 @@
+{
+	"GenerativeAIFrameworks": [
+		{
+			"name": "Hugging Face Diffusers",
+			"official_docs": "https://huggingface.co/docs/diffusers/index",
+			"official_website": "https://huggingface.co/"
+		},
+		{
+			"name": "OpenAI API",
+			"official_docs": "https://platform.openai.com/docs/",
+			"official_website": "https://openai.com/"
+		},
+		{
+			"name": "LangChain",
+			"official_docs": "https://python.langchain.com/docs/",
+			"official_website": "https://www.langchain.com/"
+		},
+		{
+			"name": "Haystack (Deepset)",
+			"official_docs": "https://docs.haystack.deepset.ai/",
+			"official_website": "https://haystack.deepset.ai/"
+		},
+		{
+			"name": "LlamaIndex",
+			"official_docs": "https://docs.llamaindex.ai/",
+			"official_website": "https://www.llamaindex.ai/"
+		}
+	],
+	"TextGenerationLLMs": [
+		{
+			"name": "GPT (OpenAI)",
+			"official_docs": "https://platform.openai.com/docs/models/gpt-4",
+			"official_website": "https://openai.com/research"
+		},
+		{
+			"name": "LLaMA (Meta AI)",
+			"official_docs": "https://ai.meta.com/llama/",
+			"official_website": "https://ai.meta.com/llama/"
+		},
+		{
+			"name": "Claude (Anthropic)",
+			"official_docs": "https://docs.anthropic.com/claude/",
+			"official_website": "https://www.anthropic.com/"
+		},
+		{
+			"name": "Mistral",
+			"official_docs": "https://docs.mistral.ai/",
+			"official_website": "https://mistral.ai/"
+		},
+		{
+			"name": "Falcon LLM",
+			"official_docs": "https://falconllm.tii.ae/",
+			"official_website": "https://falconllm.tii.ae/"
+		},
+		{
+			"name": "Cohere Generate",
+			"official_docs": "https://docs.cohere.com/docs/generate-reference",
+			"official_website": "https://cohere.com/"
+		}
+	],
+	"ImageGeneration": [
+		{
+			"name": "Stable Diffusion",
+			"official_docs": "https://huggingface.co/docs/diffusers/api/pipelines/stable_diffusion",
+			"official_website": "https://stability.ai/"
+		},
+		{
+			"name": "DALL·E",
+			"official_docs": "https://platform.openai.com/docs/guides/images",
+			"official_website": "https://openai.com/dall-e"
+		},
+		{
+			"name": "MidJourney",
+			"official_docs": "https://docs.midjourney.com/",
+			"official_website": "https://www.midjourney.com/"
+		},
+		{
+			"name": "DeepFloyd IF",
+			"official_docs": "https://huggingface.co/DeepFloyd/IF",
+			"official_website": "https://huggingface.co/DeepFloyd"
+		},
+		{
+			"name": "RunwayML Gen-2",
+			"official_docs": "https://docs.runwayml.com/",
+			"official_website": "https://runwayml.com/"
+		}
+	],
+	"AudioAndSpeechGeneration": [
+		{
+			"name": "OpenAI TTS (Text-to-Speech)",
+			"official_docs": "https://platform.openai.com/docs/guides/speech",
+			"official_website": "https://openai.com/"
+		},
+		{
+			"name": "Whisper (OpenAI Speech-to-Text)",
+			"official_docs": "https://github.com/openai/whisper",
+			"official_website": "https://openai.com/research/whisper"
+		},
+		{
+			"name": "Bark (Suno AI)",
+			"official_docs": "https://suno-ai.notion.site/Bark-Documentation-8b3a5a9a7d0c4e9aa8d5a14db1bfa3b8",
+			"official_website": "https://suno.ai/"
+		},
+		{
+			"name": "RVC (Retrieval-based Voice Conversion)",
+			"official_docs": "https://github.com/RVC-Project/Retrieval-based-Voice-Conversion-WebUI",
+			"official_website": "https://rvc-project.github.io/"
+		},
+		{
+			"name": "Descript Overdub",
+			"official_docs": "https://help.descript.com/hc/en-us/articles/360047441172-Overdub",
+			"official_website": "https://www.descript.com/overdub"
+		}
+	],
+	"VideoGeneration": [
+		{
+			"name": "Pika Labs",
+			"official_docs": "https://docs.pika.art/",
+			"official_website": "https://pika.art/"
+		},
+		{
+			"name": "Runway Gen-2",
+			"official_docs": "https://docs.runwayml.com/",
+			"official_website": "https://runwayml.com/"
+		},
+		{
+			"name": "Synthesia",
+			"official_docs": "https://help.synthesia.io/en/",
+			"official_website": "https://www.synthesia.io/"
+		},
+		{
+			"name": "Rephrase.ai",
+			"official_docs": "https://rephrase.ai/faq",
+			"official_website": "https://www.rephrase.ai/"
+		},
+		{
+			"name": "Hour One",
+			"official_docs": "https://hourone.ai/faq/",
+			"official_website": "https://hourone.ai/"
+		}
+	],
+	"ThreeDAndMultimodal": [
+		{
+			"name": "DreamFusion (Google Research)",
+			"official_docs": "https://dreamfusion3d.github.io/",
+			"official_website": "https://dreamfusion3d.github.io/"
+		},
+		{
+			"name": "Point-E (OpenAI)",
+			"official_docs": "https://github.com/openai/point-e",
+			"official_website": "https://openai.com/research/point-e"
+		},
+		{
+			"name": "Nerf (Neural Radiance Fields)",
+			"official_docs": "https://www.matthewtancik.com/nerf",
+			"official_website": "https://www.matthewtancik.com/nerf"
+		},
+		{
+			"name": "Kaedim3D",
+			"official_docs": "https://help.kaedim3d.com/",
+			"official_website": "https://www.kaedim3d.com/"
+		}
+	],
+	"ModelDeploymentAndAPIs": [
+		{
+			"name": "Replicate",
+			"official_docs": "https://replicate.com/docs",
+			"official_website": "https://replicate.com/"
+		},
+		{
+			"name": "Hugging Face Inference Endpoints",
+			"official_docs": "https://huggingface.co/inference-endpoints/docs",
+			"official_website": "https://huggingface.co/inference-endpoints"
+		},
+		{
+			"name": "Banana.dev",
+			"official_docs": "https://docs.banana.dev/",
+			"official_website": "https://www.banana.dev/"
+		},
+		{
+			"name": "Modal",
+			"official_docs": "https://modal.com/docs",
+			"official_website": "https://modal.com/"
+		},
+		{
+			"name": "Vercel AI SDK",
+			"official_docs": "https://sdk.vercel.ai/docs",
+			"official_website": "https://vercel.com/ai"
+		}
+	],
+	"SyntheticDataGeneration": [
+		{
+			"name": "Gretel.ai",
+			"official_docs": "https://docs.gretel.ai/",
+			"official_website": "https://gretel.ai/"
+		},
+		{
+			"name": "Mostly AI",
+			"official_docs": "https://mostly.ai/docs/",
+			"official_website": "https://mostly.ai/"
+		},
+		{
+			"name": "Synthia",
+			"official_docs": "https://synthia.io/docs",
+			"official_website": "https://synthia.io/"
+		},
+		{
+			"name": "Unity Perception",
+			"official_docs": "https://github.com/Unity-Technologies/com.unity.perception",
+			"official_website": "https://unity.com/"
+		},
+		{
+			"name": "MDClone",
+			"official_docs": "https://www.mdclone.com/resources",
+			"official_website": "https://www.mdclone.com/"
+		}
+	],
+	"EvaluationAndSafetyTools": [
+		{
+			"name": "OpenAI Evals",
+			"official_docs": "https://github.com/openai/evals",
+			"official_website": "https://openai.com/research"
+		},
+		{
+			"name": "DeepEval",
+			"official_docs": "https://docs.confident-ai.com/deepeval",
+			"official_website": "https://confident-ai.com/"
+		},
+		{
+			"name": "TruLens",
+			"official_docs": "https://www.trulens.org/docs/",
+			"official_website": "https://www.trulens.org/"
+		},
+		{
+			"name": "RAIL (Responsible AI Licenses)",
+			"official_docs": "https://www.licenses.ai/",
+			"official_website": "https://www.licenses.ai/"
+		},
+		{
+			"name": "AI Fairness 360 (IBM)",
+			"official_docs": "https://aif360.res.ibm.com/documentation/",
+			"official_website": "https://aif360.mybluemix.net/"
+		},
+		{
+			"name": "Elicit (Ought)",
+			"official_docs": "https://elicit.org/research",
+			"official_website": "https://elicit.org/"
+		}
+	],
+	"VectorDatabasesAndMemoryStores": [
+		{
+			"name": "Pinecone",
+			"official_docs": "https://docs.pinecone.io/",
+			"official_website": "https://www.pinecone.io/"
+		},
+		{
+			"name": "Weaviate",
+			"official_docs": "https://weaviate.io/developers/weaviate",
+			"official_website": "https://weaviate.io/"
+		},
+		{
+			"name": "Milvus",
+			"official_docs": "https://milvus.io/docs/",
+			"official_website": "https://milvus.io/"
+		},
+		{
+			"name": "Chroma",
+			"official_docs": "https://docs.trychroma.com/",
+			"official_website": "https://www.trychroma.com/"
+		},
+		{
+			"name": "Redis Vector (Redisearch / Redis Stack)",
+			"official_docs": "https://redis.io/docs/interact/search-and-query/search/vector-database/",
+			"official_website": "https://redis.io/"
+		},
+		{
+			"name": "FAISS (Facebook AI Similarity Search)",
+			"official_docs": "https://faiss.ai/",
+			"official_website": "https://faiss.ai/"
+		},
+		{
+			"name": "Annoy (Spotify)",
+			"official_docs": "https://github.com/spotify/annoy",
+			"official_website": "https://github.com/spotify/annoy"
+		}
+	],
+	"FineTuningAndModelTrainingPlatforms": [
+		{
+			"name": "LoRA (Low-Rank Adaptation)",
+			"official_docs": "https://huggingface.co/docs/peft/index",
+			"official_website": "https://huggingface.co/docs/peft/index"
+		},
+		{
+			"name": "PEFT (Parameter-Efficient Fine-Tuning)",
+			"official_docs": "https://huggingface.co/docs/peft/index",
+			"official_website": "https://huggingface.co/docs/peft/index"
+		},
+		{
+			"name": "Hugging Face Trainer",
+			"official_docs": "https://huggingface.co/docs/transformers/training",
+			"official_website": "https://huggingface.co/"
+		},
+		{
+			"name": "MosaicML",
+			"official_docs": "https://docs.mosaicml.com/",
+			"official_website": "https://www.mosaicml.com/"
+		},
+		{
+			"name": "Lightning AI (PyTorch Lightning)",
+			"official_docs": "https://lightning.ai/docs/pytorch/stable/",
+			"official_website": "https://lightning.ai/"
+		},
+		{
+			"name": "Axolotl (LLM fine-tuning framework)",
+			"official_docs": "https://github.com/OpenAccess-AI-Collective/axolotl",
+			"official_website": "https://github.com/OpenAccess-AI-Collective/axolotl"
+		}
+	],
+	"GuardrailsAndPromptEngineeringTools": [
+		{
+			"name": "Guardrails AI",
+			"official_docs": "https://www.guardrailsai.com/docs",
+			"official_website": "https://www.guardrailsai.com/"
+		},
+		{
+			"name": "Guidance (Microsoft)",
+			"official_docs": "https://github.com/microsoft/guidance",
+			"official_website": "https://github.com/microsoft/guidance"
+		},
+		{
+			"name": "Promptify",
+			"official_docs": "https://github.com/promptslab/Promptify",
+			"official_website": "https://github.com/promptslab/Promptify"
+		},
+		{
+			"name": "PromptLayer",
+			"official_docs": "https://promptlayer.com/docs",
+			"official_website": "https://promptlayer.com/"
+		},
+		{
+			"name": "Outlines",
+			"official_docs": "https://outlines-dev.github.io/outlines/",
+			"official_website": "https://github.com/outlines-dev/outlines"
+		},
+		{
+			"name": "Flowise AI",
+			"official_docs": "https://docs.flowiseai.com/",
+			"official_website": "https://flowiseai.com/"
+		}
+	]
+}

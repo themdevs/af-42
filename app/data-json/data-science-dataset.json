@@ -1,0 +1,240 @@
+{
+	"CoreLanguages": [
+		{
+			"name": "Python",
+			"official_docs": "https://docs.python.org/3/",
+			"official_website": "https://www.python.org/"
+		},
+		{
+			"name": "R",
+			"official_docs": "https://cran.r-project.org/manuals.html",
+			"official_website": "https://www.r-project.org/"
+		},
+		{
+			"name": "Julia",
+			"official_docs": "https://docs.julialang.org/",
+			"official_website": "https://julialang.org/"
+		},
+		{
+			"name": "MATLAB",
+			"official_docs": "https://www.mathworks.com/help/matlab/",
+			"official_website": "https://www.mathworks.com/products/matlab.html"
+		}
+	],
+	"DataManipulationAndAnalysis": [
+		{
+			"name": "NumPy",
+			"official_docs": "https://numpy.org/doc/",
+			"official_website": "https://numpy.org/"
+		},
+		{
+			"name": "Pandas",
+			"official_docs": "https://pandas.pydata.org/docs/",
+			"official_website": "https://pandas.pydata.org/"
+		},
+		{
+			"name": "Dask",
+			"official_docs": "https://docs.dask.org/en/stable/",
+			"official_website": "https://dask.org/"
+		},
+		{
+			"name": "Polars",
+			"official_docs": "https://pola-rs.github.io/polars-book/",
+			"official_website": "https://www.pola.rs/"
+		},
+		{
+			"name": "Vaex",
+			"official_docs": "https://vaex.io/docs/",
+			"official_website": "https://vaex.io/"
+		}
+	],
+	"DataVisualization": [
+		{
+			"name": "Matplotlib",
+			"official_docs": "https://matplotlib.org/stable/contents.html",
+			"official_website": "https://matplotlib.org/"
+		},
+		{
+			"name": "Seaborn",
+			"official_docs": "https://seaborn.pydata.org/",
+			"official_website": "https://seaborn.pydata.org/"
+		},
+		{
+			"name": "Plotly",
+			"official_docs": "https://plotly.com/python/",
+			"official_website": "https://plotly.com/"
+		},
+		{
+			"name": "Bokeh",
+			"official_docs": "https://docs.bokeh.org/en/latest/",
+			"official_website": "https://bokeh.org/"
+		},
+		{
+			"name": "ggplot2",
+			"official_docs": "https://ggplot2.tidyverse.org/",
+			"official_website": "https://ggplot2.tidyverse.org/"
+		},
+		{
+			"name": "Altair",
+			"official_docs": "https://altair-viz.github.io/",
+			"official_website": "https://altair-viz.github.io/"
+		}
+	],
+	"StatisticalAndNumericalComputing": [
+		{
+			"name": "SciPy",
+			"official_docs": "https://docs.scipy.org/doc/scipy/",
+			"official_website": "https://scipy.org/"
+		},
+		{
+			"name": "Statsmodels",
+			"official_docs": "https://www.statsmodels.org/stable/",
+			"official_website": "https://www.statsmodels.org/"
+		},
+		{
+			"name": "JAGS (Just Another Gibbs Sampler)",
+			"official_docs": "http://mcmc-jags.sourceforge.net/",
+			"official_website": "http://mcmc-jags.sourceforge.net/"
+		},
+		{
+			"name": "Stan",
+			"official_docs": "https://mc-stan.org/users/documentation/",
+			"official_website": "https://mc-stan.org/"
+		}
+	],
+	"MachineLearningFrameworks": [
+		{
+			"name": "Scikit-learn",
+			"official_docs": "https://scikit-learn.org/stable/",
+			"official_website": "https://scikit-learn.org/"
+		},
+		{
+			"name": "TensorFlow",
+			"official_docs": "https://www.tensorflow.org/api_docs",
+			"official_website": "https://www.tensorflow.org/"
+		},
+		{
+			"name": "PyTorch",
+			"official_docs": "https://pytorch.org/docs/",
+			"official_website": "https://pytorch.org/"
+		},
+		{
+			"name": "Keras",
+			"official_docs": "https://keras.io/api/",
+			"official_website": "https://keras.io/"
+		},
+		{
+			"name": "XGBoost",
+			"official_docs": "https://xgboost.readthedocs.io/",
+			"official_website": "https://xgboost.ai/"
+		},
+		{
+			"name": "LightGBM",
+			"official_docs": "https://lightgbm.readthedocs.io/",
+			"official_website": "https://lightgbm.readthedocs.io/"
+		}
+	],
+	"BigDataAndDistributedComputing": [
+		{
+			"name": "Apache Spark",
+			"official_docs": "https://spark.apache.org/docs/latest/",
+			"official_website": "https://spark.apache.org/"
+		},
+		{
+			"name": "Hadoop",
+			"official_docs": "https://hadoop.apache.org/docs/",
+			"official_website": "https://hadoop.apache.org/"
+		},
+		{
+			"name": "Apache Flink",
+			"official_docs": "https://nightlies.apache.org/flink/flink-docs-release-1.18/",
+			"official_website": "https://flink.apache.org/"
+		},
+		{
+			"name": "Ray",
+			"official_docs": "https://docs.ray.io/en/latest/",
+			"official_website": "https://www.ray.io/"
+		},
+		{
+			"name": "Apache Beam",
+			"official_docs": "https://beam.apache.org/documentation/",
+			"official_website": "https://beam.apache.org/"
+		}
+	],
+	"WorkflowAndExperimentManagement": [
+		{
+			"name": "MLflow",
+			"official_docs": "https://mlflow.org/docs/latest/index.html",
+			"official_website": "https://mlflow.org/"
+		},
+		{
+			"name": "Weights & Biases (WandB)",
+			"official_docs": "https://docs.wandb.ai/",
+			"official_website": "https://wandb.ai/"
+		},
+		{
+			"name": "Kubeflow",
+			"official_docs": "https://www.kubeflow.org/docs/",
+			"official_website": "https://www.kubeflow.org/"
+		},
+		{
+			"name": "Airflow (Apache)",
+			"official_docs": "https://airflow.apache.org/docs/",
+			"official_website": "https://airflow.apache.org/"
+		},
+		{
+			"name": "Prefect",
+			"official_docs": "https://docs.prefect.io/",
+			"official_website": "https://www.prefect.io/"
+		},
+		{
+			"name": "DVC (Data Version Control)",
+			"official_docs": "https://dvc.org/doc",
+			"official_website": "https://dvc.org/"
+		}
+	],
+	"DataCollectionAndCleaning": [
+		{
+			"name": "Beautiful Soup",
+			"official_docs": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
+			"official_website": "https://www.crummy.com/software/BeautifulSoup/"
+		},
+		{
+			"name": "Scrapy",
+			"official_docs": "https://docs.scrapy.org/en/latest/",
+			"official_website": "https://scrapy.org/"
+		},
+		{
+			"name": "Great Expectations",
+			"official_docs": "https://docs.greatexpectations.io/",
+			"official_website": "https://greatexpectations.io/"
+		},
+		{
+			"name": "OpenRefine",
+			"official_docs": "https://openrefine.org/documentation.html",
+			"official_website": "https://openrefine.org/"
+		}
+	],
+	"NotebooksAndInteractiveEnvironments": [
+		{
+			"name": "Jupyter Notebook",
+			"official_docs": "https://jupyter.org/documentation",
+			"official_website": "https://jupyter.org/"
+		},
+		{
+			"name": "JupyterLab",
+			"official_docs": "https://jupyterlab.readthedocs.io/",
+			"official_website": "https://jupyterlab.readthedocs.io/"
+		},
+		{
+			"name": "Google Colab",
+			"official_docs": "https://colab.research.google.com/notebooks/intro.ipynb",
+			"official_website": "https://colab.research.google.com/"
+		},
+		{
+			"name": "RStudio",
+			"official_docs": "https://posit.co/docs/",
+			"official_website": "https://posit.co/"
+		}
+	]
+}
