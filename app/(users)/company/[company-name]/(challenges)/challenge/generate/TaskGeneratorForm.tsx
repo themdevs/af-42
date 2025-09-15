@@ -9,6 +9,7 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { Input } from '@/components/ui/input';
 import { createFrontendChallenge } from './action';
 import { useState } from 'react';
+import { DataSelectionComponent } from '@/components/data-selection-component';
 
 const formSchema = z.object({
 	jobOffer: z.string().min(200, {
@@ -18,7 +19,6 @@ const formSchema = z.object({
 });
 
 export function TaskGeneratorForm() {
-
 	const [result, setResult] = useState<string | null>(null);
 	// 1. Define your form.
 	const form = useForm<z.infer<typeof formSchema>>({
@@ -70,6 +70,7 @@ export function TaskGeneratorForm() {
 					<Button type="submit">Submit</Button>
 				</form>
 			</Form>
+			<DataSelectionComponent />
 			{result && <pre>{result}</pre>}
 		</>
 	);

@@ -84,6 +84,7 @@ export const DataSelectionComponent = () => {
 	const [selectedDataset, setSelectedDataset] = useState('ai');
 	const [selectedKeys, setSelectedKeys] = useState<string[]>([]);
 	const [outputJson, setOutputJson] = useState<Record<string, any>>({});
+	const [expandedCategories, setExpandedCategories] = useState<Set<string>>(new Set());
 
 	const { control, handleSubmit, watch } = useForm<FormData>({
 		resolver: zodResolver(formSchema),
@@ -109,8 +110,9 @@ export const DataSelectionComponent = () => {
 		);
 	}, [currentDataset, searchTerm]);
 
-	// Handle key selection
-	const handleKeyToggle = (key: string) => {
+	// Handle category selection
+	const handleCategoryToggle = (categoryKey: string) => {
+		const key = `${selectedDataset}.${categoryKey}`;
 		const newSelectedKeys = selectedKeys.includes(key)
 			? selectedKeys.filter((k) => k !== key)
 			: [...selectedKeys, key];
@@ -119,19 +121,59 @@ export const DataSelectionComponent = () => {
 		generateOutput(newSelectedKeys);
 	};
 
+	// Handle individual item selection within a category
+	const handleItemToggle = (categoryKey: string, itemIndex: number) => {
+		const key = `${selectedDataset}.${categoryKey}.${itemIndex}`;
+		const newSelectedKeys = selectedKeys.includes(key)
+			? selectedKeys.filter((k) => k !== key)
+			: [...selectedKeys, key];
+
+		setSelectedKeys(newSelectedKeys);
+		generateOutput(newSelectedKeys);
+	};
+
+	// Toggle category expansion
+	const toggleCategoryExpansion = (categoryKey: string) => {
+		const newExpanded = new Set(expandedCategories);
+		if (newExpanded.has(categoryKey)) {
+			newExpanded.delete(categoryKey);
+		} else {
+			newExpanded.add(categoryKey);
+		}
+		setExpandedCategories(newExpanded);
+	};
+
 	// Generate output JSON
 	const generateOutput = (keys: string[]) => {
 		const output: Record<string, any> = {};
 
 		keys.forEach((key) => {
-			const [datasetKey, categoryKey] = key.split('.');
+			const parts = key.split('.');
+			const datasetKey = parts[0];
+			const categoryKey = parts[1];
+			const itemIndex = parts[2];
+
 			const dataset = datasets.find((d) => d.key === datasetKey);
 
 			if (dataset && dataset.data && (dataset.data as any)[categoryKey]) {
 				if (!output[datasetKey]) {
 					output[datasetKey] = {};
 				}
-				output[datasetKey][categoryKey] = (dataset.data as any)[categoryKey];
+
+				const categoryData = (dataset.data as any)[categoryKey];
+
+				if (itemIndex !== undefined) {
+					// Individual item selection
+					if (Array.isArray(categoryData) && categoryData[parseInt(itemIndex)]) {
+						if (!output[datasetKey][categoryKey]) {
+							output[datasetKey][categoryKey] = [];
+						}
+						output[datasetKey][categoryKey].push(categoryData[parseInt(itemIndex)]);
+					}
+				} else {
+					// Entire category selection
+					output[datasetKey][categoryKey] = categoryData;
+				}
 			}
 		});
 
@@ -162,9 +204,9 @@ export const DataSelectionComponent = () => {
 		<div className="max-w-7xl mx-auto p-6 space-y-6">
 			{/* Header */}
 			<div className="text-center space-y-2">
-				<h1 className="text-3xl font-bold tracking-tight">Data Selection Tool</h1>
+				<h1 className="text-3xl font-bold tracking-tight">Stack Selection Tool</h1>
 				<p className="text-muted-foreground">
-					Select categories and items from various technology datasets to generate custom JSON output
+					Select categories and items from various technology fields to generate custom JSON output
 				</p>
 			</div>
 
@@ -174,17 +216,16 @@ export const DataSelectionComponent = () => {
 					<CardHeader>
 						<CardTitle className="flex items-center gap-2">
 							<Filter className="h-5 w-5" />
-							Dataset Selection
+							Field Selection
 						</CardTitle>
-						<CardDescription>Choose a dataset to explore and select from</CardDescription>
+						<CardDescription>Choose the field or your tech challenge</CardDescription>
 					</CardHeader>
 					<CardContent className="space-y-4">
 						<Tabs value={selectedDataset} onValueChange={setSelectedDataset}>
-							<TabsList className="grid w-full grid-cols-2">
-								<TabsTrigger value="ai">AI/ML</TabsTrigger>
-								<TabsTrigger value="webDevelopment">Web</TabsTrigger>
-							</TabsList>
-							<TabsContent value={selectedDataset} className="space-y-2">
+							<TabsContent
+								value={selectedDataset}
+								className="space-y-2 p-0 m-0 border-1 border-muted rounded-lg"
+							>
 								<ScrollArea className="h-64">
 									<div className="space-y-1">
 										{datasets.map((dataset) => (
@@ -232,31 +273,87 @@ export const DataSelectionComponent = () => {
 						</div>
 
 						<ScrollArea className="h-96">
-							<div className="space-y-2">
+							<div className="space-y-3">
 								{filteredCategories.map((category) => {
-									const key = `${selectedDataset}.${category}`;
-									const isSelected = selectedKeys.includes(key);
+									const categoryKey = `${selectedDataset}.${category}`;
+									const isCategorySelected = selectedKeys.includes(categoryKey);
+									const categoryData = currentDataset[category];
+									const isArray = Array.isArray(categoryData);
 
 									return (
 										<div key={category} className="space-y-2">
-											<div className="flex items-center space-x-2 p-2 rounded-lg border">
+											{/* Category Header */}
+											{/* <div className="flex items-center space-x-2 p-2 rounded-lg border bg-muted/30">
 												<Checkbox
-													id={key}
-													checked={isSelected}
-													onCheckedChange={() => handleKeyToggle(key)}
+													id={categoryKey}
+													checked={isCategorySelected}
+													onCheckedChange={() => handleCategoryToggle(category)}
 												/>
-												<Label htmlFor={key} className="flex-1 cursor-pointer">
+												<Label htmlFor={categoryKey} className="flex-1 cursor-pointer">
 													<div className="font-medium">{category}</div>
 													<div className="text-xs text-muted-foreground">
-														{Array.isArray(currentDataset[category])
-															? `${
-																	(currentDataset[category] as DatasetItem[]).length
-															  } items`
+														{isArray
+															? `${(categoryData as DatasetItem[]).length} items`
 															: 'Object data'}
 													</div>
 												</Label>
-												{isSelected && <CheckCircle2 className="h-4 w-4 text-green-500" />}
-											</div>
+												{isCategorySelected && (
+													<CheckCircle2 className="h-4 w-4 text-green-500" />
+												)}
+											</div> */}
+
+											{/* Individual Items */}
+											{isArray && (categoryData as DatasetItem[]).length > 0 && (
+												<div className="ml-4 space-y-1 border-l-2 border-muted pl-4">
+													<div className="mb-2">
+														<div className="text-xs font-medium text-muted-foreground">
+															{category}:
+														</div>
+													</div>
+													{(categoryData as DatasetItem[]).map((item, index) => {
+														const itemKey = `${selectedDataset}.${category}.${index}`;
+														const isItemSelected = selectedKeys.includes(itemKey);
+
+														return (
+															<div
+																key={index}
+																className="flex items-center space-x-2 p-1 rounded border bg-background"
+															>
+																<Checkbox
+																	id={itemKey}
+																	checked={isItemSelected}
+																	onCheckedChange={() =>
+																		handleItemToggle(category, index)
+																	}
+																/>
+																<Label
+																	htmlFor={itemKey}
+																	className="flex-1 cursor-pointer"
+																>
+																	<div className="text-sm font-medium">
+																		{item.name}
+																	</div>
+																	{item.official_docs && (
+																		<div className="text-xs text-muted-foreground truncate">
+																			{item.official_docs}
+																		</div>
+																	)}
+																</Label>
+																{isItemSelected && (
+																	<CheckCircle2 className="h-3 w-3 text-green-500" />
+																)}
+															</div>
+														);
+													})}
+													{!expandedCategories.has(category) &&
+														(categoryData as DatasetItem[]).length > 5 && (
+															<div className="text-xs text-muted-foreground italic">
+																... and {(categoryData as DatasetItem[]).length - 5}{' '}
+																more items
+															</div>
+														)}
+												</div>
+											)}
 										</div>
 									);
 								})}
@@ -332,16 +429,50 @@ export const DataSelectionComponent = () => {
 						<CardDescription>Overview of your current selection</CardDescription>
 					</CardHeader>
 					<CardContent>
-						<div className="flex flex-wrap gap-2">
-							{selectedKeys.map((key) => {
-								const [datasetKey, categoryKey] = key.split('.');
-								const dataset = datasets.find((d) => d.key === datasetKey);
-								return (
-									<Badge key={key} variant="secondary" className="text-xs">
-										{dataset?.name} → {categoryKey}
-									</Badge>
-								);
-							})}
+						<div className="space-y-3">
+							<div className="flex flex-wrap gap-2">
+								{selectedKeys.map((key) => {
+									const parts = key.split('.');
+									const datasetKey = parts[0];
+									const categoryKey = parts[1];
+									const itemIndex = parts[2];
+									const dataset = datasets.find((d) => d.key === datasetKey);
+
+									if (itemIndex !== undefined) {
+										// Individual item selection
+										const categoryData = (dataset?.data as any)?.[categoryKey];
+										const item = Array.isArray(categoryData)
+											? categoryData[parseInt(itemIndex)]
+											: null;
+										return (
+											<Badge key={key} variant="outline" className="text-xs">
+												{dataset?.name} → {categoryKey} → {item?.name || `Item ${itemIndex}`}
+											</Badge>
+										);
+									} else {
+										// Category selection
+										return (
+											<Badge key={key} variant="secondary" className="text-xs">
+												{dataset?.name} → {categoryKey} (All)
+											</Badge>
+										);
+									}
+								})}
+							</div>
+
+							{/* Selection Statistics */}
+							<div className="pt-2 border-t">
+								<div className="grid grid-cols-2 gap-4 text-sm">
+									<div>
+										<span className="font-medium">Categories:</span>{' '}
+										{selectedKeys.filter((key) => key.split('.').length === 2).length}
+									</div>
+									<div>
+										<span className="font-medium">Individual Items:</span>{' '}
+										{selectedKeys.filter((key) => key.split('.').length === 3).length}
+									</div>
+								</div>
+							</div>
 						</div>
 					</CardContent>
 				</Card>
