@@ -97,7 +97,9 @@ export const DataSelectionComponent = () => {
 		);
 	}, [currentDataset, searchTerm]);
 
-	// Event handlers for user interactions
+	// ##########################################################
+	// # Event handlers for user interactions
+	// ##########################################################
 
 	// Handle individual item selection within a category
 	const handleItemToggle = (categoryKey: string, itemIndex: number) => {
@@ -148,7 +150,10 @@ export const DataSelectionComponent = () => {
 		setOutputJson(output);
 	};
 
-	// Utility functions for exporting data
+	// ##########################################################
+	// # Utility functions for exporting data
+	// ##########################################################
+
 	// Copy JSON to clipboard
 	const copyToClipboard = () => {
 		navigator.clipboard.writeText(JSON.stringify(outputJson, null, 2));
