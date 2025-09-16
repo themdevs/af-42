@@ -55,10 +55,10 @@ interface TechStackExtractionResult {
 interface StackSelectionJson {
 	role_title?: string;
 	seniority?: 'junior' | 'mid' | 'senior';
+	difficulty?: 'junior' | 'mid' | 'senior';
 	primary_stack?: string[];
 	secondary_stack?: string[];
 	domain?: string;
-	difficulty?: 'junior' | 'mid' | 'senior';
 	focus_areas?: string[];
 	non_goals?: string[];
 	company_context_priority?: string;
@@ -339,25 +339,21 @@ export async function extractTechStackFromTranslatedText(
 				const result = await generateText({
 					model: openai('gpt-4o-mini'),
 					prompt: `You are a Tech Stack Extractor Agent. Analyze the following job offer text and extract the technical stack information. Return a JSON object with the following structure:
-
-{
-  "role_title": "extracted role title",
-  "seniority": "junior|mid|senior",
-  "tech_stack": {
-    "languages": ["list of programming languages"],
-    "frameworks": ["list of frameworks"],
-    "databases": ["list of databases"],
-    "devops": ["list of devops tools"],
-    "cloud": ["list of cloud services"],
-    "testing": ["list of testing tools"],
-    "tools": ["list of other tools"],
-    "other": []
-  },
-  "assumptions": ["list any assumptions made"]
-}
-
-Job offer text:
-${cleanedText}`,
+                    {
+                        "tech_stack": {
+                            "languages": ["list of programming languages"],
+                            "frameworks": ["list of frameworks"],
+                            "databases": ["list of databases"],
+                            "devops": ["list of devops tools"],
+                            "cloud": ["list of cloud services"],
+                            "testing": ["list of testing tools"],
+                            "tools": ["list of other tools"],
+                            "other": []
+                        },
+                        "assumptions": ["list any assumptions made"]
+                    }
+                    Job offer text: ${cleanedText}
+                    `,
 				});
 
 				return {

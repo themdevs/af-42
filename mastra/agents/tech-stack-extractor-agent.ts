@@ -32,7 +32,7 @@ export const techStackExtractorAgent = new Agent({
 
         ## Inputs
         - **Job Offer File** (PDF, DOCX, or TXT) → extract only technical stack references.
-        - **JSON Config** → strict schema containing role, seniority, output_language, normalization rules, etc.
+        - **JSON Config** → strict schema containing output_language, normalization rules, etc.
 
         If conflicts arise:
         - JSON wins for formatting/schema.
@@ -45,8 +45,6 @@ export const techStackExtractorAgent = new Agent({
 
         \`\`\`json
         {
-            "role_title": "{from job-offer or JSON override}",
-            "seniority": "{junior|mid|senior}",
             "tech_stack": {
                 "languages": ["TypeScript", "Python"],
                 "frameworks": ["React", "Node.js", "Django"],
