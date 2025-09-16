@@ -1,3 +1,24 @@
+/**
+ * Translation Utility for File Extracted Text
+ *
+ * This module provides a robust translation service for text extracted from various file formats
+ * (PDF, DOCX, TXT, etc.) using the Mastra translator agent. It includes comprehensive error handling,
+ * input validation, retry logic with exponential backoff, and timeout protection to ensure reliable
+ * translation operations. The service validates input text for length, content quality, and format,
+ * handles network failures gracefully, and provides detailed metadata about translation operations.
+ *
+ * Key Features:
+ * - Input validation (length limits, content quality checks)
+ * - Retry mechanism with exponential backoff for transient failures
+ * - Timeout protection (30 seconds default)
+ * - Comprehensive error handling with user-friendly messages
+ * - Performance monitoring and structured logging
+ * - Type-safe interfaces for integration
+ *
+ * @author AF42 Development Team
+ * @version 1.0.0
+ */
+
 // Translation service configuration
 import { translatorAgent } from '../agents/translator-agent';
 

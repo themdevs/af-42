@@ -11,6 +11,27 @@ import { useState } from 'react';
 import { DataSelectionComponent } from '@/components/challenge-generator/data-selection-component';
 import { FileTextExtractor } from '@/components/file-text-extractor';
 import { TextExtractionResult } from '@/mastra/utils/extract-text-from-file';
+// Define the StackSelectionJson type locally to avoid importing Mastra utilities in client component
+interface StackSelectionJson {
+	role_title?: string;
+	seniority?: 'junior' | 'mid' | 'senior';
+	primary_stack?: string[];
+	secondary_stack?: string[];
+	domain?: string;
+	difficulty?: 'junior' | 'mid' | 'senior';
+	focus_areas?: string[];
+	non_goals?: string[];
+	company_context_priority?: string;
+	evaluation_mode?: string;
+	deliverable_format?: string;
+	output_language?: string;
+	privacy_constraints?: string[];
+	inclusion_requirements?: string[];
+	prohibited_items?: string[];
+	extra_credit_themes?: string[];
+	technical_stack?: string[];
+	[key: string]: any;
+}
 
 const formSchema = z.object({
 	jobOfferFile: z.instanceof(File).optional(),
@@ -25,6 +46,9 @@ export function TaskGeneratorForm() {
 	const [translatedText, setTranslatedText] = useState<string>('');
 	const [isTranslating, setIsTranslating] = useState<boolean>(false);
 	const [translationError, setTranslationError] = useState<string | null>(null);
+	const [isExtractingTechStack, setIsExtractingTechStack] = useState<boolean>(false);
+	const [techStackError, setTechStackError] = useState<string | null>(null);
+	const [extractedTechStack, setExtractedTechStack] = useState<StackSelectionJson | null>(null);
 
 	// 1. Define your form.
 	const form = useForm<z.infer<typeof formSchema>>({
@@ -40,6 +64,57 @@ export function TaskGeneratorForm() {
 	const handleJsonChange = (json: string) => {
 		setJsonConfig(json);
 		form.setValue('jsonConfig', json);
+	};
+
+	// Automatically extract tech stack from translated text and merge with existing JSON config
+	const extractAndMergeTechStack = async (translatedText: string, existingJsonConfig: string) => {
+		if (!translatedText || translatedText.trim() === '') {
+			return;
+		}
+
+		setIsExtractingTechStack(true);
+		setTechStackError(null);
+
+		try {
+			// Call the API route to extract tech stack
+			const response = await fetch('/api/extract-tech-stack', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({
+					translatedText,
+					existingJsonConfig,
+				}),
+			});
+
+			if (!response.ok) {
+				const errorData = await response.json();
+				throw new Error(errorData.error || 'Tech stack extraction failed');
+			}
+
+			const result = await response.json();
+
+			if (result.success && result.techStack) {
+				setExtractedTechStack(result.techStack);
+
+				// Update the JSON config with the extracted tech stack
+				const mergedJsonString = JSON.stringify(result.techStack, null, 2);
+				setJsonConfig(mergedJsonString);
+				form.setValue('jsonConfig', mergedJsonString);
+
+				console.log('✅ Tech stack extracted and merged successfully:', result.techStack);
+			} else {
+				setTechStackError(result.error || 'Failed to extract tech stack');
+				console.error('❌ Tech stack extraction failed:', result.error);
+			}
+		} catch (error) {
+			const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+			setTechStackError(errorMessage);
+			console.error('❌ Tech stack extraction error:', error);
+		} finally {
+			setIsExtractingTechStack(false);
+		}
 	};
 
 	// Handle text extraction result
@@ -67,6 +142,9 @@ export function TaskGeneratorForm() {
 
 				const { translatedText } = await response.json();
 				setTranslatedText(translatedText);
+
+				// Automatically extract tech stack from translated text and merge with existing JSON config
+				await extractAndMergeTechStack(translatedText, jsonConfig);
 			} catch (error) {
 				console.error('Translation failed:', error);
 				setTranslationError(error instanceof Error ? error.message : 'Translation failed');
@@ -161,13 +239,74 @@ export function TaskGeneratorForm() {
 						</FormItem>
 					)}
 
+					{/* Tech Stack Extraction Status */}
+					{(isExtractingTechStack || extractedTechStack || techStackError) && (
+						<FormItem>
+							<FormLabel>Tech Stack Extraction Status</FormLabel>
+							<FormControl>
+								<div className="min-h-[100px] border rounded-lg p-4 bg-muted/50">
+									{isExtractingTechStack ? (
+										<div className="flex items-center justify-center h-full text-muted-foreground">
+											<div className="flex items-center gap-2">
+												<div className="animate-spin rounded-full h-4 w-4 border-b-2 border-primary"></div>
+												Extracting tech stack from translated text...
+											</div>
+										</div>
+									) : techStackError ? (
+										<div className="text-red-600 text-sm">
+											<strong>Tech Stack Extraction Error:</strong> {techStackError}
+										</div>
+									) : extractedTechStack ? (
+										<div className="space-y-2">
+											<div className="text-sm text-green-600 font-medium">
+												✓ Tech stack extracted and merged successfully
+											</div>
+											<div className="text-xs text-muted-foreground">
+												Role: {extractedTechStack.role_title} | Seniority:{' '}
+												{extractedTechStack.seniority} | Technologies:{' '}
+												{extractedTechStack.technical_stack?.length || 0}
+											</div>
+											<details className="group">
+												<summary className="cursor-pointer text-sm font-medium text-muted-foreground hover:text-foreground">
+													View Extracted Tech Stack
+												</summary>
+												<div className="mt-2 p-3 bg-background rounded-md max-h-60 overflow-y-auto">
+													<pre className="text-xs whitespace-pre-wrap break-words">
+														{JSON.stringify(extractedTechStack, null, 2)}
+													</pre>
+												</div>
+											</details>
+										</div>
+									) : null}
+								</div>
+							</FormControl>
+							<FormDescription>
+								Tech stack is automatically extracted from translated text and merged with your
+								selections
+							</FormDescription>
+							{translatedText && !isExtractingTechStack && (
+								<div className="mt-2">
+									<Button
+										type="button"
+										variant="outline"
+										size="sm"
+										onClick={() => extractAndMergeTechStack(translatedText, jsonConfig)}
+										disabled={isExtractingTechStack}
+									>
+										{isExtractingTechStack ? 'Extracting...' : 'Re-extract Tech Stack'}
+									</Button>
+								</div>
+							)}
+						</FormItem>
+					)}
+
 					<FormItem>
 						<DataSelectionComponent onJsonChange={handleJsonChange} />
 						<FormLabel>JSON Config</FormLabel>
 						<FormDescription>
 							<span className="font-bold">Important: </span>
-							This JSON config is automatically generated from your selections above and will be used to
-							generate the challenge.
+							This JSON config is automatically generated from your selections above and tech stack
+							extraction from translated text. It will be used to generate the challenge.
 						</FormDescription>
 
 						<FormControl>
