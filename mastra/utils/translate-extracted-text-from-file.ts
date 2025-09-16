@@ -1,9 +1,8 @@
-import { makeRequest } from '@/utils/make-requests';
+// Translation service configuration
+import { translatorAgent } from '../agents/translator-agent';
 
-
-export async function translateExtractedTextFromFile(extractedText: string, targetLanguage: string) {
-	const response = await fetch('/api/translate', {
-		method: 'POST',
-		body: JSON.stringify({ extractedText, targetLanguage }),
-	});
+export async function translateExtractedTextFromFile(extractedText: string) {
+	const response = await translatorAgent.generate(extractedText);
+	console.log('response', response);
+	return response.text;
 }

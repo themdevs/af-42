@@ -10,6 +10,7 @@ import { techStackExtractorAgent } from './agents/tech-stack-extractor-agent';
 import { textQuestionAgent } from './agents/text-question-agent';
 import { pdfQuestionAgent } from './agents/pdf-question-agent';
 import { pdfSummarizationAgent } from './agents/pdf-summarization-agent';
+import { translatorAgent } from './agents/translator-agent';
 
 // Workflows
 // import { pdfToQuestionsWorkflow } from './workflows/generate-questions-from-pdf-workflow';
@@ -26,6 +27,7 @@ export const mastra = new Mastra({
 		frontendAgent,
 		backendAgent,
 		techStackExtractorAgent,
+		translatorAgent,
 	},
 	storage: new LibSQLStore({
 		// stores telemetry, evals, ... into memory storage, if it needs to persist, change to file:../mastra.db
