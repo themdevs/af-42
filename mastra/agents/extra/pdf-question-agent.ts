@@ -1,7 +1,7 @@
 import { openai } from '@ai-sdk/openai';
 import { Agent } from '@mastra/core/agent';
-import { pdfFetcherTool } from '../tools/pdf-fetcher-tool';
-import { generateQuestionsFromTextTool } from '../tools/generate-questions-from-text-tool';
+import { pdfFetcherTool } from '../../tools/pdf-fetcher-tool';
+import { generateQuestionsFromTextTool } from '../../tools/generate-questions-from-text-tool';
 import { LibSQLStore } from '@mastra/libsql';
 import { Memory } from '@mastra/memory';
 

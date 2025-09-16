@@ -7,9 +7,6 @@ import { VercelDeployer } from '@mastra/deployer-vercel';
 import { frontendAgent } from './agents/frontend-agent';
 import { backendAgent } from './agents/backend-agent';
 import { techStackExtractorAgent } from './agents/tech-stack-extractor-agent';
-import { textQuestionAgent } from './agents/text-question-agent';
-import { pdfQuestionAgent } from './agents/pdf-question-agent';
-import { pdfSummarizationAgent } from './agents/pdf-summarization-agent';
 import { translatorAgent } from './agents/translator-agent';
 
 // Workflows
@@ -21,9 +18,6 @@ export type { TextExtractionResult, FileProcessingOptions } from './utils/extrac
 export const mastra = new Mastra({
 	// workflows: { pdfToQuestionsWorkflow },
 	agents: {
-		textQuestionAgent,
-		pdfQuestionAgent,
-		pdfSummarizationAgent,
 		frontendAgent,
 		backendAgent,
 		techStackExtractorAgent,
