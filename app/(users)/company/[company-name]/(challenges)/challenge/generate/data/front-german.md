@@ -1,4 +1,4 @@
-Frontend Entwickler
+<!-- Frontend Entwickler
 Neu
 
 KA RESOURCES
@@ -79,9 +79,8 @@ Team Events
 🏋🏿‍♂️
 Fitness Angebote
 Essen & Trinken
-🍏
+🍏 -->
 
-```markdown
 # Frontend Developer — Frontend Technical Challenge
 **Seniority Target:** mid
 **Primary Stack:** TypeScript, Angular, Angular JS Material, RxJS, Docker
@@ -148,4 +147,3 @@ You are tasked with developing a modern single-page application (SPA) for a heal
 ## Assumptions
 - The candidate has access to a development environment with Node.js and Angular CLI installed.
 - The candidate is familiar with Docker for containerization.
-```
