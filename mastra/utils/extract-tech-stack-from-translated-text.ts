@@ -198,16 +198,51 @@ function parseTechStackFromAgentResponse(responseText: string): any {
  * Extracts role title from text
  */
 function extractRoleTitle(text: string): string {
+	// Split text into lines and clean them
+	const lines = text
+		.split('\n')
+		.map((line) => line.trim())
+		.filter((line) => line.length > 0);
+
+	// Try to extract from first few lines (common job posting format)
+	for (let i = 0; i < Math.min(5, lines.length); i++) {
+		const line = lines[i];
+
+		// Remove markdown headers
+		const cleanLine = line.replace(/^#+\s*/, '').trim();
+
+		// Skip common non-title patterns
+		if (cleanLine.match(/^(location|salary|experience|company|description|CDI|CDD|télétravail)/i)) {
+			continue;
+		}
+
+		// Check if line looks like a job title (contains common job-related keywords)
+		if (
+			cleanLine.match(
+				/(developer|engineer|architect|manager|analyst|specialist|consultant|lead|senior|junior|mid|full.?stack|frontend|backend|devops|cloud|data|software|web|mobile|ui|ux|qa|test)/i,
+			)
+		) {
+			return cleanLine;
+		}
+
+		// If it's the first line and reasonably short (likely a title)
+		if (i === 0 && cleanLine.length > 5 && cleanLine.length < 100) {
+			return cleanLine;
+		}
+	}
+
+	// Fallback patterns for structured text
 	const rolePatterns = [
-		/role[:\s]+([^.]+)/gi,
-		/position[:\s]+([^.]+)/gi,
-		/title[:\s]+([^.]+)/gi,
-		/job[:\s]+([^.]+)/gi,
+		/(?:role|position|title|job|job title)[:\s]+([^.\n]+)/gi,
+		/(?:poste|titre|fonction)[:\s]+([^.\n]+)/gi, // French patterns
+		/recherchons?\s+un(?:e)?\s+([^.\n]+)/gi, // "nous recherchons un(e)..."
+		/looking\s+for\s+a?\s*([^.\n]+)/gi, // "looking for a..."
 	];
 
 	for (const pattern of rolePatterns) {
 		const match = text.match(pattern);
-		if (match) {
+		console.log('Pattern match:', pattern, match);
+		if (match && match[1]) {
 			return match[1].trim();
 		}
 	}

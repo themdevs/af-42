@@ -6,11 +6,12 @@ import { z } from 'zod';
 
 import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
-import { createFrontendChallenge } from '@/app/(users)/company/[company-name]/(challenges)/challenge/generate/action';
+import { createTechChallenge } from '@/app/(users)/company/[company-name]/(challenges)/challenge/generate/action';
 import { useState } from 'react';
-import { DataSelectionComponent } from '@/components/challenge-generator/data-selection-component';
-import { FileTextExtractor } from '@/components/file-text-extractor';
+import { DataSelectionComponent } from '@/components/challenge-generator/data-selection.component';
+import { FileTextExtractor } from '@/components/file-text-extractor.component';
 import { TextExtractionResult } from '@/mastra/utils/extract-text-from-file';
+import { formatTextToMarkdown } from '@/mastra/utils/format-text-to-markdown';
 
 // Define the StackSelectionJson type locally to avoid importing Mastra utilities in client component
 interface StackSelectionJson {
@@ -144,8 +145,12 @@ export function TaskGeneratorForm() {
 				const { translatedText } = await response.json();
 				setTranslatedText(translatedText);
 
+				// todo : format the translated text into a markdown format
+				const formattedText = formatTextToMarkdown(translatedText);
+				console.log('formattedText', formattedText);
+
 				// Automatically extract tech stack from translated text and merge with existing JSON config
-				await extractAndMergeTechStack(translatedText, jsonConfig);
+				await extractAndMergeTechStack(formattedText, jsonConfig);
 			} catch (error) {
 				console.error('Translation failed:', error);
 				setTranslationError(error instanceof Error ? error.message : 'Translation failed');
@@ -173,7 +178,7 @@ export function TaskGeneratorForm() {
 			jobOfferContent = await formData.jobOfferFile.text();
 		}
 
-		const res = await createFrontendChallenge(jobOfferContent, jsonConfig || '');
+		const res = await createTechChallenge(jobOfferContent, jsonConfig || '');
 		setResult(res);
 	}
 
