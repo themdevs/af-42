@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { DataSelectionComponent } from '@/components/challenge-generator/data-selection-component';
 import { FileTextExtractor } from '@/components/file-text-extractor';
 import { TextExtractionResult } from '@/mastra/utils/extract-text-from-file';
+
 // Define the StackSelectionJson type locally to avoid importing Mastra utilities in client component
 interface StackSelectionJson {
 	role_title?: string;

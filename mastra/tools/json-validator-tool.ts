@@ -25,6 +25,5 @@ export const jsonValidatorTool = createTool({
 
 const validateJson = async (jsonContent: string) => {
 	const parsedData = JSON.parse(jsonContent);
-	console.log('parsedData', parsedData);
 	return parsedData;
 };
