@@ -11,7 +11,6 @@ import { useState } from 'react';
 import { DataSelectionComponent } from '@/components/challenge-generator/data-selection-component';
 import { FileTextExtractor } from '@/components/file-text-extractor';
 import { TextExtractionResult } from '@/mastra/utils/extract-text-from-file';
-// Translation will be handled via API route
 
 const formSchema = z.object({
 	jobOfferFile: z.instanceof(File).optional(),
