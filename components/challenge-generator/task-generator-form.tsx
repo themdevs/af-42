@@ -9,7 +9,6 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { createFrontendChallenge } from '@/app/(users)/company/[company-name]/(challenges)/challenge/generate/action';
 import { useState } from 'react';
 import { DataSelectionComponent } from '@/components/challenge-generator/data-selection-component';
-import { FileUploaderComponent } from '@/components/file-uploader.component';
 import { FileTextExtractor } from '@/components/file-text-extractor';
 import { TextExtractionResult } from '@/mastra/utils/extract-text-from-file';
 
@@ -22,7 +21,6 @@ const formSchema = z.object({
 export function TaskGeneratorForm() {
 	const [result, setResult] = useState<string | null>(null);
 	const [jsonConfig, setJsonConfig] = useState<string>('');
-	const [uploadedFile, setUploadedFile] = useState<File | null>(null);
 	const [extractedText, setExtractedText] = useState<string>('');
 
 	// 1. Define your form.
@@ -39,12 +37,6 @@ export function TaskGeneratorForm() {
 	const handleJsonChange = (json: string) => {
 		setJsonConfig(json);
 		form.setValue('jsonConfig', json);
-	};
-
-	// Handle file selection
-	const handleFileSelect = (file: File | null) => {
-		setUploadedFile(file);
-		form.setValue('jobOfferFile', file || undefined);
 	};
 
 	// Handle text extraction result
