@@ -81,22 +81,6 @@ export function TaskGeneratorForm() {
 				<form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8">
 					<FormField
 						control={form.control}
-						name="jobOfferFile"
-						render={({ field }) => (
-							<FormItem>
-								<FormLabel>Job Offer Document</FormLabel>
-								<FormControl>
-									<FileUploaderComponent onFileSelect={handleFileSelect} maxFileSize={10} />
-								</FormControl>
-								<FormDescription>
-									Upload your job offer document (PDF, Word, text files, etc.)
-								</FormDescription>
-								<FormMessage />
-							</FormItem>
-						)}
-					/>
-					<FormField
-						control={form.control}
 						name="extractedText"
 						render={({ field }) => (
 							<FormItem>

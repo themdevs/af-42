@@ -45,6 +45,7 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 			}
 
 			const result: TextExtractionResult = await response.json();
+			console.log('result', result);
 
 			setExtractionResult(result);
 			onTextExtracted?.(result);
