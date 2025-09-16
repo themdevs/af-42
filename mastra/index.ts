@@ -3,11 +3,8 @@ import { PinoLogger } from '@mastra/loggers';
 import { LibSQLStore } from '@mastra/libsql';
 import { VercelDeployer } from '@mastra/deployer-vercel';
 
-// Agents
-import { frontendAgent } from './agents/frontend-agent';
-import { backendAgent } from './agents/backend-agent';
-import { techStackExtractorAgent } from './agents/tech-stack-extractor-agent';
-import { translatorAgent } from './agents/translator-agent';
+// Timmy Agent Manager
+import { timmy } from './agents/timmy';
 
 // Workflows
 // import { pdfToQuestionsWorkflow } from './workflows/generate-questions-from-pdf-workflow';
@@ -18,10 +15,7 @@ export type { TextExtractionResult, FileProcessingOptions } from './utils/extrac
 export const mastra = new Mastra({
 	// workflows: { pdfToQuestionsWorkflow },
 	agents: {
-		frontendAgent,
-		backendAgent,
-		techStackExtractorAgent,
-		translatorAgent,
+		timmy,
 	},
 	storage: new LibSQLStore({
 		// stores telemetry, evals, ... into memory storage, if it needs to persist, change to file:../mastra.db
