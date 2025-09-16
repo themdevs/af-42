@@ -1,3 +1,17 @@
+/**
+ * Text Translation API Endpoint
+ *
+ * This API endpoint translates extracted text content from files into English using AI-powered
+ * translation services. It accepts text input via JSON payload and returns translated content
+ * with comprehensive metadata. The endpoint includes robust error handling with appropriate
+ * HTTP status codes for different error types (validation, authentication, service availability)
+ * and detailed logging for debugging purposes.
+ *
+ * @route POST /api/translate-text
+ * @param text - The text content to translate (via JSON body)
+ * @returns Translated text with metadata or detailed error information
+ */
+
 import { NextRequest, NextResponse } from 'next/server';
 import {
 	translateExtractedTextFromFile,

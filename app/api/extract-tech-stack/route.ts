@@ -1,3 +1,17 @@
+/**
+ * Tech Stack Extraction API Endpoint
+ *
+ * This API endpoint extracts technology stack information from translated job descriptions or text content.
+ * It accepts translated text and optionally an existing JSON configuration, then uses AI-powered analysis
+ * to identify and categorize technologies mentioned in the content. The endpoint returns structured
+ * tech stack data that can be used for job matching, skill assessment, or technology categorization.
+ *
+ * @route POST /api/extract-tech-stack
+ * @param translatedText - The translated text content to analyze
+ * @param existingJsonConfig - Optional existing JSON configuration to merge with extracted data
+ * @returns Structured tech stack data with success/error status and metadata
+ */
+
 import { NextRequest, NextResponse } from 'next/server';
 import { extractTechStackFromTranslatedText } from '@/mastra/utils/extract-tech-stack-from-translated-text';
 

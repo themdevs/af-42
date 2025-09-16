@@ -1,3 +1,16 @@
+/**
+ * Text Extraction API Endpoint
+ *
+ * This API endpoint extracts text content from uploaded files using multipart form data.
+ * It supports various file formats and returns the extracted text along with metadata
+ * such as file information and processing details. The endpoint includes file size
+ * validation (50MB limit) and comprehensive error handling for robust file processing.
+ *
+ * @route POST /api/extract-text
+ * @param file - The file to extract text from (via FormData)
+ * @returns Extracted text content with metadata or error information
+ */
+
 import { NextRequest, NextResponse } from 'next/server';
 import { extractTextFromFile } from '@/mastra/utils/extract-text-from-file';
 
