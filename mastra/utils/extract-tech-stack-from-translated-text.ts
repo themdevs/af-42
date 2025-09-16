@@ -343,6 +343,11 @@ function convertToStackSelectionJson(extractedTechStack: any): StackSelectionJso
  * Extracts tech stack from translated text using the tech stack extractor agent
  * and automatically populates a stack selection JSON object
  */
+
+// ! =================================================================================================
+// ! todo : add a way to extract the tech stack from the formatted text instead of the translated text
+// ! =================================================================================================
+
 export async function extractTechStackFromTranslatedText(
 	translatedText: string,
 	existingJson?: StackSelectionJson,

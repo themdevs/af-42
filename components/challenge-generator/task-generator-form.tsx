@@ -69,8 +69,8 @@ export function TaskGeneratorForm() {
 	};
 
 	// Automatically extract tech stack from translated text and merge with existing JSON config
-	const extractAndMergeTechStack = async (translatedText: string, existingJsonConfig: string) => {
-		if (!translatedText || translatedText.trim() === '') {
+	const extractAndMergeTechStack = async (formattedText: string, existingJsonConfig: string) => {
+		if (!formattedText || formattedText.trim() === '') {
 			return;
 		}
 
@@ -85,7 +85,7 @@ export function TaskGeneratorForm() {
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
-					translatedText,
+					translatedText: formattedText,
 					existingJsonConfig,
 				}),
 			});
@@ -145,9 +145,11 @@ export function TaskGeneratorForm() {
 				const { translatedText } = await response.json();
 				setTranslatedText(translatedText);
 
-				// todo : format the translated text into a markdown format
+				// ! =================================================================================================
+				// ! todo : add a way to extract the tech stack from the formatted text instead of the translated text
+				// ! =================================================================================================
 				const formattedText = formatTextToMarkdown(translatedText);
-				console.log('formattedText', formattedText);
+				console.log('type of formattedText', typeof formattedText);
 
 				// Automatically extract tech stack from translated text and merge with existing JSON config
 				await extractAndMergeTechStack(formattedText, jsonConfig);
