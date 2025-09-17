@@ -14,6 +14,9 @@ export type { TextExtractionResult, FileProcessingOptions } from './utils/extrac
 
 export const mastra = new Mastra({
 	// workflows: { pdfToQuestionsWorkflow },
+	telemetry: {
+		enabled: true,
+	},
 	agents: {
 		timmy,
 	},
