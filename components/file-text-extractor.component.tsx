@@ -24,15 +24,20 @@ interface FileTextExtractorProps {
 }
 
 export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtractorProps) => {
+	// State for the currently selected file
 	const [selectedFile, setSelectedFile] = useState<File | null>(null);
+	// State for storing text extraction results
 	const [extractionResult, setExtractionResult] = useState<TextExtractionResult | null>(null);
+	// State to track extraction loading state
 	const [isExtracting, setIsExtracting] = useState(false);
 
+	// Handle file selection and reset previous results
 	const handleFileSelect = (file: File | null) => {
 		setSelectedFile(file);
 		setExtractionResult(null);
 	};
 
+	// Main function to handle text extraction from uploaded file
 	const handleExtractText = async () => {
 		if (!selectedFile) return;
 
@@ -42,24 +47,28 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 			const formData = new FormData();
 			formData.append('file', selectedFile);
 
-			// Call the API route
+			// Call the text extraction API endpoint
 			const response = await fetch('/api/extract-text', {
 				method: 'POST',
 				body: formData,
 			});
 
+			// Handle API errors
 			if (!response.ok) {
 				const errorData = await response.json();
 				throw new Error(errorData.error || 'Failed to extract text');
 			}
 
+			// Parse successful response and update state
 			const result: TextExtractionResult = await response.json();
 			console.log('result', result);
 
 			setExtractionResult(result);
+			// Notify parent component of successful extraction
 			onTextExtracted?.(result);
 		} catch (error) {
 			console.error('Text extraction failed:', error);
+			// Create error result object for display
 			setExtractionResult({
 				success: false,
 				fileName: selectedFile.name,
@@ -69,6 +78,7 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 				error: error instanceof Error ? error.message : 'Unknown error occurred',
 			});
 		} finally {
+			// Always reset loading state
 			setIsExtracting(false);
 		}
 	};
@@ -76,6 +86,7 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 	return (
 		<div className={className}>
 			<Card>
+				{/* Header with title and icon */}
 				<CardHeader>
 					<CardTitle className="flex items-center gap-2">
 						<FileText className="h-5 w-5" />
@@ -83,14 +94,17 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 					</CardTitle>
 				</CardHeader>
 				<CardContent className="space-y-4">
+					{/* File upload component with size limit */}
 					<FileUploaderComponent
 						onFileSelect={handleFileSelect}
 						maxFileSize={50} // 50MB
 						disabled={isExtracting}
 					/>
 
+					{/* Show file details and extract button when file is selected */}
 					{selectedFile && (
 						<div className="space-y-3">
+							{/* File info display and extract button */}
 							<div className="flex items-center justify-between">
 								<div className="flex items-center gap-2">
 									<span className="text-sm font-medium">{selectedFile.name}</span>
@@ -102,6 +116,7 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 									disabled={isExtracting}
 									className="flex items-center gap-2"
 								>
+									{/* Show loading spinner during extraction */}
 									{isExtracting ? (
 										<>
 											<Loader2 className="h-4 w-4 animate-spin" />
@@ -113,28 +128,32 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 								</Button>
 							</div>
 
+							{/* Display extraction results if available */}
 							{extractionResult && (
 								<Card
 									className={
 										extractionResult.success
-											? 'border-green-200 bg-green-50/50'
-											: 'border-red-200 bg-red-50/50'
+											? 'border-green-200 bg-green-50/50' // Green styling for success
+											: 'border-red-200 bg-red-50/50' // Red styling for errors
 									}
 								>
 									<CardContent className="p-4">
 										<div className="flex items-start gap-3">
+											{/* Success/error icon */}
 											{extractionResult.success ? (
 												<CheckCircle className="h-5 w-5 text-green-500 mt-0.5" />
 											) : (
 												<AlertCircle className="h-5 w-5 text-red-500 mt-0.5" />
 											)}
 											<div className="flex-1 space-y-2">
+												{/* Status message and extraction method badge */}
 												<div className="flex items-center gap-2">
 													<span className="font-medium">
 														{extractionResult.success
 															? 'Text Extracted Successfully'
 															: 'Extraction Failed'}
 													</span>
+													{/* Show extraction method if available */}
 													{extractionResult.metadata?.extractionMethod && (
 														<Badge variant="outline" className="text-xs">
 															{extractionResult.metadata.extractionMethod}
@@ -144,7 +163,9 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 
 												{extractionResult.success ? (
 													<div className="space-y-2">
+														{/* Grid layout for extraction metadata stats */}
 														<div className="grid grid-cols-2 gap-4 text-sm">
+															{/* Word count display */}
 															{extractionResult.metadata?.wordCount && (
 																<div>
 																	<span className="text-muted-foreground">
@@ -155,6 +176,7 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 																	</span>
 																</div>
 															)}
+															{/* Character count display */}
 															{extractionResult.metadata?.charCount && (
 																<div>
 																	<span className="text-muted-foreground">
@@ -165,6 +187,7 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 																	</span>
 																</div>
 															)}
+															{/* Page count display for documents */}
 															{extractionResult.metadata?.pagesCount && (
 																<div>
 																	<span className="text-muted-foreground">
@@ -175,6 +198,7 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 																	</span>
 																</div>
 															)}
+															{/* Sheet count display for spreadsheets */}
 															{extractionResult.metadata?.sheetsCount && (
 																<div>
 																	<span className="text-muted-foreground">
@@ -187,12 +211,15 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 															)}
 														</div>
 
+														/* Collapsible text viewer section */}
 														<div className="mt-3">
 															<details className="group">
+																{/* Clickable summary with character count */}
 																<summary className="cursor-pointer text-sm font-medium text-muted-foreground hover:text-foreground">
 																	View Extracted Text (
 																	{extractionResult.extractedText.length} characters)
 																</summary>
+																{/* Scrollable text content area */}
 																<div className="mt-2 p-3 bg-muted rounded-md max-h-60 overflow-y-auto">
 																	<pre className="text-xs whitespace-pre-wrap break-words">
 																		{extractionResult.extractedText}
@@ -202,6 +229,7 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 														</div>
 													</div>
 												) : (
+																					/* Error message display */
 													<div className="text-sm text-red-600">{extractionResult.error}</div>
 												)}
 											</div>
