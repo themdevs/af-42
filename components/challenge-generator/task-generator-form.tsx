@@ -150,7 +150,7 @@ export function TaskGeneratorForm() {
 				// ! =================================================================================================
 				const formattedText = formatTextToMarkdown(translatedText);
 				console.log('type of formattedText', typeof formattedText);
-				console.log('formattedText', formattedText);
+				console.log('formattedText: \n', formattedText);
 
 				// Automatically extract tech stack from translated text and merge with existing JSON config
 				await extractAndMergeTechStack(formattedText, jsonConfig);
