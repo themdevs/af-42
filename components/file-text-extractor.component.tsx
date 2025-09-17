@@ -211,7 +211,7 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 															)}
 														</div>
 
-														/* Collapsible text viewer section */}
+														{/* Collapsible text viewer section */}
 														<div className="mt-3">
 															<details className="group">
 																{/* Clickable summary with character count */}
@@ -229,7 +229,7 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 														</div>
 													</div>
 												) : (
-																					/* Error message display */
+                                                    {/* Error message display */}
 													<div className="text-sm text-red-600">{extractionResult.error}</div>
 												)}
 											</div>
