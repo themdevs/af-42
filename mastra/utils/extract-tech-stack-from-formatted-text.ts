@@ -432,7 +432,6 @@ export async function extractTechStackFromFormattedText(
 
 		// Merge with existing JSON if provided
 		const finalJson = existingJson ? { ...existingJson, ...stackSelectionJson } : stackSelectionJson;
-		console.log('finalJson: \n', finalJson);
 
 		const processingTime = Date.now() - startTime;
 		const extractedCount = Object.values(extractedTechStack.tech_stack || {}).flat().length;
