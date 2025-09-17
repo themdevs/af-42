@@ -8,6 +8,7 @@ const envSchema = z.object({
 	APP_ENV: z.enum(['development', 'production', 'testing', 'staging']).default('development'),
 	NODE_ENV: z.enum(['development', 'production', 'testing']).default('development'),
 	NEXT_PUBLIC_BACKEND_API_CLIENT: z.string(),
+	OPENAI_API_KEY: z.string(),
 });
 
 //* Need to explicitly extract the public env variables from the process.env

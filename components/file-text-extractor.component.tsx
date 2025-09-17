@@ -1,4 +1,4 @@
-/*  NOTE: FileTextExtractor Component
+/*  FileTextExtractor Component
     A React component that provides a user interface for uploading files and extracting text content from them.
     Supports various file types including PDFs, Word documents, text files, and more. The component handles
     file upload, displays file metadata, and shows extraction results with detailed statistics like word count,
@@ -59,13 +59,14 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 
 			// Parse successful response and update state
 			const result: TextExtractionResult = await response.json();
-			console.log('result', result);
 
 			setExtractionResult(result);
+
 			// Notify parent component of successful extraction
 			onTextExtracted?.(result);
 		} catch (error) {
 			console.error('Text extraction failed:', error);
+
 			// Create error result object for display
 			setExtractionResult({
 				success: false,
@@ -229,7 +230,8 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 												) : (
 													<div className="text-sm text-red-600">
 														{/* Error message display */}
-														{extractionResult.error}</div>
+														{extractionResult.error}
+													</div>
 												)}
 											</div>
 										</div>

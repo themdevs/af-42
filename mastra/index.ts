@@ -5,6 +5,7 @@ import { VercelDeployer } from '@mastra/deployer-vercel';
 
 // Timmy Agent Manager
 import { timmy } from './agents/timmy';
+import { techStackExtractorAgent } from './agents/tech-stack-extractor-agent';
 
 // Workflows
 // import { pdfToQuestionsWorkflow } from './workflows/generate-questions-from-pdf-workflow';
@@ -16,6 +17,7 @@ export const mastra = new Mastra({
 	// workflows: { pdfToQuestionsWorkflow },
 	agents: {
 		timmy,
+		techStackExtractorAgent,
 	},
 	storage: new LibSQLStore({
 		// stores telemetry, evals, ... into memory storage, if it needs to persist, change to file:../mastra.db

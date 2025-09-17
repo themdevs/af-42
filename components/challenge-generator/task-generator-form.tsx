@@ -68,8 +68,9 @@ export function TaskGeneratorForm() {
 		form.setValue('jsonConfig', json);
 	};
 
-	// Automatically extract tech stack from translated text and merge with existing JSON config
+	// Automatically extract tech stack from formatted text and merge with existing JSON config
 	const extractAndMergeTechStack = async (formattedText: string, existingJsonConfig: string) => {
+		console.log('extractAndMergeTechStack', formattedText, existingJsonConfig);
 		if (!formattedText || formattedText.trim() === '') {
 			return;
 		}
@@ -85,10 +86,11 @@ export function TaskGeneratorForm() {
 					'Content-Type': 'application/json',
 				},
 				body: JSON.stringify({
-					translatedText: formattedText,
+					formattedText,
 					existingJsonConfig,
 				}),
 			});
+			// console.log('response', response);
 
 			if (!response.ok) {
 				const errorData = await response.json();
@@ -96,6 +98,7 @@ export function TaskGeneratorForm() {
 			}
 
 			const result = await response.json();
+			// console.log('result', result);
 
 			if (result.success && result.techStack) {
 				setExtractedTechStack(result.techStack);
@@ -145,15 +148,14 @@ export function TaskGeneratorForm() {
 				const { translatedText } = await response.json();
 				setTranslatedText(translatedText);
 
-				// ! =================================================================================================
-				// ! todo : add a way to extract the tech stack from the formatted text instead of the translated text
-				// ! =================================================================================================
 				const formattedText = formatTextToMarkdown(translatedText);
-				console.log('type of formattedText', typeof formattedText);
-				console.log('formattedText: \n', formattedText);
 
-				// Automatically extract tech stack from translated text and merge with existing JSON config
-				await extractAndMergeTechStack(formattedText, jsonConfig);
+				// console.log('type of formattedText', typeof formattedText);
+				// console.log('formattedText: \n', formattedText);
+
+				// Automatically extract tech stack from formatted text and merge with exiMergeTechStack(formattedText, jsonConfig);
+				const techStack = await extractAndMergeTechStack(formattedText, jsonConfig);
+				console.log('techStack', techStack);
 			} catch (error) {
 				console.error('Translation failed:', error);
 				setTranslationError(error instanceof Error ? error.message : 'Translation failed');
@@ -167,8 +169,6 @@ export function TaskGeneratorForm() {
 			setTranslationError(null);
 		}
 	};
-
-	// todo: define a way to select the right agent for the task
 	// 2. Define a submit handler.
 	async function handleSubmit(formData: z.infer<typeof formSchema>) {
 		let jobOfferContent = '';

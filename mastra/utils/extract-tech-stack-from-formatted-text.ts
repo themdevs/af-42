@@ -200,6 +200,7 @@ function parseTechStackFromAgentResponse(responseText: string): any {
 function extractRoleTitle(text: string): string {
 	// Split text into lines and clean them
 	const lines = text
+		.toLowerCase()
 		.split('\n')
 		.map((line) => line.trim())
 		.filter((line) => line.length > 0);
@@ -344,25 +345,21 @@ function convertToStackSelectionJson(extractedTechStack: any): StackSelectionJso
  * and automatically populates a stack selection JSON object
  */
 
-// ! =================================================================================================
-// ! todo : add a way to extract the tech stack from the formatted text instead of the translated text
-// ! =================================================================================================
-
-export async function extractTechStackFromTranslatedText(
-	translatedText: string,
+export async function extractTechStackFromFormattedText(
+	formattedText: string,
 	existingJson?: StackSelectionJson,
 ): Promise<TechStackExtractionResult> {
 	const startTime = Date.now();
 
 	try {
 		// Input validation
-		const validation = validateInput(translatedText);
+		const validation = validateInput(formattedText);
 		if (!validation.isValid) {
 			return {
 				success: false,
 				error: validation.error,
 				metadata: {
-					originalLength: translatedText?.length || 0,
+					originalLength: formattedText?.length || 0,
 					processingTimeMs: Date.now() - startTime,
 					extractedCount: 0,
 				},
@@ -370,16 +367,17 @@ export async function extractTechStackFromTranslatedText(
 		}
 
 		// Clean and prepare text
-		const cleanedText = translatedText.trim();
-		console.log(`Starting tech stack extraction for text of length: ${cleanedText.length}`);
+		const cleanedText = formattedText.trim();
 
 		// Perform extraction with timeout and retry logic using AI model directly
 		const response = await Promise.race([
 			retryWithBackoff(async () => {
 				const result = await generateText({
 					model: openai('gpt-4o-mini'),
-					prompt: `You are a Tech Stack Extractor Agent. Analyze the following job offer text and extract the technical stack information. Return a JSON object with the following structure:
+					prompt: `You are a Tech Stack Extractor Agent. Analyze the following job offer text and extract the technical stack information and role details. Return a JSON object with the following structure:
                     {
+                        "role_title": "exact role title from the job offer",
+                        "seniority": "junior|mid|senior",
                         "tech_stack": {
                             "languages": ["list of programming languages"],
                             "frameworks": ["list of frameworks"],
@@ -392,6 +390,12 @@ export async function extractTechStackFromTranslatedText(
                         },
                         "assumptions": ["list any assumptions made"]
                     }
+
+                    Instructions:
+                    - Extract the exact role title as it appears in the job offer
+                    - Determine seniority level based on the role title and requirements
+                    - Identify all technical technologies, tools, frameworks mentioned
+
                     Job offer text: ${cleanedText}
                     `,
 				});
@@ -428,6 +432,7 @@ export async function extractTechStackFromTranslatedText(
 
 		// Merge with existing JSON if provided
 		const finalJson = existingJson ? { ...existingJson, ...stackSelectionJson } : stackSelectionJson;
+		console.log('finalJson: \n', finalJson);
 
 		const processingTime = Date.now() - startTime;
 		const extractedCount = Object.values(extractedTechStack.tech_stack || {}).flat().length;
@@ -451,7 +456,7 @@ export async function extractTechStackFromTranslatedText(
 		console.error('Tech stack extraction failed:', {
 			error: errorMessage,
 			processingTimeMs: processingTime,
-			textLength: translatedText?.length || 0,
+			textLength: formattedText?.length || 0,
 			timestamp: new Date().toISOString(),
 		});
 
@@ -479,7 +484,7 @@ export async function extractTechStackFromTranslatedText(
 			success: false,
 			error: userFriendlyError,
 			metadata: {
-				originalLength: translatedText?.length || 0,
+				originalLength: formattedText?.length || 0,
 				processingTimeMs: processingTime,
 				extractedCount: 0,
 			},
