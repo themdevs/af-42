@@ -303,7 +303,7 @@ export function TaskGeneratorForm() {
 					)}
 
 					<FormItem>
-						<DataSelectionComponent onJsonChange={handleJsonChange} />
+						{/* <DataSelectionComponent onJsonChange={handleJsonChange} /> */}
 						<FormLabel>JSON Config</FormLabel>
 						<FormDescription>
 							<span className="font-bold">Important: </span>
