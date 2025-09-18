@@ -43,3 +43,5 @@ next-env.d.ts
 # mastra
 .mastra
 .vscode
+.resources
+
