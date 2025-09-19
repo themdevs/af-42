@@ -210,7 +210,7 @@ export function TaskGeneratorFormFromDataSelection() {
 			</Form>
 			<div className="w-full mt-4 border rounded-lg p-4 bg-muted/50">
 				<h1 className="text-2xl text-green-600 font-bold pb-4">Result:</h1>
-				<pre className="text-lg font-mono  mt-4">{result}</pre>
+				<pre className="text-lg font-mono overflow-auto	whitespace-pre-wrap mt-4">{result}</pre>
 			</div>
 		</>
 	);
