@@ -14,7 +14,6 @@ import { Tabs, TabsContent } from '@/components/ui/tabs';
 
 // Icons and notifications
 import { Search, Filter, CheckCircle2 } from 'lucide-react';
-import { toast } from 'sonner';
 
 // Import all technology datasets from JSON files
 import * as aiDataset from '../../app/data-json/ai-dataset.json';
@@ -159,17 +158,14 @@ export const DataSelectionComponent = ({ onJsonChange }: DataSelectionComponentP
 		}
 	};
 
-	// ##########################################################
-	// # Utility functions for exporting data
-	// ##########################################################
-
-	// Copy JSON to clipboard
+	//  ##########################################################
+	// * Utility functions for exporting data
+	/*
 	const copyToClipboard = () => {
 		navigator.clipboard.writeText(JSON.stringify(outputJson, null, 2));
 		toast.success('JSON copied to clipboard!');
-	};
+        };
 
-	// Download JSON as file
 	const downloadJson = () => {
 		const blob = new Blob([JSON.stringify(outputJson, null, 2)], { type: 'application/json' });
 		const url = URL.createObjectURL(blob);
@@ -181,7 +177,9 @@ export const DataSelectionComponent = ({ onJsonChange }: DataSelectionComponentP
 		document.body.removeChild(a);
 		URL.revokeObjectURL(url);
 		toast.success('JSON file downloaded!');
-	};
+        };
+    */
+	//  ##########################################################
 
 	return (
 		<div className="w-full mx-auto p-6 space-y-6 items-center">
