@@ -158,29 +158,6 @@ export const DataSelectionComponent = ({ onJsonChange }: DataSelectionComponentP
 		}
 	};
 
-	//  ##########################################################
-	//  Utility functions for exporting data
-	/*
-	const copyToClipboard = () => {
-		navigator.clipboard.writeText(JSON.stringify(outputJson, null, 2));
-		toast.success('JSON copied to clipboard!');
-        };
-
-	const downloadJson = () => {
-		const blob = new Blob([JSON.stringify(outputJson, null, 2)], { type: 'application/json' });
-		const url = URL.createObjectURL(blob);
-		const a = document.createElement('a');
-		a.href = url;
-		a.download = 'selected-data.json';
-		document.body.appendChild(a);
-		a.click();
-		document.body.removeChild(a);
-		URL.revokeObjectURL(url);
-		toast.success('JSON file downloaded!');
-        };
-    */
-	//  ##########################################################
-
 	return (
 		<div className="w-full mx-auto space-y-6 items-center">
 			{/* Page Header */}
