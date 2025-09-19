@@ -126,7 +126,6 @@ export function TaskGeneratorForm() {
 			form.setValue('extractedText', result.extractedText);
 
 			// Automatically translate the extracted text
-			setIsTranslating(true);
 			setTranslationError(null);
 			try {
 				const response = await fetch('/api/translate-text', {
@@ -162,6 +161,7 @@ export function TaskGeneratorForm() {
 			setTranslationError(null);
 		}
 	};
+
 	// 2. Define a submit handler.
 	async function handleSubmit(formData: z.infer<typeof formSchema>) {
 		let jobOfferContent = '';
