@@ -182,10 +182,10 @@ export const DataSelectionComponent = ({ onJsonChange }: DataSelectionComponentP
 	//  ##########################################################
 
 	return (
-		<div className="w-full mx-auto p-6 space-y-6 items-center">
+		<div className="w-full mx-auto space-y-6 items-center">
 			{/* Page Header */}
 			<div className="text-start space-y-2">
-				<h1 className="text-3xl font-bold tracking-tight">Stack Selection Tool</h1>
+				<h1 className="text-3xl font-bold tracking-tight">Stack Selection Tool (optional)</h1>
 				<p className="text-muted-foreground">
 					Select categories and items from various technology fields to generate custom JSON output
 				</p>
