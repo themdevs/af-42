@@ -159,7 +159,7 @@ export const DataSelectionComponent = ({ onJsonChange }: DataSelectionComponentP
 	};
 
 	//  ##########################################################
-	// * Utility functions for exporting data
+	//  Utility functions for exporting data
 	/*
 	const copyToClipboard = () => {
 		navigator.clipboard.writeText(JSON.stringify(outputJson, null, 2));
