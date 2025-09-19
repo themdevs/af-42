@@ -160,12 +160,6 @@ export const DataSelectionComponent = ({ onJsonChange }: DataSelectionComponentP
 
 	return (
 		<div className="w-full mx-auto space-y-6 items-center">
-			{/* Page Header */}
-			<div className="text-start space-y-2">
-				<h1 className="text-3xl font-bold tracking-tight">Stack Selection Tool</h1>
-				<p className="text-muted-foreground text-sm">Generate a custom tech challenge.</p>
-			</div>
-
 			{/* Main Content Grid - 3 columns on large screens */}
 			<div className="flex flex-row gap-6 w-full">
 				{/* Left Column: Field/Dataset Selection */}
