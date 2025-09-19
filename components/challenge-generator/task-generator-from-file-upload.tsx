@@ -8,7 +8,6 @@ import { Button } from '@/components/ui/button';
 import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { createTechChallenge } from '@/app/(users)/company/[company-name]/(challenges)/challenge/generate/action';
 import { useState } from 'react';
-// import { DataSelectionComponent } from '@/components/challenge-generator/data-selection.component';
 import { FileTextExtractor } from '@/components/file-text-extractor.component';
 import { TextExtractionResult } from '@/mastra/utils/extract-text-from-file';
 import { formatTextToMarkdown } from '@/mastra/utils/format-text-to-markdown';
@@ -41,7 +40,7 @@ const formSchema = z.object({
 	jsonConfig: z.string().optional(),
 });
 
-export function TaskGeneratorForm() {
+export function TaskGeneratorFormFromFileUpload() {
 	const [result, setResult] = useState<string | null>(null);
 	const [jsonConfig, setJsonConfig] = useState<string>('');
 	const [extractedText, setExtractedText] = useState<string>('');
@@ -180,7 +179,6 @@ export function TaskGeneratorForm() {
 
 	return (
 		<>
-			{/* <DataSelectionComponent onJsonChange={handleJsonChange} /> */}
 			<Form {...form}>
 				<form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-8 flex flex-col gap-4">
 					<FormField

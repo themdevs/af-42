@@ -1,5 +1,9 @@
-import { TaskGeneratorForm } from '@/components/challenge-generator/task-generator-form';
+import { ChallengeGeneratorSelectorComponent } from "@/components/challenge-generator/challenge-generator-selector.component";
 
 export default function GenerateChallengePage() {
-	return <TaskGeneratorForm />;
+	return (
+		<>
+			<ChallengeGeneratorSelectorComponent />
+		</>
+	);
 }

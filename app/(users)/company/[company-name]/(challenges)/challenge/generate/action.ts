@@ -4,6 +4,8 @@ import { mastra } from '../../../../../../../mastra';
 
 // Server action to generate technical challenges using AI agent
 export async function createTechChallenge(jobOffer: string, jsonConfig: string) {
+	console.log('Creating technical challenge with job offer:', jobOffer);
+	console.log('Creating technical challenge with JSON config:', jsonConfig);
 	// Get the AI agent named 'timmy' from Mastra
 	const timmy = mastra.getAgent('timmy');
 
