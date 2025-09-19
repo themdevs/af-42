@@ -85,13 +85,6 @@ export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtrac
 	return (
 		<div className={className}>
 			<Card>
-				{/* Header with title and icon */}
-				<CardHeader>
-					<CardTitle className="flex items-center gap-2">
-						<FileText className="h-5 w-5" />
-						Text Extraction Tool
-					</CardTitle>
-				</CardHeader>
 				<CardContent className="space-y-4">
 					{/* File upload component with size limit */}
 					<FileUploaderComponent

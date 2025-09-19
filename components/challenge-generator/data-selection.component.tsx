@@ -159,13 +159,13 @@ export const DataSelectionComponent = ({ onJsonChange }: DataSelectionComponentP
 	};
 
 	return (
-		<div className="w-full mx-auto space-y-6 items-center">
+		<div className="space-y-6 items-center">
 			{/* Main Content Grid - 3 columns on large screens */}
-			<div className="flex flex-row gap-6 w-full">
+			<div className="grid grid-cols-2 gap-6 pb-6">
 				{/* Left Column: Field/Dataset Selection */}
-				<Card className="max-w-1/5">
+				<Card className="">
 					<CardHeader>
-						<CardTitle className="flex items-center gap-2">
+						<CardTitle className="flex items-start gap-2">
 							<Filter className="h-5 w-5" />
 							Field Selection
 						</CardTitle>
@@ -177,7 +177,7 @@ export const DataSelectionComponent = ({ onJsonChange }: DataSelectionComponentP
 								value={selectedDataset}
 								className="space-y-2 p-0 m-0 border-1 border-muted rounded-lg"
 							>
-								<ScrollArea className="h-64">
+								<ScrollArea className="h-96">
 									<div className="space-y-1">
 										{datasets.map((dataset) => (
 											<Button
@@ -202,7 +202,7 @@ export const DataSelectionComponent = ({ onJsonChange }: DataSelectionComponentP
 				</Card>
 
 				{/* Middle Column: Category and Item Selection */}
-				<Card className="w-1/2">
+				<Card className="">
 					<CardHeader>
 						<CardTitle className="flex items-center gap-2">
 							<Search className="h-5 w-5" />
@@ -225,7 +225,7 @@ export const DataSelectionComponent = ({ onJsonChange }: DataSelectionComponentP
 										<div key={category} className="space-y-2 mt-2">
 											{/* Render individual items if category contains array data */}
 											{isArray && (categoryData as DatasetItem[]).length > 0 && (
-												<div className="ml-4 space-y-1 border-l-2 border-muted pl-4">
+												<div className="ml-4 space-y-1 border-muted pl-4">
 													{/* Category header */}
 													<div className="mb-2">
 														<div className="text-xs font-medium text-muted-foreground">

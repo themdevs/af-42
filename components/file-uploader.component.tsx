@@ -28,9 +28,9 @@ const DEFAULT_ACCEPTED_TYPES = {
 	'application/vnd.ms-powerpoint': ['.ppt'],
 	'application/vnd.openxmlformats-officedocument.presentationml.presentation': ['.pptx'],
 	'image/jpeg': ['.jpg', '.jpeg'],
-	'image/png': ['.png'],
-	'image/gif': ['.gif'],
-	'image/webp': ['.webp'],
+	// 'image/png': ['.png'],
+	// 'image/gif': ['.gif'],
+	// 'image/webp': ['.webp'],
 };
 
 export const FileUploaderComponent = ({

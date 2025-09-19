@@ -208,9 +208,9 @@ export function TaskGeneratorFormFromDataSelection() {
 					<Button type="submit">Submit</Button>
 				</form>
 			</Form>
-			<div className="mt-4 max-w-6xl border rounded-lg p-4 bg-muted/50">
+			<div className="w-full mt-4 border rounded-lg p-4 bg-muted/50">
 				<h1 className="text-2xl text-green-600 font-bold pb-4">Result:</h1>
-				<pre className="text-lg font-mono whitespace-pre-wrap overflow-auto mt-4">{result}</pre>
+				<pre className="text-lg font-mono  mt-4">{result}</pre>
 			</div>
 		</>
 	);

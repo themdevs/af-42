@@ -11,7 +11,7 @@ export function ChallengeGeneratorSelectorComponent() {
 	const [activeTab, setActiveTab] = useState('file-upload');
 
 	return (
-		<div className="w-full max-w-6xl mx-auto space-y-6">
+		<div className="w-full max-w-7xl mx-auto space-y-6">
 			<div className="text-center space-y-2">
 				<h1 className="text-3xl font-bold tracking-tight">Challenge Generator</h1>
 				<p className="text-muted-foreground">Choose how you'd like to generate your technical challenge</p>
