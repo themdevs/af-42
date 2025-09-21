@@ -24,8 +24,10 @@ interface FileTextExtractorProps {
 export const FileTextExtractor = ({ onTextExtracted, className }: FileTextExtractorProps) => {
 	// State for the currently selected file
 	const [selectedFile, setSelectedFile] = useState<File | null>(null);
+
 	// State for storing text extraction results
 	const [extractionResult, setExtractionResult] = useState<TextExtractionResult | null>(null);
+
 	// State to track extraction loading state
 	const [isExtracting, setIsExtracting] = useState(false);
 
