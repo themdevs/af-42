@@ -13,6 +13,8 @@ import {
 	DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
 import { SidebarMenu, SidebarMenuButton, SidebarMenuItem, useSidebar } from '@/components/ui/sidebar';
+import { Button } from '@/components/ui/button';
+import { LogoutLink } from '@kinde-oss/kinde-auth-nextjs/components';
 
 export function NavUser({
 	user,
@@ -90,8 +92,13 @@ export function NavUser({
 						</DropdownMenuGroup>
 						<DropdownMenuSeparator />
 						<DropdownMenuItem>
-							<LogOut />
-							Log out
+							{/* Logout Link */}
+							<LogoutLink>
+								<Button variant="outline" size="sm" className="w-full">
+									<LogOut />
+									Log out
+								</Button>
+							</LogoutLink>
 						</DropdownMenuItem>
 					</DropdownMenuContent>
 				</DropdownMenu>
