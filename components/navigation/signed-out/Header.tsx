@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { NavigationMenu, NavigationMenuItem, NavigationMenuList } from '@/components/ui/navigation-menu';
 // import { logIn, logout } from '@/actions/auth';
 import { Button } from '@/components/ui/button';
+import { RegisterLink, LoginLink } from '@kinde-oss/kinde-auth-nextjs/components';
 
 const navLinks = [
 	{
@@ -41,7 +42,7 @@ export default function SignedOutHeader() {
 
 	return (
 		<>
-			<header className="border-b border-gray-800 shadow-lg sticky top-0 z-50 bg-black/95 backdrop-blur-sm relative">
+			<header className="border-b border-gray-800 shadow-lg sticky top-0 z-50 bg-black/95 backdrop-blur-sm">
 				<nav className="min-h-[60px] flex items-center justify-between px-4 py-3 md:px-6 lg:px-8">
 					{/* Logo */}
 					<Link href="/home" className="flex-shrink-0">
@@ -74,20 +75,31 @@ export default function SignedOutHeader() {
 
 					{/* Desktop Auth Buttons - Hidden on mobile/tablet */}
 					<div className="hidden md:flex flex-row gap-2">
-						<Button
-							// onClick={() => logIn()}
-							size="sm"
-							className="bg-cyan-600 hover:bg-cyan-700 text-white border-2 border-cyan-600 hover:border-cyan-700 transition-all duration-300 transform hover:scale-105 text-xs lg:text-sm"
-						>
-							Log In
-						</Button>
-						<Button
+						<LoginLink>
+							<Button
+								// onClick={() => logIn()}
+								size="sm"
+								className="bg-cyan-600 hover:bg-cyan-700 text-white border-2 border-cyan-600 hover:border-cyan-700 transition-all duration-300 transform hover:scale-105 text-xs lg:text-sm"
+							>
+								Log In
+							</Button>
+						</LoginLink>
+						<RegisterLink>
+							<Button
+								// onClick={() => logIn()}
+								size="sm"
+								className="bg-cyan-600 hover:bg-cyan-700 text-white border-2 border-cyan-600 hover:border-cyan-700 transition-all duration-300 transform hover:scale-105 text-xs lg:text-sm"
+							>
+								Sign Up
+							</Button>
+						</RegisterLink>
+						{/* <Button
 							// onClick={() => logout()}
 							size="sm"
 							className="bg-cyan-600 hover:bg-cyan-700 text-white border-2 border-cyan-600 hover:border-cyan-700 transition-all duration-300 transform hover:scale-105 text-xs lg:text-sm"
 						>
 							Sign Out
-						</Button>
+						</Button> */}
 					</div>
 
 					{/* Mobile Menu Toggle - Visible on mobile/tablet */}
@@ -130,16 +142,29 @@ export default function SignedOutHeader() {
 
 						{/* Mobile Auth Section */}
 						<div className="flex flex-col gap-3 w-full">
-							<Button
-								onClick={() => {
-									// logIn();
-									setIsMenuOpen(false);
-								}}
-								className="w-full bg-cyan-600 hover:bg-cyan-700 text-white border-2 border-cyan-600 hover:border-cyan-700 transition-all duration-300"
-							>
-								Log In
-							</Button>
-							<Button
+							<LoginLink>
+								<Button
+									onClick={() => {
+										// logIn();
+										setIsMenuOpen(false);
+									}}
+									className="w-full bg-cyan-600 hover:bg-cyan-700 text-white border-2 border-cyan-600 hover:border-cyan-700 transition-all duration-300"
+								>
+									Sign In
+								</Button>
+							</LoginLink>
+							<RegisterLink>
+								<Button
+									onClick={() => {
+										// logIn();
+										setIsMenuOpen(false);
+									}}
+									className="w-full bg-cyan-600 hover:bg-cyan-700 text-white border-2 border-cyan-600 hover:border-cyan-700 transition-all duration-300"
+								>
+									Sign Up
+								</Button>
+							</RegisterLink>
+							{/* <Button
 								onClick={() => {
 									// logout();
 									setIsMenuOpen(false);
@@ -147,7 +172,7 @@ export default function SignedOutHeader() {
 								className="w-full bg-cyan-600 hover:bg-cyan-700 text-white border-2 border-cyan-600 hover:border-cyan-700 transition-all duration-300"
 							>
 								Sign Out
-							</Button>
+							</Button> */}
 						</div>
 					</div>
 				</div>
